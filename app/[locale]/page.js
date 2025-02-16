@@ -35,15 +35,10 @@ export default async function HomePage({ params }) {
       <div className={classes.image_slider} data-aos="zoom-out" data-aos-duration="1000">
         <ResponsiveCarousel images={sliderImages} delay={6500} />
       </div>
-
       <IntroText title={data.homepage[locale].herotext.title} content={data.homepage[locale].herotext.content} />
-
       <CollectionsSlider />
-
       <ServiceSection content={data.homepage[locale].service} locale={locale} />
-
       <TopProductsSlider />
-
       <ArticlesSection articles={articles} locale={locale} />
       <ContactSection />
     </>
