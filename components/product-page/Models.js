@@ -1,0 +1,19 @@
+import { RiFolderDownloadLine } from "react-icons/ri";
+import ui from "@/app/data/ui.json";
+import classes from "./Models.module.css";
+
+export default function Models({ product, locale }) {
+  return (
+    <section className={classes.product_downloads}>
+      <h3 className="section_title">{ui.product_page.models[locale]}</h3>
+      <div>
+        {product.models.map((model, index) => (
+          <a key={index} href={`/models/${model.file}`} download={model.file} className={classes.download_link}>
+            <div className={classes.model_title}>{model.title}</div>
+            <RiFolderDownloadLine fontSize={24} className={classes.download_icon} />
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+}

@@ -1,0 +1,19 @@
+.container {
+  max-width: clamp(640px, 80vw, 1024px);
+  margin: 0 auto;
+  padding: clamp(3rem, 10vw, 10rem) 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.title {
+  font-size: clamp(2.125rem, 2.5vw, 3rem);
+  /* line-height: clamp(2.375rem, 3vw, 3.5rem); */
+  font-weight: 600;
+  /* @apply text-capitalize text-[56px]; */
+}
+.content {
+  font-size: clamp(0.875rem, 2vw, 1.5rem);
+  line-height: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 500;
+}

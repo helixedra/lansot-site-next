@@ -1,0 +1,248 @@
+{
+  "homepage": {
+    "uk": {
+      "name": "Головна",
+      "title": "Головна сторінка",
+      "meta": {
+        "title": "Головна сторінка",
+        "description": "Головна сторінка",
+        "keywords": "головна сторінка"
+      },
+      "herotext": {
+        "title": "Естетика сучасних меблів для вишуканого життя",
+        "content": "Наші меблі, розроблені з використанням новітніх технологічних рішень та найсучасніших матеріалів де кожен предмет є втіленням елегантності та зручності. Крім того, ми пропонуємо налаштувати меблі під свої потреби та персональний стиль. Ви можете обирати різні розміри та матеріали, щоб ідеально вписати наші вироби у ваш простір."
+      },
+      "service": {
+        "title": "Індивідуальний підхід",
+        "content": "Ми розуміємо, що кожен простір унікальний, тому пропонуємо рішення, які відповідають вашим потребам і бажанням."
+      }
+    },
+    "en": {
+      "name": "Home Page",
+      "title": "Home Page",
+      "meta": {
+        "title": "Home Page",
+        "description": "Home Page",
+        "keywords": "home page"
+      },
+      "herotext": {
+        "title": "Aesthetics Of Modern Furniture For Sophisticated Living",
+        "content": "Our furniture, designed using the latest technological solutions and the most modern materials where each item is an embodiment of elegance and convenience. In addition, we offer to customize furniture to your needs and personal style. You can choose different sizes and materials to perfectly fit our products into your space."
+      },
+      "service": {
+        "title": "Individual Approach",
+        "content": "We understand that every space is unique, so we offer solutions that meet your needs and desires."
+      }
+    },
+    "series": [
+      {
+        "url": "idea",
+        "title": "Idea",
+        "description": {
+          "uk": "Серія тумб для вітальні та спальні",
+          "en": "Series of bedside tables for living room and bedroom"
+        },
+        "size": "big",
+        "img": "/images/products/idea-sl/idea-sl_promo_img_2.jpg"
+      },
+      {
+        "url": "leon",
+        "title": "Leon",
+        "description": {
+          "uk": "Шафи та тумби для вітальні",
+          "en": "Wardrobes and bedside tables for living room"
+        },
+        "size": "small",
+        "img": "/images/leon-collection.jpg"
+      },
+      {
+        "url": "folio",
+        "title": "Folio",
+        "description": {
+          "uk": "Серія тумб та комодів для спальні та вітальні",
+          "en": "Series of bedside tables and chests of drawers for bedroom and living room"
+        },
+        "size": "small",
+        "img": "/images/folio-collection.jpg"
+      },
+      {
+        "url": "verona",
+        "title": "Verona",
+        "description": {
+          "uk": "Серія тумб та комодів для спальні та вітальні",
+          "en": "Series of bedside tables and chests of drawers for bedroom and living room"
+        },
+        "size": "small",
+        "img": "/images/verona_collection.jpg"
+      },
+      {
+        "url": "delta",
+        "title": "Delta",
+        "description": {
+          "uk": "Серія тумб для вітальні в зону ТБ",
+          "en": "Series of bedside tables for living room in TV area"
+        },
+        "size": "small",
+        "img": "/images/delta-collection.jpg"
+      },
+      {
+        "url": "edge",
+        "title": "Edge",
+        "description": {
+          "uk": "Серія тумб для спальні та вітальні",
+          "en": "Series of bedside tables for bedroom and living room"
+        },
+        "size": "big",
+        "img": "/images/products/edge-ll/edge-ll-interior_02_2.jpg"
+      }
+    ]
+  },
+  "products": {
+    "uk": {
+      "name": "Каталог",
+      "title": "Каталог товарів",
+      "meta": {
+        "title": "Каталог товарів",
+        "description": "Всі товари",
+        "keywords": "products, all"
+      }
+    },
+    "en": {
+      "name": "Products",
+      "title": "Catalog of products",
+      "meta": {
+        "title": "Catalog of products",
+        "description": "All products",
+        "keywords": "products, all"
+      }
+    }
+  },
+  "finishes": {
+    "uk": {
+      "name": "Декори",
+      "title": "Декори",
+      "meta": {
+        "title": "Декори",
+        "description": "Всі декори",
+        "keywords": "декори, всі"
+      },
+      "info": "Всі представлені декори є репродукціями. Вибір придатного за кольором декору можливий тільки за допомогою оригінального зразка."
+    },
+    "en": {
+      "name": "Finishes",
+      "title": "All finishes",
+      "meta": {
+        "title": "All finishes",
+        "description": "All finishes",
+        "keywords": "finishes, all"
+      },
+      "info": "All presented finishes are reproductions. The choice of a suitable color decor is possible only with the the original sample."
+    }
+  },
+  "delivery": {
+    "uk": {
+      "name": "Оплата та доставка",
+      "title": "Оплата та доставка",
+      "meta": {
+        "title": "Оплата та доставка",
+        "description": "Інформація про оплату та доставку",
+        "keywords": "оплата, доставка, умови"
+      },
+      "info": {
+        "payment": {
+          "title": "Оплата",
+          "description": ["Оформлення замовлення здійснюється тільки за умови <strong>повної (100%) оплати</strong> рахунку.", "Оплата здійснюється тільки в національній валюті (грн.) на розрахунковий рахунок."]
+        },
+        "delivery": {
+          "title": "Доставка",
+          "description": [
+            "Вартість доставки по Києву: малогабаритні товари до 30кг. - <strong>400 грн.</strong>, великогабаритні від <strong>600 грн.</strong> У вартість доставки включено занесення.",
+            "За відсутності ліфта вартість підйому - <strong>40 грн./поверх.</strong>",
+            "Доставка по Україні розраховується за тарифами транспортної компанії.",
+            "Вартість збирання габаритних виробів розраховується індивідуально.",
+            "Послуги монтажу виробів, ми <strong><u>не надаємо</u></strong>."
+          ]
+        }
+      }
+    },
+    "en": {
+      "name": "Payment and Delivery",
+      "title": "Payment and Delivery",
+      "meta": {
+        "title": "Payment and Delivery",
+        "description": "Information about payment and delivery",
+        "keywords": "payment, delivery, terms"
+      },
+      "info": {
+        "payment": {
+          "title": "Payment",
+          "description": ["Order processing is carried out only upon <strong>full (100%) payment</strong> of the invoice.", "Payment is made only in the national currency (UAH) to the current account."]
+        },
+        "delivery": {
+          "title": "Delivery",
+          "description": [
+            "Delivery cost in Kyiv: small-sized goods up to 30kg - <strong>400 UAH</strong>, large-sized goods from <strong>600 UAH</strong>. Delivery cost includes carrying.",
+            "In the absence of an elevator, the cost of lifting is <strong>40 UAH per floor</strong>.",
+            "Delivery across Ukraine is calculated according to the tariffs of the transport company.",
+            "The cost of assembling large-sized products is calculated individually.",
+            "We <strong><u>do not provide</u></strong> installation services for products."
+          ]
+        }
+      }
+    }
+  },
+  "about": {
+    "uk": {
+      "title": "Про нас",
+      "content": "<p>Якісний продукт та турбота про клієнта – це основні цінності нашого бренду. Наші меблі відповідають високим стандартам якості та вимогам, які диктує ринок. Мінімалізм у дизайні, який не підвладний часу.</p><p>У наших колекціях робиться наголос на меблях для зберігання речей. Комоди та тумби для спальні та вітальні. Обідні столи, письмові столи для офісів та кабінетів, журнальні столики у вітальню. Полиці та стелажі для книг. Усі моделі виконані з урахуванням ергономіки та підійдуть як для власників компактних квартир, так і для великих заміських будинків.</p><p>Щодня ми вдосконалюємо наші продукти, щоб клієнти були впевнені в безпеці та надійності меблів.</p>",
+      "meta": {
+        "title": "Про нас",
+        "description": "Про нас",
+        "keywords": "про нас"
+      }
+    },
+    "en": {
+      "title": "About Us",
+      "content": "<p>Quality product and customer care are the main values of our brand. Our furniture meets high quality standards and market requirements. Design minimalism that is timeless.</p><p>Our collections focus on storage furniture. Chests of drawers and bedside tables for the bedroom and living room. Dining tables, writing desks for offices and cabinets, coffee tables in the living room. Shelves and bookcases. All models are designed with ergonomics in mind and are suitable for owners of compact apartments as well as large country houses.</p><p>Every day, we improve our products to ensure that customers are confident in the safety and reliability of the furniture.</p>",
+      "meta": {
+        "title": "About Us",
+        "description": "About Us",
+        "keywords": "about us"
+      }
+    }
+  },
+  "contacts": {
+    "uk": {
+      "name": "Контакти",
+      "title": "Контакти",
+      "meta": {
+        "title": "Контакти",
+        "description": "Контактна інформація",
+        "keywords": "контакти"
+      },
+      "info": {
+        "office": { "title": "Офіс", "content": "Київ, вул. Туманяна, 1 (шоурум тимчасово зачинений)" },
+        "phone": "+38 097 112 26 16",
+        "email": "info@lansot.com",
+        "schedule": { "title": "Графік роботи", "content": "Пн-Пт: 10:00 - 20:00, Сб-Нд: Вихідний" },
+        "production": { "title": "Виробництво", "content": "Київ, вул. Віскозна, 8" }
+      }
+    },
+    "en": {
+      "name": "Contacts",
+      "title": "Contacts",
+      "meta": {
+        "title": "Contacts",
+        "description": "Contact information",
+        "keywords": "contacts"
+      },
+      "info": {
+        "office": { "title": "Office", "content": "Kyiv, Tumanyan St., 1 (showroom temporarily closed)" },
+        "phone": "+38 097 112 26 16",
+        "email": "info@lansot.com",
+        "schedule": { "title": "Working hours", "content": "Mon-Fri: 10:00 - 20:00, Sat-Sun: Closed" },
+        "production": { "title": "Production", "content": "Kyiv, Viskozna St., 8" }
+      }
+    }
+  }
+}

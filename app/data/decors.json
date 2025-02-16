@@ -1,0 +1,127 @@
+{
+  "ldsp": {
+    "title": { "uk": "ЛДСП Однотонні декори", "en": "Laminate Solid Colors" },
+    "images": [
+      {
+        "img": "w1000.jpg",
+        "title": "W 1000 ST9",
+        "description": { "uk": "Білий преміум", "en": "Premium White" }
+      },
+      {
+        "img": "u702.jpg",
+        "title": "U 702 ST9",
+        "description": { "uk": "Кашемір", "en": "Cashmere Grey" }
+      },
+      {
+        "img": "u201.jpg",
+        "title": "U 201 ST9",
+        "description": { "uk": "Сіра галька", "en": "Pebble Grey" }
+      },
+      {
+        "img": "k096su.jpg",
+        "title": "K 096 SU",
+        "description": { "uk": "Глиняний сірий", "en": "Clay Grey" }
+      },
+      {
+        "img": "u788.jpg",
+        "title": "U 788 ST9",
+        "description": { "uk": "Арктика сіра", "en": "Arctic Grey" }
+      },
+      {
+        "img": "u156.jpg",
+        "title": "U 156 ST9",
+        "description": { "uk": "Пісок", "en": "Sand" }
+      },
+      {
+        "img": "u200.jpg",
+        "title": "U 200 ST9",
+        "description": { "uk": "Бежевий", "en": "Beige" }
+      },
+      {
+        "img": "0301su.jpg",
+        "title": "0301 SU",
+        "description": { "uk": "Капучіно", "en": "Cappuccino" }
+      },
+      {
+        "img": "u767.jpg",
+        "title": "U 767 ST9",
+        "description": { "uk": "Кубаніт", "en": "Cubanite" }
+      },
+      {
+        "img": "u960.jpg",
+        "title": "U 960 ST9",
+        "description": { "uk": "Онікс", "en": "Onyx" }
+      },
+      {
+        "img": "u963.jpg",
+        "title": "U 963 ST9",
+        "description": { "uk": "Діамант сірий", "en": "Diamond Grey" }
+      },
+      {
+        "img": "u741.jpg",
+        "title": "U 741 ST9",
+        "description": { "uk": "Лава сіра", "en": "Lava Grey" }
+      },
+      {
+        "img": "u748.jpg",
+        "title": "U 748 ST9",
+        "description": { "uk": "Трюфель коричневий", "en": "Truffle Brown" }
+      },
+      {
+        "img": "k098su.jpg",
+        "title": "K 098 SU",
+        "description": { "uk": "Керамічний червоний", "en": "Ceramic Red" }
+      },
+      {
+        "img": "u899.jpg",
+        "title": "U 899 ST9",
+        "description": { "uk": "Ніжний чорний", "en": "Soft Black" }
+      },
+      {
+        "img": "u999.jpg",
+        "title": "U 999 ST2",
+        "description": { "uk": "Чорний", "en": "Black" }
+      }
+    ]
+  },
+  "ldsp_wood": {
+    "title": { "uk": "ЛДСП Інші декори", "en": "Laminate Other Decors" },
+    "images": [
+      {
+        "img": "h1714st19.jpg",
+        "title": "H 1714 ST19",
+        "description": { "uk": "Горіх Лінкольн", "en": "Lincoln Walnut" }
+      },
+      {
+        "img": "u999st19.jpg",
+        "title": "U 999 ST19",
+        "description": { "uk": "Чорне дерево", "en": "Black Wood" }
+      },
+      {
+        "img": "p25.jpg",
+        "title": "P 25",
+        "description": { "uk": "Горіх", "en": "Walnut" }
+      },
+      {
+        "img": "p57.jpg",
+        "title": "P 57",
+        "description": { "uk": "Ясень патіна", "en": "Ash Patina" }
+      },
+      {
+        "img": "k541pn.jpg",
+        "title": "K 541 PN",
+        "description": { "uk": "Грейж Тессі", "en": "Greige Tessi" }
+      },
+      {
+        "img": "8548sn.jpg",
+        "title": "8548 SN",
+        "description": { "uk": "Файнлайн Мокка", "en": "Fineline Mocha" }
+      },
+      {
+        "img": "5501sn.jpg",
+        "title": "5501 SN",
+        "description": { "uk": "Дуб Славонія", "en": "Slavonian Oak" }
+      }
+    ]
+  }
+}

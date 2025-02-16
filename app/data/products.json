@@ -1,0 +1,44 @@
+{
+  "leon-h2": {
+    "id": "leon-h2",
+    "meta": {
+      "title": { "uk": "Тумба Leon H2", "en": "Highboard Leon H2" },
+      "description": {
+        "uk": "Тумба для вітальні Leon H2 у мінімалістичному стилі",
+        "en": "Highboard for the living room Leon H2 in minimalistic style"
+      },
+      "keywords": {
+        "uk": "Тумба для вітальні, тумба, комод, шафа",
+        "en": "Wardrobe for the living room, cabinet, shelf"
+      }
+    },
+    "url": "leon-h2",
+    "category": "single-units",
+    "collection": "leon",
+    "name": "Leon H2",
+    "sub": { "uk": "Тумба", "en": "Highboard" },
+    "description": {
+      "uk": "Шафа для вітальні із оновленої серії Leon. Ідеально підійде для зберігання медіа або посуду у вітальні чи на кухні. Двері можуть бути виконані з алюмінієвої профільної рамки зі склом або з плитних матеріалів з різними варіантами обробки.",
+      "en": "Wardrobe for the living room from the updated Leon series. Ideal for storing media or dishes in the living room or kitchen. Doors can be made of an aluminum profile frame with glass or from sheet materials with different finishing options."
+    },
+    "cover": "leon_h2_cover.jpg",
+    "top_image": "leon_h2_top_image.jpg",
+    "promo": [{ "type": "col-1", "images": [] }],
+    "drawings": ["leon_h2_drawing_01.jpg", "leon_h2_drawing_02.jpg"],
+    "models": [{ "title": "Leon H2", "file": "Lansot_Leon_H2.zip" }],
+    "top": true,
+    "showroom": true,
+    "start_price": "16,510",
+    "sizes": { "width": ["60", "70", "80", "90"], "height": ["120", "140", "160"], "depth": ["40", "45", "50"] },
+    "features": [
+      {
+        "title": { "uk": "Корпус", "en": "Body" },
+        "items": { "boards": ["mdf", "chipboard", "veneer"] }
+      },
+      {
+        "title": { "uk": "Металеві деталі", "en": "Metal parts" },
+        "items": { "color": ["ral"] }
+      }
+    ]
+  }
+}

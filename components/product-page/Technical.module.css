@@ -1,0 +1,31 @@
+.product_drawings {
+  /* margin: 96px 24px !important; */
+  width: 100%;
+}
+
+.drawings_container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-direction: column;
+}
+.drawing {
+  width: 100%;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+}
+.drawing > img {
+  width: 100%;
+  max-width: 420px;
+}
+
+@media (min-width: 920px) {
+  .drawings_container {
+    flex-direction: row !important;
+    justify-content: start !important;
+  }
+  .drawing {
+    width: auto !important;
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "boards": {
+    "mdf": {
+      "title": { "uk": "Фарбований МДФ", "en": "Painted MDF" }
+    },
+    "chipboard": {
+      "title": { "uk": "Ламінований ДСП", "en": "Laminated Chipboard" },
+      "items": ["U788", "U789", "U790"]
+    },
+    "veneer": {
+      "title": { "uk": "Шпон", "en": "Veneer" },
+      "items": ["oak", "ash", "beech"]
+    },
+    "glass": {
+      "title": { "uk": "Скло", "en": "Glass" },
+      "items": [
+        { "uk": "Глянцеве, фарбоване", "en": "Glossy, painted" },
+        { "uk": "Матове, фарбоване", "en": "Matte, painted" }
+      ]
+    },
+    "base_color": {
+      "title": { "uk": "Колір корпусу", "en": "Body color" },
+      "items": [
+        { "uk": "Білий", "en": "White" },
+        { "uk": "Чорний", "en": "Black" }
+      ]
+    }
+  },
+  "colors": {
+    "ral": ""
+  }
+}

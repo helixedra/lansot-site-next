@@ -1,0 +1,1058 @@
+{
+  "leon-h2": {
+    "title": { "uk": "Тумба Leon H2", "en": "Leon H2" },
+    "meta_description": {
+      "uk": "Тумба для вітальні Leon H2 у мінімалістичному стилі",
+      "en": "Leon H2 in minimalistic style"
+    },
+    "meta_keywords": {
+      "uk": "Тумба для вітальні, тумба, комод, шафа",
+      "en": "Wardrobe, cabinet, shelf"
+    },
+    "url": "leon-h2",
+    "category": "single-units",
+    "collection": "leon",
+    "name": "Leon H2",
+    "sub": "Тумба",
+    "description": {
+      "uk": "Шафа для вітальні із оновленої серії Leon. Ідеально підійде для зберігання медіа або посуду у вітальні чи на кухні. Двері можуть бути виконані з алюмінієвої профільної рамки зі склом або з плитних матеріалів з різними варіантами обробки.",
+      "en": "Wardrobe for the living room from the updated Leon series. Ideal for storing media or dishes in the living room or kitchen. Doors can be made of an aluminum profile frame with glass or from sheet materials with different finishing options."
+    },
+    "cover": "leon_h2_cover.jpg",
+    "top_image": "leon_h2_top_image.jpg",
+    "start_price": "17,990",
+    "promo": [{ "type": "col-1", "images": [] }],
+    "drawings": ["leon_h2_drawing_01.jpg", "leon_h2_drawing_02.jpg"],
+    "models": [{ "title": "Leon H2", "file": "Lansot_Leon_H2.zip" }],
+    "top": true
+  },
+  "leon": {
+    "title": "Тумба Leon S2",
+    "meta_description": "Тумба для вітальні Leon S2 у мінімалістичному стилі",
+    "meta_keywords": "Тумба для вітальні, тумба, комод",
+    "url": "leon",
+    "collection": "leon",
+    "category": "single-units",
+    "name": "Leon S2",
+    "sub": "Тумба",
+    "description": "Тумба для вітальні з відкритою центральною секцією та закритими бічними секціями. Двері можуть бути виконані з алюмінієвої профільної рамки зі склом або з плитних матеріалів з різними варіантами обробки. Верх тумби може бути виконаний із фарбованого скла.",
+    "cover": "leon_s2_cover.jpg",
+    "top_image": "leon_s2_top_image.jpg",
+    "start_price": "18,380",
+    "promo": [
+      {
+        "type": "col-1",
+        "images": [
+          { "img": "leon_promo_img_1.jpg", "alt": "Тумба для гостиной Leon" }
+        ]
+      }
+    ],
+    "drawings": ["leon_drawing_01.jpg", "leon_drawing_02.jpg"],
+    "models": [{ "title": "Leon", "file": "Lansot_Leon.zip" }],
+    "top": true
+  },
+  "idea-sl": {
+    "title": { "uk": "Тумба Idea SL", "en": "Idea SL" },
+    "meta_description": {
+      "uk": "Широка тумба для вітальні з шухлядками в сучасному мінімалістичному стилі. Дизайнерська тумба без ручок.",
+      "en": "Wide wardrobe for the living room with shelves in a modern minimalistic style. Designer wardrobe without handles."
+    },
+    "meta_keywords": {
+      "uk": "тумба у вітальню, тумба під тв, тумба широка, тумба",
+      "en": "Wardrobe for the living room, TV stand, wide wardrobe"
+    },
+    "url": "idea-sl",
+    "collection": "idea",
+    "category": "single-units",
+    "name": "Idea SL",
+    "sub": "Тумба",
+    "description": "Тонкі грані корпусу та малопомітні стики підкреслюють витонченність та додають візуальної легкості. Шухлядки відкриваються легким натисканням, а відсутність ручок позбавляє зайвих деталей та полегшує догляд за меблями.",
+    "cover": "idea_sl_cover.jpg",
+    "top_image": "idea_sl_top_image.jpg",
+    "start_price": "19,110",
+    "promo": [
+      {
+        "type": "col-1",
+        "images": [
+          { "img": "idea-sl_promo_img_2.jpg", "alt": "Тумба у вітальню під ТВ" }
+        ]
+      }
+    ],
+    "drawings": ["idea_sl_drawing_01.jpg"],
+    "models": [{ "title": "Idea SL", "file": "Lansot_Idea_SL.zip" }],
+    "top": true
+  },
+  "idea-ns2": {
+    "title": "Приліжкова тумба Idea NS2",
+    "meta_description": "Приліжкова тумба с висувними ящиками в сучасному мінімалістичному стилі без ручок.",
+    "meta_keywords": "Приліжкова тумба, тумба широка, тумба з ящиками",
+    "url": "idea-ns2",
+    "collection": "idea",
+    "category": "bedside-tables",
+    "name": "Idea NS2",
+    "sub": "Приліжкова тумба",
+    "description": "Тонкі грані корпусу та малопомітні стики підкреслюють витонченність та додають візуальної легкості. Шухлядки відкриваються легким натисканням, а відсутність ручок позбавляє зайвих деталей та полегшує догляд за меблями.",
+    "cover": "idea_ns2_cover.jpg",
+    "top_image": "idea_ns2_top_image.jpg",
+    "start_price": "16,510",
+    "promo": [
+      {
+        "type": "col-1",
+        "images": [
+          {
+            "img": "idea_ns2_promo_img_1.jpg",
+            "alt": "Приліжкова тумба с висувними ящиками"
+          },
+          {
+            "img": "idea_ns2_promo_img_2.jpg",
+            "alt": "Дизайнерські Приліжкова тумба с висувними ящиками в шпоні"
+          }
+        ]
+      }
+    ],
+    "drawings": ["idea_ns2_drawing_01.jpg"],
+    "models": [],
+    "top": true
+  },
+  "idea-s1w2": {
+    "title": "Приліжкова тумба Idea S1W2",
+    "meta_description": "Приліжкова тумба с висувними ящиками в сучасному мінімалістичному стилі без ручок.",
+    "meta_keywords": "Приліжкова тумба, тумба широка, тумба з ящиками",
+    "url": "idea-s1w2",
+    "collection": "idea",
+    "category": "bedside-tables",
+    "name": "Idea S1W2",
+    "sub": "Приліжкова тумба",
+    "description": "Тонкі грані корпусу та малопомітні стики підкреслюють витонченність та додають візуальної легкості. Шухлядки відкриваються легким натисканням, а відсутність ручок позбавляє зайвих деталей та полегшує догляд за меблями.",
+    "cover": "idea_s1w2_cover.jpg",
+    "top_image": "idea_s1w2_top_image.jpg",
+    "start_price": "11,590",
+    "promo": [
+      {
+        "type": "col-1",
+        "images": [
+          {
+            "img": "idea_s1w2_promo_img_1.jpg",
+            "alt": "Приліжкова тумба лансот ідея"
+          }
+        ]
+      }
+    ],
+    "drawings": ["idea_s1w2_drawing_01.jpg"],
+    "models": [{ "title": "Idea S1W1", "file": "Lansot_Idea_S1W1.zip" }],
+    "top": true
+  },
+  "idea-4w2": {
+    "title": "Тумба Idea 4W2",
+    "meta_description": "Широка тумба для вітальні з шухлядами в сучасному мінімалістичному стилі. Дизайнерська тумба без ручок.",
+    "meta_keywords": "тумба у вітальню, тумба під тв, тумба широка, тумба з ящиками",
+    "url": "idea-4w2",
+    "collection": "idea",
+    "category": "single-units",
+    "name": "Idea 4W2",
+    "sub": "Тумба",
+    "description": "Тонкі грані корпусу та малопомітні стики підкреслюють витонченість і надають візуальній легкості виробу. Висувні ящики відкриваються легким натисканням, а відсутність ручок позбавляє від зайвих деталей і полегшує догляд за меблями.",
+    "cover": "idea_4w2_cover.jpg",
+    "top_image": "idea_4w2_top_image.jpg",
+    "start_price": "34,040",
+    "promo": [],
+    "drawings": ["idea_4w2_drawing_01.jpg"],
+    "models": [{ "title": "Idea 4W2", "file": "Lansot_Idea_4W2.zip" }],
+    "top": true
+  },
+  "apollo-2": {
+    "title": "Письмовий стіл Apollo 2",
+    "meta_description": "Письмовий стіл Apollo 2 у мінімалістичному стилі",
+    "meta_keywords": "стіл, робочий стіл, письмовий стіл",
+    "url": "apollo-2",
+    "category": "tables",
+    "name": "Apollo 2",
+    "sub": "Письмовий стіл",
+    "description": "Письмовий стіл Apollo 2 ідеально підійде для домашнього кабінету або офісу. Стільниця може бути виконана в різних кольорах. Зручні висувні ящики допоможуть організувати зберігання на робочому місці.",
+    "cover": "apollo_2_cover.jpg",
+    "top_image": "apollo_2_top_image.jpg",
+    "start_price": "17,200",
+    "promo": [
+      {
+        "type": "col-2",
+        "images": [
+          { "img": "apollo_2_promo_img_1.jpg", "alt": "Робочий стіл Apollo 2" },
+          { "img": "apollo_2_promo_img_2.jpg", "alt": "Робочий стіл Apollo 2" }
+        ]
+      },
+      {
+        "type": "col-1",
+        "images": [
+          { "img": "apollo_2_promo_img_3.jpg", "alt": "Робочий стіл Apollo 2" }
+        ]
+      }
+    ],
+    "drawings": ["apollo_2_drawing_01.jpg"],
+    "models": [{ "title": "Apollo 2", "file": "Lansot_Apollo-2.zip" }],
+    "top": true
+  },
+  "verona-6": {
+    "title": "Комод Verona 6",
+    "meta_description": "Дизайнерська комод Verona 6 у мінімалістичному стилі",
+    "meta_keywords": "дизайнерська комод, тумба, комод до спальні",
+    "url": "verona-6",
+    "category": "drawer-units",
+    "collection": "verona",
+    "name": "Verona 6",
+    "sub": "Комод",
+    "description": "Вдале поєднання матеріалів, практичність та вишуканий дизайн, ідеально доповнить та підкреслить інтер'єр спальні або вбиральні кімнати.Місткі ящики з широким вибором декорів для фасаду та лаконічні ручки з металу надають унікальності комоду.",
+    "cover": "verona_6_cover.jpg",
+    "top_image": "verona_6_top_image.jpg",
+    "start_price": "24,440",
+    "promo": [
+      {
+        "type": "col-1",
+        "images": [
+          {
+            "img": "verona_3_promo_img_1.jpg",
+            "alt": "Серія комодів та тумб Verona"
+          }
+        ]
+      }
+    ],
+    "drawings": ["verona_6_drawing_01.jpg"],
+    "models": [{ "title": "Verona 6", "file": "Lansot_Verona-6.zip" }],
+    "top": true
+  },
+  "edge-sl": {
+    "title": "Тумба Edge SL",
+    "meta_description": "Широка тумба для вітальні з шухлядами в сучасному мінімалістичному стилі. Дизайнерська тумба без ручок.",
+    "meta_keywords": "тумба у вітальню, тумба під тв, тумба широка, тумба з ящиками",
+    "url": "edge-sl",
+    "category": "single-units",
+    "collection": "edge",
+    "name": "Edge SL",
+    "sub": "Тумба",
+    "description": "Широка тумба з висувними ящиками з низьким цоколем. Виступаючі краї тумби створюють форму контейнера, а також виконують роль ручок. Вгору тумби можуть бути вбудовані різні заглушки для проводів та розетки, для використання в зоні ТБ.",
+    "cover": "edge_sl_cover.jpg",
+    "top_image": "edge_sl_top_image.jpg",
+    "start_price": "14,300",
+    "promo": [
+      {
+        "type": "col-1",
+        "images": [
+          {
+            "img": "edge_sl_promo_img_1.jpg",
+            "alt": "Дизайнерська тумба для вітальні з висувними ящиками"
+          },
+          {
+            "img": "edge_sl_promo_img_2.jpg",
+            "alt": "Дизайнерська тумба під тв з висувними ящиками в шпоні"
+          }
+        ]
+      },
+      {
+        "type": "col-2",
+        "images": [
+          {
+            "img": "edge_sl_promo_img_3.jpg",
+            "alt": "Широка тумба з висувними ящиками в стилі мінімалізм"
+          },
+          {
+            "img": "edge_sl_promo_img_4.jpg",
+            "alt": "Сучасна тумба під тв у стилі мінімалізм"
+          }
+        ]
+      }
+    ],
+    "drawings": [
+      "edge_sl_drawing_01.jpg",
+      "edge_sl_drawing_02.jpg",
+      "edge_sl_drawing_03.jpg"
+    ],
+    "models": [{ "title": "Edge SL", "file": "Lansot_Edge_SL.zip" }],
+    "top": true
+  },
+  "edge-nse": {
+    "title": "Приліжкова тумба Edge NSE",
+    "meta_description": "Приліжкова тумба в стилі мінімалізм. Дизайнерська тумба в спальню без ящика.",
+    "meta_keywords": "Приліжкова тумба, меблі в спальню, тумбочка, тумбочка",
+    "url": "edge-nse",
+    "category": "bedside-tables",
+    "collection": "edge",
+    "name": "Edge NSE",
+    "sub": "Приліжкова тумба",
+    "description": "Приліжкова тумба Edge NSE - це модифікація тумби NS без шухляди. Вона поєднує в собі елегантну простоту та функціональність. Тумби, що виступають вгору, створюють форму контейнера і додає меблів виразності.",
+    "cover": "edge_nse_cover.jpg",
+    "top_image": "edge_nse_top_image.jpg",
+    "start_price": "4,380",
+    "promo": [
+      {
+        "type": "col-3",
+        "images": [
+          {
+            "img": "edge_nse_promo_img_1.jpg",
+            "alt": "Приліжкова тумба Edge NSE"
+          },
+          {
+            "img": "edge_nse_promo_img_2.jpg",
+            "alt": "Приліжкова тумба Edge NSE"
+          },
+          {
+            "img": "edge_nse_promo_img_3.jpg",
+            "alt": "Приліжкова тумба Edge NSE"
+          }
+        ]
+      }
+    ],
+    "drawings": ["edge_nse_drawing_1.jpg", "edge_nse_drawing_2.jpg"],
+    "models": [{ "title": "Edge NSE", "file": "Lansot_Edge_NSE.zip" }],
+    "top": true
+  },
+  "verona-ns": {
+    "title": "Приліжкова тумба Verona NS",
+    "meta_description": "Приліжкова тумба Verona NS у мінімалістичному стилі",
+    "meta_keywords": "Приліжкова тумба, тумба, тумбочки в спальню",
+    "url": "verona-ns",
+    "category": "bedside-tables",
+    "collection": "verona",
+    "name": "Verona NS",
+    "sub": "Приліжкова тумба",
+    "description": "Вдале поєднання матеріалів, практичність та вишуканий дизайн, ідеально доповнить та підкреслить інтер'єр спальні.Місткі ящики з широким вибором декорів для фасаду і лаконічні ручки з металу надають унікальності тумбі приліжкової Verona NS.",
+    "cover": "verona_ns_cover.jpg",
+    "top_image": "verona_ns_top_image.jpg",
+    "start_price": "7,680",
+    "promo": [
+      {
+        "type": "col-1",
+        "images": [
+          {
+            "img": "verona_ns_promo_img_1.jpg",
+            "alt": "Мінімалістична тумба Verona NS в інтер'єрі"
+          }
+        ]
+      },
+      {
+        "type": "col-2",
+        "images": [
+          { "img": "verona_ns_promo_img_6.jpg", "alt": "Біла тумба Verona NS" },
+          { "img": "verona_ns_promo_img_9.jpg", "alt": "Біла тумба Verona NS" }
+        ]
+      },
+      {
+        "type": "col-3",
+        "images": [
+          {
+            "img": "verona_ns_promo_img_2.jpg",
+            "alt": "Приліжкова тумба Verona NS"
+          },
+          {
+            "img": "verona_ns_promo_img_4.jpg",
+            "alt": "Приліжкові тумби Verona NS"
+          },
+          {
+            "img": "verona_ns_promo_img_3.jpg",
+            "alt": "Приліжкова тумба Verona NS"
+          }
+        ]
+      }
+    ],
+    "drawings": [
+      "verona_ns_drawing_01.jpg",
+      "verona_ns_drawing_02.jpg",
+      "verona_ns_drawing_03.jpg",
+      "verona_ns_drawing_04.jpg"
+    ],
+    "models": [{ "title": "Verona NS", "file": "Lansot_Verona_NS.zip" }],
+    "top": true
+  },
+  "verona-3": {
+    "title": "Комод Verona 3",
+    "meta_description": "Дизайнерська комод Verona 3 у мінімалістичному стилі",
+    "meta_keywords": "дизайнерська комод, тумба, комод до спальні",
+    "url": "verona-3",
+    "category": "drawer-units",
+    "collection": "verona",
+    "name": "Verona 3",
+    "sub": "Комод",
+    "description": "Вдале поєднання матеріалів, практичність та вишуканий дизайн, ідеально доповнить та підкреслить інтер'єр спальні або вбиральні кімнати.Місткі ящики з широким вибором декорів для фасаду та лаконічні ручки з металу надають унікальності комоду.",
+    "cover": "verona_3_cover.jpg",
+    "top_image": "verona_3_top_image.jpg",
+    "start_price": "15,760",
+    "showroom": true,
+    "promo": [
+      {
+        "type": "col-1",
+        "images": [
+          { "img": "verona_3_promo_img_2.jpg", "alt": "Комод Verona 3 в шпоні" }
+        ]
+      },
+      {
+        "type": "col-1",
+        "images": [
+          { "img": "verona_3_promo_img_1.jpg", "alt": "Комод Verona 3" }
+        ]
+      }
+    ],
+    "drawings": ["verona_3_drawing_01.jpg", "verona_3_drawing_02.jpg"],
+    "models": [{ "title": "Verona 3", "file": "Lansot_Verona_3.zip" }],
+    "top": true
+  },
+  "grid-s": {
+    "title": "Стелаж Grid S",
+    "meta_description": "Сучасний стелаж Grid S у мінімалістичному стилі від Lansot",
+    "meta_keywords": "стелаж, поліці, книжкова шафа",
+    "url": "grid-s",
+    "collection": "grid",
+    "category": "shelves",
+    "name": "Grid S",
+    "sub": "Стелаж",
+    "description": "Grid S – це одна з модифікацій модульної системи книжкових шаф Grid на 4 полиці. Нижня секція може бути виконана у вигляді висувних ящиків або дверей. Полиці шафи можуть бути обладнані підсвіткою з сенсорним вимикачем.",
+    "cover": "grid-s_cover.jpg",
+    "top_image": "grid-s_top_image.jpg",
+    "start_price": "22,700",
+    "showroom": true,
+    "promo": [
+      {
+        "type": "col-1",
+        "images": [
+          { "img": "grid-s_promo_img_1.jpg", "alt": "Книжкова шафа, полиці" }
+        ]
+      }
+    ],
+    "drawings": ["grid-s_drawing_01.jpg", "grid-s_drawing_02.jpg"],
+    "models": [{ "title": "Grid S", "file": "Lansot_Grid-S.zip" }],
+    "top": true
+  },
+  "frank": {
+    "title": "Стіл Frank",
+    "meta_description": "Сучасний обідній стіл Frank у мінімалістичному стилі від Lansot",
+    "meta_keywords": "стіл, обідній стіл, стіл на кухню, сучасний стіл, стіл мінімалізм, стіл лофт",
+    "url": "frank",
+    "category": "tables",
+    "name": "Frank",
+    "sub": "Стіл",
+    "description": "Стіл Frank - це елегантне та практичне рішення для обідньої зони та робочих просторів. Класична форма в сучасному виконанні, яка ідеально впишеться в будь-який інтер'єр.",
+    "cover": "frank_cover.jpg",
+    "top_image": "frank_top_image.jpg",
+    "start_price": "15,580",
+    "showroom": true,
+    "promo": [
+      {
+        "type": "col-1",
+        "images": [
+          { "img": "frank_promo_img_1.jpg", "alt": "Стіл у вітальню з металу" }
+        ]
+      },
+      {
+        "type": "col-2",
+        "images": [
+          {
+            "img": "frank_promo_img_2.jpg",
+            "alt": "Стіл в чорному кольорі з металу"
+          }
+        ]
+      }
+    ],
+    "drawings": ["frank_drawing_01.jpg", "frank_drawing_02.jpg"],
+    "models": [{ "title": "Frank", "file": "Lansot_Frank.zip" }],
+    "top": true
+  },
+  "edge-ns": {
+    "title": "Приліжкова тумба Edge NS",
+    "meta_description": "Приліжкова тумба без ручок з шухлядою в стилі мінімалізм. Дизайнерські тумби до спальні.",
+    "meta_keywords": "Приліжкова тумба, меблі в спальню, тумбочка, тумба",
+    "url": "edge-ns",
+    "category": "bedside-tables",
+    "collection": "edge",
+    "name": "Edge NS",
+    "sub": "Приліжкова тумба",
+    "description": "Приліжкова тумба Edge NS – це поєднання мінімалістичного дизайну та практичності. Виступаючі краї тумби утворюють зручний контейнер зверху, а також додають виразних деталей формі тумби. Відкрита секція знизу дозволяє зберігати книги, журнали та інші медіа.",
+    "cover": "edge_ns_cover.jpg",
+    "top_image": "edge_ns_top_image.jpg",
+    "start_price": "7,020",
+    "showroom": true,
+    "time": "до 20 дней",
+    "promo": [
+      {
+        "type": "col-2",
+        "images": [
+          {
+            "img": "edge_ns_promo_img_6.jpg",
+            "alt": "Сучасна тумба Edge NS теракотового кольору в інтер'єрі"
+          },
+          {
+            "img": "edge_ns_promo_img_8.jpg",
+            "alt": "Біла тумба Edge NS без ручок"
+          }
+        ]
+      },
+      {
+        "type": "col-2",
+        "images": [
+          {
+            "img": "edge_ns_promo_img_12.jpg",
+            "alt": "Тумбочка з висувним ящиком в стилі мінімалізм"
+          },
+          {
+            "img": "edge_ns_promo_img_7.jpg",
+            "alt": "Тумба Edge NS без ручок з шухлядоюю в стилі мінімалізм"
+          }
+        ]
+      },
+      {
+        "type": "col-1",
+        "images": [
+          {
+            "img": "edge_ns_promo_img_13.jpg",
+            "alt": "Тумба Edge NS без ручок з шухлядоюю в стилі мінімалізм"
+          }
+        ]
+      }
+    ],
+    "drawings": ["edge_ns_drawing_01.jpg", "edge_ns_drawing_02.jpg"],
+    "models": [{ "title": "Edge NS", "file": "Lansot_Edge_NS.zip" }],
+    "top": true
+  },
+  "folio-dh": {
+    "title": "Комод Folio DH",
+    "meta_description": "Дизайнерська комод Folio DH в стилі мінімалізм",
+    "meta_keywords": "дизайнерська комод, тумба, комод до спальні",
+    "url": "folio-dh",
+    "category": "drawer-units",
+    "collection": "folio",
+    "name": "Folio DH",
+    "sub": "Комод",
+    "description": "Комод Folio DH — це тонкі грані корпусу, які надають легкості, а непомітні стики — монолітності конструкції. Різноманітні кольорові рішення, які здатні оживити будь-який простір.",
+    "cover": "folio_dh_cover.jpg",
+    "top_image": "folio_dh_top_image.jpg",
+    "start_price": "33,930",
+    "promo": [
+      {
+        "type": "col-1",
+        "images": [
+          {
+            "img": "folio_dh_promo_img_1.jpg",
+            "alt": "Сучасний комод Folio DH у спальні"
+          }
+        ]
+      },
+      {
+        "type": "col-2",
+        "images": [
+          {
+            "img": "folio_dh_promo_img_2.jpg",
+            "alt": "Приліжкова тумба Folio DH"
+          },
+          { "img": "folio_dh_promo_img_3.jpg", "alt": "Ручки для комоду" }
+        ]
+      },
+      {
+        "type": "col-1",
+        "images": [
+          {
+            "img": "folio_dh_promo_img_4.jpg",
+            "alt": "Серія комодів та тумб Folio"
+          }
+        ]
+      },
+      {
+        "type": "col-3",
+        "images": [
+          {
+            "img": "folio_dh_promo_img_5.jpg",
+            "alt": "Дизайнерський комод в червоному кольорі"
+          },
+          {
+            "img": "folio_dh_promo_img_7.jpg",
+            "alt": "Чорний дизайнерський комод з шухлядами"
+          },
+          {
+            "img": "folio_dh_promo_img_8.jpg",
+            "alt": "Білий комод на замовлення"
+          }
+        ]
+      }
+    ],
+    "drawings": ["folio_dh_drawing_01.jpg", "folio_dh_drawing_02.jpg"],
+    "models": [{ "title": "Folio DH", "file": "Lansot_Folio_DH6.zip" }],
+    "top": true
+  },
+  "folio-d": {
+    "title": "Приліжкова тумба Folio D",
+    "meta_description": "Приліжкова тумба з висувними ящиками Folio D у стилі мінімалізм",
+    "meta_keywords": "тумба, тумбочка, меблі в спальню, тумба біля ліжка, тумби дизайнерські",
+    "url": "folio-d",
+    "category": "bedside-tables",
+    "collection": "folio",
+    "name": "Folio D",
+    "sub": "Приліжкова тумба",
+    "description": "Приліжкова тумба з висувними ящиками Folio D — це тонкі грані корпусу, які надають легкості, а непомітні стики — монолітності конструкції. Різноманітні кольорові рішення, які здатні оживити будь-який простір.",
+    "cover": "folio_d_cover.jpg",
+    "top_image": "folio_d_top_image.jpg",
+    "start_price": "10,330",
+    "showroom": true,
+    "promo": [
+      {
+        "type": "col-1",
+        "images": [
+          {
+            "img": "folio_d_promo_img_5_1.jpg",
+            "alt": "Приліжкова тумба з висувними ящиками Folio D"
+          }
+        ]
+      },
+      {
+        "type": "col-2",
+        "images": [
+          {
+            "img": "folio_d_promo_img_2.jpg",
+            "alt": "Приліжкова тумба для спальні Folio D"
+          },
+          {
+            "img": "folio_d_promo_img_3.jpg",
+            "alt": "Біла приліжкова тумба Folio D"
+          }
+        ]
+      }
+    ],
+    "drawings": ["folio_d_drawing_01.jpg", "folio_d_drawing_02.jpg"],
+    "models": [{ "title": "Folio D", "file": "Lansot_Folio_D2.zip" }],
+    "top": true
+  },
+  "delta-t3": {
+    "title": "Тумба під ТВ Delta Type 3",
+    "meta_description": "Сучасна тумба під ТВ Delta Type 3 для вітальні в мінімалістичному стилі",
+    "meta_keywords": "дизайнерський комод, тумба, тумба у вітальні, тумба під тв",
+    "url": "delta-t3",
+    "collection": "delta",
+    "category": "single-units",
+    "name": "Delta Type 3",
+    "sub": "Тумба під ТВ",
+    "description": "Тумба Delta Type 3 - це стильний і практичний елемент меблів для вашої вітальні. Ця тумба обладнана трьома шухлядами для зберігання різних речей.",
+    "cover": "delta_t3_cover.jpg",
+    "top_image": "delta_t3_top_image.jpg",
+    "start_price": "17,160",
+    "showroom": true,
+    "promo": [
+      {
+        "type": "col-1",
+        "images": [
+          {
+            "img": "delta_t3_promo_img_2.jpg",
+            "alt": "Мінімалістична тумба під тв у вітальні в шпоні ебенового дерева"
+          }
+        ]
+      },
+      {
+        "type": "col-2",
+        "images": [
+          {
+            "img": "delta_t3_promo_img_5.jpg",
+            "alt": "Низька тумба Delta Type 3 з висувними шухлядами в шпоні американського горіха від Lansot"
+          },
+          {
+            "img": "delta_t3_promo_img_1.jpg",
+            "alt": "Тумба Delta Type 3 з висувними шухлядами від Lansot"
+          }
+        ]
+      },
+      {
+        "type": "col-1",
+        "images": [
+          {
+            "img": "delta_t3_promo_img_3.jpg",
+            "alt": "Дизайнерська тумба під тв від Lansot"
+          }
+        ]
+      }
+    ],
+    "drawings": ["delta_t3_drawing_01.jpg", "delta_t3_drawing_02.jpg"],
+    "models": [{ "title": "Delta Type 3", "file": "Lansot_Delta_T3.zip" }],
+    "top": true
+  },
+  "delta-t2": {
+    "title": "Тумба під ТВ Delta Type 2",
+    "meta_description": "Сучасна тумба під ТВ Delta Type 2 для вітальні в мінімалістичному стилі",
+    "meta_keywords": "дизайнерський комод, тумба, тумба у вітальні, тумба під тв",
+    "url": "delta-t2",
+    "collection": "delta",
+    "category": "single-units",
+    "name": "Delta Type 2",
+    "sub": "Тумба під ТБ",
+    "description": "Тумба Delta Type 2 - це стильний і практичний елемент меблів для вашої вітальні. Ця тумба обладнана шухлядами для зберігання різних речей і відкритою секцією для медіа.",
+    "cover": "delta_t2_cover.jpg",
+    "top_image": "delta_t2_top_image.jpg",
+    "start_price": "15,600",
+    "promo": [
+      {
+        "type": "col-1",
+        "images": [
+          {
+            "img": "delta_t2_promo_img_4.jpg",
+            "alt": "Тумба Delta Type 2 в шпоні дуба"
+          }
+        ]
+      },
+      {
+        "type": "col-2",
+        "images": [
+          {
+            "img": "delta_t2_promo_img_2.jpg",
+            "alt": "Тумба Delta Type 2 с шухлядами від Lansot"
+          },
+          {
+            "img": "delta_t2_promo_img_3.jpg",
+            "alt": "Тумба Delta Type 2 с шухлядами від Lansot"
+          }
+        ]
+      }
+    ],
+    "drawings": ["delta_t2_drawing_01.jpg", "delta_t2_drawing_02.jpg"],
+    "models": [{ "title": "Delta Type 2", "file": "Lansot_Delta_T2.zip" }],
+    "top": true
+  },
+  "folio-dv": {
+    "title": "Комод Folio DV",
+    "meta_description": "Мінімалістичний комод Folio DV у сучасному стилі",
+    "meta_keywords": "дизайнерський комод, тумба, комод у спальню, вертикальний комод",
+    "url": "folio-dv",
+    "category": "drawer-units",
+    "collection": "folio",
+    "name": "Folio DV",
+    "sub": "Комод",
+    "description": "Комод Folio DV — це тонкі грані корпусу, які надають легкості, а непомітні стики — монолітності конструкції. Різноманітні кольорові рішення, які здатні оживити будь-який простір.",
+    "cover": "folio_dv_cover.jpg",
+    "top_image": "folio_dv_top_image.jpg",
+    "start_price": "20,540",
+    "promo": [
+      {
+        "type": "col-2",
+        "images": [
+          {
+            "img": "folio_dv_3_1_2.jpg",
+            "alt": "Мінімалістичний комод Folio DV у червоному кольорі"
+          },
+          {
+            "img": "folio_dv_promo_2_2.jpg",
+            "alt": "Вертикальний комод із шухлядами Folio DV і приліжкова тумба Folio D2"
+          }
+        ]
+      }
+    ],
+    "drawings": ["folio_dv_drawing_01.jpg", "folio_dv_drawing_02.jpg"],
+    "models": [{ "title": "Folio DV", "file": "Lansot_Folio_DV6.zip" }],
+    "top": true
+  },
+  "theo": {
+    "title": "Журнальний столик - Theo",
+    "meta_description": "Журнальний столик Theo для вітальні або столик для ліжка в спальню",
+    "meta_keywords": "журнальний столик, кавовий столик, столик для ліжка",
+    "url": "theo",
+    "category": "coffee-tables",
+    "name": "Theo",
+    "sub": "Кавовий столик",
+    "description": "Журнальний столик Т-подібної форми Theo (Тео), характеризується простими та чистими формами та натуральними матеріалами стільниці. Металева опора з тонких трубок з фігурною поперечиною та стільниця конічної форми, яка гармонійно завершує композицію.",
+    "cover": "theo_cover.jpg",
+    "top_image": "theo_top_image.jpg",
+    "start_price": "7,500",
+    "showroom": true,
+    "promo": [
+      {
+        "type": "col-2",
+        "images": [
+          {
+            "img": "theo_promo_img_5.jpg",
+            "alt": "Кавовий столики Theo з натуральним шпоном у стилі мінімалізм від Лансот"
+          },
+          {
+            "img": "theo_promo_img_4.jpg",
+            "alt": "Журнальний столики Theo з натуральним шпоном американського горіха"
+          }
+        ]
+      },
+      {
+        "type": "col-1",
+        "images": [
+          {
+            "img": "theo_promo_img_1.jpg",
+            "alt": "Журнальні столики Theo з натуральним шпоном у стилі мінімалізм від Лансот"
+          }
+        ]
+      },
+      {
+        "type": "col-2",
+        "images": [
+          {
+            "img": "theo_promo_img_3.jpg",
+            "alt": "Кавовий столики Theo з натуральним шпоном у стилі мінімалізм від Лансот"
+          },
+          { "img": "theo_promo_img_2.jpg", "alt": "Журнальні столики Theo" }
+        ]
+      }
+    ],
+    "drawings": ["theo_drawing_01.jpg", "theo_drawing_02.jpg"],
+    "models": [{ "title": "Theo", "file": "Lansot_Theo.zip" }],
+    "top": true
+  },
+  "edge-stl": {
+    "title": "Тумба Edge STL",
+    "meta_description": "Тумба з 4 дверцятами для вітальні чи спальні. Мінімалістичний дизайн без ручок, внутрішні секції з полицями, дверцята з безшумним плавним закриванням.",
+    "meta_keywords": "тумба, тумба з дверцятами, сучасний дизайн, мінімалістичний стиль, меблі для вітальні, меблі для спальні, тумба без ручок, безшумні механізми, плавне закривання, зберігання речей, тумба з полицями, стильна тумба, практичні меблі",
+    "url": "edge-stl",
+    "category": "single-units",
+    "collection": "edge",
+    "name": "Edge STL",
+    "sub": "Тумба",
+    "description": "Тумба з чотирма дверцятами для вітальні або спальні. Виконана в сучасному мінімалістичному дизайні без ручок. Внутрішній простір поділений на дві секції з полицями. Дверцята оснащені безшумними механізмами з плавним закриванням.",
+    "cover": "edge_stl_cover.jpg",
+    "top_image": "edge_stl_top_image.jpg",
+    "start_price": "14,870",
+    "sku": "EST-1-160-44",
+    "promo": [
+      {
+        "type": "col-2",
+        "images": [
+          {
+            "img": "edge_stl_promo_img_4.jpg",
+            "alt": "Низька тумба Edge STL без ручок у стилі мінімалізм"
+          },
+          {
+            "img": "edge_stl_promo_img_1.jpg",
+            "alt": "Широка тумба з розпашними дверцятами Edge STL без ручок у стилі мінімалізм"
+          }
+        ]
+      },
+      {
+        "type": "col-2",
+        "images": [
+          {
+            "img": "edge_stl_promo_img_2.jpg",
+            "alt": "Тумба у вітальню Edge STL"
+          },
+          {
+            "img": "edge_stl_promo_img_3.jpg",
+            "alt": "Дизайнерська тумба для вітальні"
+          }
+        ]
+      },
+      {
+        "type": "col-1",
+        "images": [
+          { "img": "edge_stl_promo_img_5.jpg", "alt": "Тумба STL у вітальні" }
+        ]
+      }
+    ],
+    "drawings": ["edge_stl_drawing_01.jpg", "edge_stl_drawing_02.jpg"],
+    "models": [{ "title": "Edge STL", "file": "Lansot_Edge_STL.zip" }],
+    "top": true
+  },
+  "edge-lh": {
+    "title": "Тумба Edge LH",
+    "meta_description": "Тумба для вітальні з дверцятами на металевих ніжках в сучасному мінімалістичному стилі. Дизайнерська тумба без ручок.",
+    "meta_keywords": "тумба у вітальню, тумба під тв, тумба широка",
+    "url": "edge-lh",
+    "category": "single-units",
+    "collection": "edge",
+    "name": "Edge LH",
+    "sub": "Тумба",
+    "description": "Тумба для вітальні із серії Edge. Дві великі секції для зберігання приховані за дверцятами. Краї виступають вгору, утворюючи контейнер у верхній частині тумби.",
+    "cover": "edge_lh_cover.jpg",
+    "top_image": "edge_lh_top_image.jpg",
+    "start_price": "16,940",
+    "showroom": true,
+    "promo": [
+      {
+        "type": "col-1",
+        "images": [
+          {
+            "img": "edge_lh_promo_img_7.jpg",
+            "alt": "Червона дизайнерська тумба для вітальні на ніжках"
+          }
+        ]
+      },
+      {
+        "type": "col-2",
+        "images": [
+          {
+            "img": "edge_lh_promo_img_1.jpg",
+            "alt": "Широка тумба під TV у вітальню"
+          },
+          {
+            "img": "edge_lh_promo_img_3.jpg",
+            "alt": "Сучасна тумба на ніжках у вітальню"
+          }
+        ]
+      },
+      {
+        "type": "col-3",
+        "images": [
+          {
+            "img": "edge_lh_promo_img_4.jpg",
+            "alt": "Чорна дизайнерська тумба для вітальні на ніжках"
+          },
+          {
+            "img": "edge_lh_promo_img_5.jpg",
+            "alt": "Тумба під тв на ніжках у стилі мінімалізм"
+          },
+          {
+            "img": "edge_lh_promo_img_6.jpg",
+            "alt": "Біла дизайнерська тумба на ніжках у стилі мінімалізм"
+          }
+        ]
+      }
+    ],
+    "drawings": ["edge_lh_drawing_01.jpg", "edge_lh_drawing_02.jpg"],
+    "models": [{ "title": "Edge LH", "file": "Lansot_Edge_LH.zip" }],
+    "top": true
+  },
+  "edge-ll": {
+    "title": "Тумба Edge LL",
+    "meta_description": "Широка тумба для вітальні з висувними ящиками на металевих ніжках у сучасному мінімалістичному стилі. Дизайнерська тумба без ручок.",
+    "meta_keywords": "тумба у вітальню, тумба під тв, тумба широка, тумба з ящиками",
+    "url": "edge-ll",
+    "category": "single-units",
+    "collection": "edge",
+    "name": "Edge LL",
+    "sub": "Тумба",
+    "description": "Широка тумба з шухлядами на металевих ніжках. Бортики створюють форму контейнера зверху тумби, а також, це важливий естетичний елемент, який додає меблів виразності.",
+    "cover": "edge_ll_cover.jpg",
+    "top_image": "edge_ll_top_image.jpg",
+    "start_price": "13,520",
+    "promo": [
+      {
+        "type": "col-1",
+        "images": [
+          {
+            "img": "edge-ll-interior_01_c.jpg",
+            "alt": "Тумба для вітальні під ТВ на ніжках Edge LL"
+          }
+        ]
+      },
+      {
+        "type": "col-2",
+        "images": [
+          {
+            "img": "edge-ll-interior_02_2.jpg",
+            "alt": "Тумба для вітальні з висувними ящиками Edge LL"
+          },
+          {
+            "img": "edge_ll_promo_img_9.jpg",
+            "alt": "Тумби на ніжках у стилі мінімалізм"
+          }
+        ]
+      },
+      {
+        "type": "col-2",
+        "images": [
+          {
+            "img": "edge_ll_promo_img_10.jpg",
+            "alt": "Шпонована тумба для вітальні на ніжках"
+          },
+          {
+            "img": "edge_ll_promo_img_11.jpg",
+            "alt": "Дизайнерська тумба для вітальні на ніжках"
+          }
+        ]
+      }
+    ],
+    "drawings": ["edge_ll_drawing_01.jpg", "edge_ll_drawing_03.jpg"],
+    "models": [{ "title": "Edge LL", "file": "Lansot_Edge_LL.zip" }],
+    "top": true
+  },
+  "edge-wml": {
+    "title": "Тумба Edge WML",
+    "meta_description": "Широка підвісна тумба для вітальні з висувними ящиками в сучасному мінімалістичному стилі. Дизайнерська підвісна тумба без ручок.",
+    "meta_keywords": "тумба у вітальню, тумба під тв, тумба широка, тумба з ящиками, підвісна тумба",
+    "url": "edge-wml",
+    "category": "single-units",
+    "collection": "edge",
+    "name": "Edge WML",
+    "sub": "Підвісна тумба",
+    "description": "Підвісна тумба з висувними ящиками. Бортики створюють форму контейнера зверху тумби, а також, це важливий естетичний елемент, який додає меблів виразності.",
+    "cover": "edge_wml_cover.jpg",
+    "top_image": "edge_wml_top_image.jpg",
+    "start_price": "12,170",
+    "showroom": true,
+    "promo": [
+      {
+        "type": "col-2",
+        "images": [
+          {
+            "img": "edge_wml_promo_img_1.jpg",
+            "alt": "Біла підвісна тумба у вітальні"
+          },
+          {
+            "img": "edge_wml_promo_img_2.jpg",
+            "alt": "Широка підвісна тумба в чорному кольорі"
+          }
+        ]
+      },
+      {
+        "type": "col-1",
+        "images": [
+          {
+            "img": "edge_wml_promo_img_3.jpg",
+            "alt": "Дизайнерська чорна підвісна тумба в стилі мінімалізм"
+          }
+        ]
+      },
+      {
+        "type": "col-2",
+        "images": [
+          {
+            "img": "edge_wml_promo_img_4.jpg",
+            "alt": "Біла дизайнерська тумба для вітальні з висувними шухлядами"
+          },
+          {
+            "img": "edge_wml_promo_img_5.jpg",
+            "alt": "Біла дизайнерська тумба для вітальні з висувними шухлядами"
+          }
+        ]
+      }
+    ],
+    "drawings": ["edge_wml_drawing_01.jpg", "edge_wml_drawing_02.jpg"],
+    "models": [{ "title": "Edge WML", "file": "Lansot_Edge_WML.zip" }],
+    "top": true
+  },
+  "quatro2": {
+    "title": "Журнальний столик Quatro 2",
+    "meta_description": "Журнальний столик для вітальні Quatro 2 під замовлення. Кавовий столик або приліжковий столик для спальні.",
+    "meta_keywords": "журнальний столик, дизайнерський столик, кавовий столик, столик приліжковий, столик для вітальній, металевий столик",
+    "url": "quatro2",
+    "category": "coffee-tables",
+    "name": "Quatro 2",
+    "sub": "Журнальні столики",
+    "description": "Журнальний столик Quatro 2 - це проста прямокутна форма, що стала вже класикою в інтер'єрах у стилі мінімалізм. Металева опора з тонких трубок та стільниця прямокутної форми.",
+    "cover": "quatro2_cover.jpg",
+    "top_image": "quatro2_top_image.jpg",
+    "start_price": "6,080",
+    "showroom": true,
+    "promo": [
+      {
+        "type": "col-1",
+        "images": [
+          {
+            "img": "quatro_promo_2_3_f.jpg",
+            "alt": "Журнальний столик Quatro 2 для вітальні"
+          }
+        ]
+      },
+      {
+        "type": "col-2",
+        "images": [
+          {
+            "img": "quatro2_promo_img_3.jpg",
+            "alt": "Журнальний столик на металевих ніжках"
+          },
+          {
+            "img": "quatro2_promo_img_4.jpg",
+            "alt": "Приліжковий столик на металевих ніжках"
+          }
+        ]
+      }
+    ],
+    "drawings": [
+      "quatro2_drawing_01.jpg",
+      "quatro2_drawing_02.jpg",
+      "quatro2_drawing_03.jpg"
+    ],
+    "models": [{ "title": "Quatro 2", "file": "Lansot_Quatro_2.zip" }],
+    "top": true
+  }
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "title": { "uk": "Мінімалізм у дизайні", "en": "Minimalism in design" },
+    "meta": {
+      "description": { "uk": "Опис статті 1", "en": "Description of article 1" },
+      "keywords": { "uk": "ключові слова статті 1", "en": "keywords of article 1" }
+    },
+    "preview": { "uk": "Ми створюємо меблі з чистими лініями та продуманими формами, які гармонійно доповнюють будь-який інтер’єр.", "en": "We create furniture with clean lines and thoughtful shapes that harmoniously complement any interior." },
+    "content": { "uk": "Контент статті 1", "en": "Content of article 1" },
+    "link": "article-1"
+  },
+  {
+    "id": 2,
+    "title": { "uk": "Article 2", "en": "Article 2" },
+    "meta": {
+      "description": { "uk": "Опис статті 2", "en": "Description of article 2" },
+      "keywords": { "uk": "ключові слова статті 2", "en": "keywords of article 2" }
+    },
+    "preview": { "uk": "Короткий опис статті 2", "en": "Short description of article 2" },
+    "content": { "uk": "Контент статті 2", "en": "Content of article 2" },
+    "link": "article-2"
+  },
+  {
+    "id": 3,
+    "title": { "uk": "Article 3", "en": "Article 3" },
+    "meta": {
+      "description": { "uk": "Опис статті 3", "en": "Description of article 3" },
+      "keywords": { "uk": "ключові слова статті 3", "en": "keywords of article 3" }
+    },
+    "preview": { "uk": "Короткий опис статті 3", "en": "Short description of article 3" },
+    "content": { "uk": "Контент статті 3", "en": "Content of article 3" },
+    "link": "article-3"
+  }
+]

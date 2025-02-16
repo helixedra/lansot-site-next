@@ -1,0 +1,36 @@
+.radio_selector {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 0.5rem 0;
+}
+.group_title {
+  font-size: 1rem;
+  min-width: 220px;
+}
+.group_container {
+  display: flex;
+  gap: 1rem;
+}
+.group_item {
+  display: flex;
+  gap: 0.5rem;
+  width: 28px;
+}
+.item {
+  color: grey;
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid rgb(231, 231, 231);
+}
+
+.selected {
+  font-weight: 600;
+  color: #000;
+  border-bottom: none;
+}

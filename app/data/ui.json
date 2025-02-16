@@ -1,0 +1,61 @@
+{
+  "global": {
+    "configure": { "uk": "Конфігуратор", "en": "Configurator" },
+    "read_more": { "uk": "Читати", "en": "Read More" },
+    "see_more": { "uk": "Детальніше", "en": "See More" },
+    "read_less": { "uk": "Згорнути", "en": "Collapse" },
+    "showroom": { "uk": "Наявний в шоурумі", "en": "Available in showroom" },
+    "from": { "uk": "Від", "en": "From" },
+    "price_tooltip": { "uk": "Ціна вказана для базової комплектації в мінімальних габаритах. Остаточна вартість може відрізнятися в залежності від вибраних опцій.", "en": "The price is listed for the basic option in the minimum dimensions. Final cost may vary based on customization or additional features." },
+    "currency": { "uk": "грн.", "en": "uah" },
+    "request_price": { "uk": "Запросити прорахунок", "en": "Request Price" },
+    "request_price_subheading": { "uk": "Натисніть щоб надіслати запит у месенджер", "en": "Click to send a request via messenger" },
+    "how_to_buy": { "uk": "Як замовити?", "en": "How to buy?" },
+    "or": { "uk": "або", "en": "or" },
+    "articles": { "uk": "Статті", "en": "Articles" }
+  },
+  "form": {
+    "name": { "uk": "Ім'я", "en": "Name" },
+    "phone": { "uk": "Телефон", "en": "Phone" },
+    "email": { "uk": "Email", "en": "Email" },
+    "message": { "uk": "Повідомлення", "en": "Message" },
+    "submit": { "uk": "Надіслати", "en": "Send" }
+  },
+  "product_page": {
+    "specifications": {
+      "uk": "Технічні характеристики",
+      "en": "Specifications"
+    },
+    "models": { "uk": "3D моделі", "en": "3D models" },
+    "ask_price": { "uk": "Запросити прорахунок", "en": "Request price" },
+    "width": { "uk": "Ширина (см)", "en": "Width (cm)" },
+    "height": { "uk": "Висота (см)", "en": "Height (cm)" },
+    "depth": { "uk": "Глибина (см)", "en": "Depth (cm)" },
+    "price": { "uk": "Ціна", "en": "Price" },
+    "face_material": {
+      "uk": "Матеріал лицевих панелей",
+      "en": "Face material"
+    },
+    "back_material": { "uk": "Матеріал інших панелей", "en": "Back material" },
+    "doors_material": { "uk": "Матеріал наповнення", "en": "Inside material" },
+    "doors_color": { "uk": "Колір наповнення", "en": "Inside color" },
+    "doors_type": { "uk": "Тип наповнення", "en": "Inside type" }
+  },
+
+  "cart": {
+    "title": { "uk": "Кошик", "en": "Cart" },
+    "remove": { "uk": "Видалити", "en": "Remove" },
+    "add": { "uk": "Додати", "en": "Add" },
+    "remove_all": { "uk": "Видалити все", "en": "Remove all" },
+    "total": { "uk": "Загальна сума", "en": "Total" },
+    "checkout": { "uk": "Оформити замовлення", "en": "Checkout" },
+    "close": { "uk": "Закрити", "en": "Close" },
+    "qty": { "uk": "Кількість", "en": "Qty" },
+    "price": { "uk": "Ціна", "en": "Price" },
+    "add_to_cart": { "uk": "Додати до кошика", "en": "Add to cart" }
+  },
+  "how_to_buy": {
+    "uk": "<p>Оформити замовлення можна онлайн <strike>або у нас в офісі за адресою: Київ, вул. Туманяна, 1</strike> <i>(шоурум тимчасово зачинений)</i></p><p>Оформлення замовлення здійснюється тільки за умови <b>повної (100%) оплати</b> рахунку.</p><p>Для оформлення замовлення онлайн, зв'яжіться з нашим менеджером за телефоном <b><a href='tel:+380971122616'>+38 097 112 26 16</a></b> або через месенджери для узгодження всіх деталей.</p>",
+    "en": "<p>You can place an order online <strike>or in our office at: Kyiv, Tumanyana St., 1</strike> <i>(showroom is temporarily closed)</i></p><p>Orders are processed only with <b>full (100%) payment</b> of the invoice.</p><p>To place an order online, contact our manager by phone <b><a href='tel:+380971122616'>+38 097 112 26 16</a></b> or via messengers to agree on all the details.</p>"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "products": {
+    "uk": {
+      "name": "Каталог",
+      "url": "/uk/products"
+    },
+    "en": {
+      "name": "Products",
+      "url": "/en/products"
+    }
+  },
+  "finishes": {
+    "uk": {
+      "name": "Матеріали",
+      "url": "/uk/finishes"
+    },
+    "en": {
+      "name": "Finishes",
+      "url": "/en/finishes"
+    }
+  },
+  "delivery": {
+    "uk": {
+      "name": "Оплата і доставка",
+      "url": "/uk/delivery"
+    },
+    "en": {
+      "name": "Delivery",
+      "url": "/en/delivery"
+    }
+  },
+  "about": {
+    "uk": {
+      "name": "Про нас",
+      "url": "/uk/about"
+    },
+    "en": {
+      "name": "About",
+      "url": "/en/about"
+    }
+  },
+  "contacts": {
+    "uk": {
+      "name": "Контакти",
+      "url": "/uk/contacts"
+    },
+    "en": {
+      "name": "Contacts",
+      "url": "/en/contacts"
+    }
+  }
+}

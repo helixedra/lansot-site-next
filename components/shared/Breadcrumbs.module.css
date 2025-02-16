@@ -1,0 +1,24 @@
+.breadcrumbs_container {
+  display: flex;
+  align-items: center;
+}
+.breadcrumbs_list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.breadcrumbs_list_item {
+  margin-right: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-dark-50);
+}
+.breadcrumbs_list_item::before {
+  content: "/";
+  margin-right: 0.5rem;
+}
+.breadcrumbs_list_item:first-child::before {
+  content: "";
+  margin-right: 0;
+}

@@ -1,0 +1,26 @@
+.product_card {
+  /* margin-left: 24px; */
+  margin-bottom: 48px;
+  /* padding   : 16px; */
+  text-align: center;
+}
+
+.product_card > a > img {
+  width: 100%;
+}
+
+.product_card_name {
+  font-size: 22px;
+  font-weight: 500;
+  z-index: 90;
+  position: relative;
+}
+
+.product_sub {
+  font-weight: 400;
+  color: #9c9c9c;
+  font-size: 14px;
+  margin-top: -32px;
+  z-index: 90;
+  position: relative;
+}

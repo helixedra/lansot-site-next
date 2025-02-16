@@ -1,0 +1,171 @@
+{
+  "products": {
+    "uk": {
+      "name": "Всі товари",
+      "url": "",
+      "category_description": "<p>Всі товари</p>",
+      "meta": {
+        "title": "Всі товари",
+        "description": "Всі товари",
+        "keywords": "Всі товари",
+        "robots": true
+      }
+    },
+    "en": {
+      "name": "All Products",
+      "url": "",
+      "category_description": "<p>All Products</p>",
+      "meta": {
+        "title": "All Products",
+        "description": "All Products",
+        "keywords": "All Products",
+        "robots": true
+      }
+    }
+  },
+  "drawer-units": {
+    "uk": {
+      "name": "Комоди",
+      "url": "drawer-units",
+      "category_description": "<p>Комоди Lansot — це сучасні та функціональні меблі для зберігання речей. Прототипом комода був звичайний сундук, але в XVIII столітті він набув сучасних рис завдяки додаванню шухляд. Сьогодні комод можна зустріти не лише у спальні, але й у вітальні, на кухні або навіть в офісах, де його шухляди забезпечують зручний доступ до документів та дрібних речей.</p><p>Сучасні комоди обладнані високоякісною фурнітурою, що робить їх експлуатацію зручною та безшумною. Корпуси виготовляються з МДФ або ДСП, що забезпечує надійність за доступною ціною. У каталозі Lansot ви знайдете різні моделі: широкі, вузькі, тумби з шухлядами та на ніжках.</p><p>Ви можете замовити комод у різних кольорах і стилях, а також тумбу в спальню, що відповідає останнім тенденціям дизайну. Купити комод у нас — це вибір якості та довговічності.</p>",
+      "meta": {
+        "title": "Комоди",
+        "description": "Сучасні тумби та комоди в стилі мінімалізм. Високий рівень виконання та якісні матеріали. Різні системи відкривання та гнучкі розмірні сітки.",
+        "keywords": "каталог тумб, тумба приліжкова, тумба під тв, тумба в спальню, комод, комод у спальню",
+        "robots": true
+      }
+    },
+    "en": {
+      "name": "Drawers",
+      "url": "drawer-units",
+      "category_description": "<p>Drawers Lansot — this is a modern and functional furniture for storing things. The prototype of the drawer was a simple chest, but in the 18th century it acquired modern features thanks to the addition of shelves. Today, the drawer can be found not only in the bedroom, but also in the living room, kitchen or even in offices, where its shelves provide convenient access to documents and small items.</p><p>Modern drawers are equipped with high-quality furniture, which makes their operation convenient and silent. The cabinets are made of MDF or MDF, which ensures reliability at an affordable price. In the Lansot catalog you will find various models: wide, narrow, drawers and on legs.</p><p>You can order a drawer in different colors and styles, as well as a bedside table that meets the latest design trends. Buy a drawer from us — this is a choice of quality and durability.</p>",
+      "meta": {
+        "title": "Drawers",
+        "description": "Modern drawers and cabinets in the style of minimalism. High level of execution and high-quality materials. Various opening systems and flexible size grids.",
+        "keywords": "catalog of drawers, bedside table, drawer under the TV, drawer in the bedroom, drawer, drawer in the bedroom",
+        "robots": true
+      }
+    }
+  },
+  "tables": {
+    "uk": {
+      "name": "Столи",
+      "url": "tables",
+      "category_description": "<p>Обідні та письмові столи є ключовими елементами будь-якого інтер'єру. Обідній стіл — це центр дому, де збирається вся сім'я для спільних трапез та чаювань. Він створює атмосферу затишку та єдності, незалежно від того, де знаходиться: в їдальні, на кухні чи у вітальні. Без нього складно уявити повноцінний сімейний відпочинок.</p><p>Для творчих та професійних задач незамінним стане письмовий стіл. Він не просто елемент меблів, а важливий інструмент, що впливає на продуктивність. Від його якості та зручності залежить комфорт під час роботи.</p><p>Ми приділяємо особливу увагу вибору матеріалів та фурнітури, щоб наші столи були не тільки міцними, але й естетичними. Мінімалістичний дизайн, стримана кольорова палітра та прості форми дозволяють їм гармонійно вписуватися в будь-який інтер'єр. Обирайте наші столи для дому та роботи, щоб створити зручний і стильний простір.</p>",
+      "meta": {
+        "title": "Столи",
+        "description": "Обідні та письмові столи для дому та офісу в стилі мінімалізм. Гнучкі розмірні сітки та широкий вибір матеріалів і оздоблень.",
+        "keywords": "письмовий стіл, обідній стіл, стіл офісний, стіл на кухню",
+        "robots": true
+      }
+    },
+    "en": {
+      "name": "Tables",
+      "url": "tables",
+      "category_description": "<p>Dining and writing tables are key elements of any interior. The dining table is the center of the home, where the whole family gathers for meals and tea. It creates a cozy and unified atmosphere, regardless of its location: in the dining room, kitchen, or living room. Without it, it is difficult to imagine a complete family vacation.</p><p>For creative and professional tasks, the writing table is indispensable. It is not just a furniture element, but an important tool that influences productivity. The quality and convenience of the writing table directly affect comfort during work.</p><p>We pay special attention to the choice of materials and furniture, so that our tables are not only strong, but also aesthetic. The minimalist design, restrained color palette and simple forms allow them to harmoniously fit into any interior. Choose our tables for home and work to create a comfortable and stylish space.</p>",
+      "meta": {
+        "title": "Tables",
+        "description": "Dining and writing tables for home and office in the style of minimalism. Flexible size grids and a wide choice of materials and finishes.",
+        "keywords": "writing table, dining table, office table, table for the kitchen",
+        "robots": true
+      }
+    }
+  },
+  "shelves": {
+    "uk": {
+      "name": "Стелажі та полиці",
+      "url": "shelves",
+      "category_description": "<p>Один із найзручніших і найпопулярніших обладнань для зберігання речей - це шафа або стелаж. Їх використовують скрізь, де потрібно зберігати речі. Від промислових складів до житлових і офісних приміщень.</p><p>Стелаж є конструкцією з полиць закріплених на вертикальних опорах. Головна перевага стелажів і полиць - відкритість. Завдяки цьому приміщення виглядає просторим і освітленим. На полицях зберігаються книги або декоративні предмети, які прикрашають інтер'єр. </p><p>У ситуації, коли вам потрібно заховати з поля зору якісь предмети, використовують шафи з непрозорими дверцятами. Часто подібні вироби вбудовують у ніші в стіні, щоб не порушувати геометрію кімнати. Іноді для зонування приміщення дизайнери використовують стелажі зі сполками або шафи.</p><p>У нашому каталозі представлені різні типи та кольори систем для зберігання. Модульні шафи, стелажі, що окремо стоять, і підвісні полиці. Ми ретельно продумуємо конструкцію і підбираємо матеріали, щоб відповідати останнім тенденціям інтер'єрного дизайну.</p>",
+      "meta": {
+        "title": "Стелажі та полиці",
+        "description": "Книжкові стелажі та полиці в сучасному мінімалістичному стилі. Вбудовувані та підвісні полиці з дерева та металу.",
+        "keywords": "стелаж, полиці, книжкові полиці, книжковий стелаж, дизайнерські полиці, стелаж мінімалізм",
+        "robots": true
+      }
+    },
+    "en": {
+      "name": "Shelves",
+      "url": "shelves",
+      "category_description": "<p>One of the most convenient and popular storage solutions is a wardrobe or shelf. They are used everywhere where you need to store things. From industrial warehouses to residential and office spaces.</p><p>A shelf is a structure with shelves attached to vertical supports. The main advantage of shelves and cabinets is openness. Thanks to this, the room looks spacious and bright. Books or decorative items are stored on the shelves, which decorate the interior.</p><p>In situations where you need to hide certain objects from view, use wardrobes with opaque doors. Often such products are built into niches in the wall to not disrupt the room's geometry. Sometimes designers use shelves with shelves or wardrobes to zone the room.</p><p>In our catalog, we offer various types and colors of storage systems. Modular wardrobes, free-standing shelves, and suspended shelves. We carefully think through the design and choose materials to meet the latest trends in interior design.</p>",
+      "meta": {
+        "title": "Shelves",
+        "description": "Book shelves and shelves in a modern minimalist style. Built-in and suspended shelves made of wood and metal.",
+        "keywords": "shelf, shelves, book shelves, book shelf, designer shelves, minimalist shelf",
+        "robots": true
+      }
+    }
+  },
+  "coffee-tables": {
+    "uk": {
+      "name": "Журнальні столи",
+      "url": "coffee-tables",
+      "category_description": "<p>Журнальний стіл - функціональний і стильний атрибут сучасного інтер'єру, що надає йому індивідуального характеру. Їх використовують у житлових і офісних приміщеннях, на балконах, терасах тощо. Журнальний столик - незамінний предмет меблів вітальні в стилі мінімалізм. Вони слугують місцем зберігання пультів, журналів і книжок, інших побутових дрібниць.</p> <p>Приліжкові столики використовують для зберігання окулярів, книжок, гаджетів та інших предметів у спальні. Часто їх використовують замість приліжкової тумби.</p> <p>Кавовий столик, як і журнальні, справляється з безліччю корисних завдань. Вони вищі за приліжкові та журнальні столики і ставляться поруч із диваном або кріслом у вітальні. Кавовий столик організовує простір для легких перекусів і чаювань.</p> <p>Сучасні інтер'єрні столики виготовляють із різних матеріалів: скла, дерева, з елементами металу та каменю. Довговічність меблів багато в чому залежить від правильної експлуатації та грамотного догляду.</p> <p>Наша компанія виробляє меблі у вітальню в стилі мінімалізм. Представлені в каталозі моделі позбавлені надмірних деталей, тому підходять для більшості інтер'єрних рішень. </p> <p>Наша продукція має різні габарити і конфігурації, щоб задовольнити запити найвимогливіших клієнтів. </p> <p>Інтер'єр засяє новими фарбами, якщо прикрасити його букетом квітів, поставленим на журнальний столик, а ранок стане по-справжньому бадьорим із чашкою запашної кави на кавовому столі.</p>",
+      "meta": {
+        "title": "Журнальні столи",
+        "description": "Кавові та журнальні столики в сучасному мінімалістичному стилі. Гнучкі розмірні сітки та широкий вибір матеріалів і оздоблень.",
+        "keywords": "дизайнерський столик, приліжковий столик, журнальний стіл, журнальні столики",
+        "robots": true
+      }
+    },
+    "en": {
+      "name": "Coffee tables",
+      "url": "coffee-tables",
+      "category_description": "<p>Coffee tables are a functional and stylish attribute of modern interiors, giving them a unique character. They are used in residential and office spaces, balconies, terraces, etc. The coffee table is an indispensable piece of furniture in the living room in the style of minimalism. They serve as storage for remote controls, magazines, books, and other household items.</p>",
+      "meta": {
+        "title": "Coffee tables",
+        "description": "Coffee and writing tables in a modern minimalist style. Flexible size grids and a wide choice of materials and finishes.",
+        "keywords": "designer table, bedside table, writing table, coffee table",
+        "robots": true
+      }
+    }
+  },
+  "single-units": {
+    "uk": {
+      "name": "Тумби для вітальні",
+      "url": "single-units",
+      "category_description": "<p>Тумби для вітальні — це поєднання сучасного мінімалізму та високої якості. Завдяки власному виробництву, ми пропонуємо стильні та функціональні рішення для вашого інтер'єру. Наші тумби ідеально підходять для зберігання техніки, книг або декору, створюючи затишок та порядок у вітальні. В асортименті сучасні мінімалістичні меблі, що відповідають актуальним трендам і вимогам зручності. Ви можете замовити тумбу індивідуального дизайну, яка гармонійно впишеться у ваш простір. Обирайте тумби для вітальні від Lansot — стиль та функціональність у кожній деталі.</p>",
+      "meta": {
+        "title": "Тумби для вітальні",
+        "description": "Сучасні тумби для вітальні в стилі мінімалізм. Високий рівень виконання та якісні матеріали. Різні системи відкривання та гнучкі розмірні сітки.",
+        "keywords": "дизайнерська тумба, тумби для вітальні, тумба, тумба під тв",
+        "robots": true
+      }
+    },
+    "en": {
+      "name": "Single units",
+      "url": "single-units",
+      "category_description": "<p>Single units are a stylish and practical furniture element for your bedroom. They provide convenient storage for items such as books, phones, or lamps, always within reach. In our catalog, we offer designer bedside tables that combine functionality and modern design. Choose bedside tables made of different materials and styles to perfectly complement your interior. Buy bedside tables for the bedroom that create comfort and coziness in your home.</p>",
+      "meta": {
+        "title": "Single units",
+        "description": "Single units for the bedroom in the style of minimalism. High level of execution and high-quality materials. Various opening systems and flexible size grids.",
+        "keywords": "designer single units, single units, single units in the bedroom",
+        "robots": true
+      }
+    }
+  },
+
+  "bedside-tables": {
+    "uk": {
+      "name": "Приліжкові тумби",
+      "url": "bedside-tables",
+      "category_description": "<p>Приліжкові тумби — це стильний і практичний елемент меблів для вашої спальні. Вони забезпечують зручне зберігання речей, таких як книги, телефон чи лампа, завжди під рукою. У нашому асортименті представлені дизайнерські тумби, які поєднують в собі функціональність та сучасний дизайн. Вибирайте приліжкові тумбочки з різних матеріалів і стилів, щоб ідеально доповнити ваш інтер'єр. Купуйте тумби в спальню, які створять комфорт і затишок у вашій оселі.</p>",
+      "meta": {
+        "title": "Приліжкові тумби",
+        "description": "Приліжкові тумбочки для спальні в стилі мінімалізм. Високий рівень виконання та якісні матеріали. Різні системи відкривання та гнучкі розмірні сітки.",
+        "keywords": "дизайнерская тумбы, прикроватные тумбочки, тумбы в спальню",
+        "robots": true
+      }
+    },
+    "en": {
+      "name": "Bedside tables",
+      "url": "bedside-tables",
+      "category_description": "<p>Bedside tables are a stylish and practical furniture element for your bedroom. They provide convenient storage for items such as books, phones, or lamps, always within reach. In our catalog, we offer designer bedside tables that combine functionality and modern design. Choose bedside tables made of different materials and styles to perfectly complement your interior. Buy bedside tables for the bedroom that create comfort and coziness in your home.</p>",
+      "meta": {
+        "title": "Bedside tables",
+        "description": "Bedside tables for the bedroom in the style of minimalism. High level of execution and high-quality materials. Various opening systems and flexible size grids.",
+        "keywords": "designer bedside tables, bedside tables, bedside tables in the bedroom",
+        "robots": true
+      }
+    }
+  }
+}
