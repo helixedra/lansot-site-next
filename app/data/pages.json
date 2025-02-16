@@ -143,6 +143,7 @@
     "uk": {
       "name": "Оплата та доставка",
       "title": "Оплата та доставка",
+      "subtitle": "Умови оплати замовлення та доставки меблів",
       "meta": {
         "title": "Оплата та доставка",
         "description": "Інформація про оплату та доставку",
@@ -151,10 +152,7 @@
       "info": {
         "payment": {
           "title": "Оплата",
-          "description": [
-            "Оформлення замовлення здійснюється тільки за умови <strong>повної (100%) оплати</strong> рахунку.",
-            "Оплата здійснюється тільки в національній валюті (грн.) на розрахунковий рахунок."
-          ]
+          "description": ["Оформлення замовлення здійснюється тільки за умови <strong>повної (100%) оплати</strong> рахунку.", "Оплата здійснюється тільки в національній валюті (грн.) на розрахунковий рахунок."]
         },
         "delivery": {
           "title": "Доставка",
@@ -171,6 +169,7 @@
     "en": {
       "name": "Payment and Delivery",
       "title": "Payment and Delivery",
+      "subtitle": "Information about payment and delivery",
       "meta": {
         "title": "Payment and Delivery",
         "description": "Information about payment and delivery",
@@ -179,10 +178,7 @@
       "info": {
         "payment": {
           "title": "Payment",
-          "description": [
-            "Order processing is carried out only upon <strong>full (100%) payment</strong> of the invoice.",
-            "Payment is made only in the national currency (UAH) to the current account."
-          ]
+          "description": ["Order processing is carried out only upon <strong>full (100%) payment</strong> of the invoice.", "Payment is made only in the national currency (UAH) to the current account."]
         },
         "delivery": {
           "title": "Delivery",
@@ -202,7 +198,7 @@
       "title": "Про нас",
       "subtitle": "Сучасні інтер'єрні рішення в стилі мінімалізму",
       "content_p1": "<p>Якість та турбота про клієнта – головні цінності нашого бренду. Ми створюємо меблі, що відповідають високим стандартам, поєднуючи сучасний дизайн із практичністю. Мінімалізм, який не втрачає актуальності з часом, – основа наших колекцій.</p>",
-      "content_p2": "<p>Ми спеціалізуємося на меблях для зберігання: стильні комоди та тумби для спальні й вітальні, зручні обідні та письмові столи для дому та офісу, а також журнальні столики, полиці та стелажі для книг. Кожна модель розроблена з урахуванням ергономіки, тому ідеально пасує як для компактних квартир, так і для просторих заміських будинків.</p><p>Ми постійно вдосконалюємо наші продукти, щоб ви були впевнені у їхній якості, безпеці та надійності.</p>",
+      "content_p2": "<p>Ми спеціалізуємося на меблях для зберігання: стильні комоди та тумби, обідні та письмові столи, журнальні столики, полиці та стелажі. Усі моделі створені з урахуванням ергономіки та підходять як для компактних квартир, так і для просторих будинків. Ми постійно вдосконалюємо наші продукти, щоб вони були зручними, надійними та безпечними.</p>",
       "features": [
         {
           "title": "Мінімалізм у дизайні",
@@ -226,6 +222,7 @@
           "text": "Ми слідкуємо за новими тенденціями в дизайні, щоб пропонувати сучасні та функціональні рішення для вашої оселі."
         }
       ],
+
       "meta": {
         "title": "Про нас",
         "description": "Про нас",
@@ -236,7 +233,7 @@
       "title": "About Us",
       "subtitle": "Modern interior solutions in the style of minimalism",
       "content_p1": "<p>Quality and customer care are the main values of our brand. We create furniture that meets high standards, combining modern design with practicality. Minimalism that does not lose relevance over time is the basis of our collections.</p>",
-      "content_p2": "<p>We specialize in storage furniture: stylish chests of drawers and bedside tables for bedroom and living room, convenient dining and writing tables for home and office, as well as coffee tables, shelves and bookcases. Each model is designed with ergonomics in mind, so it is ideal for both compact apartments and spacious country houses.</p><p>We constantly improve our products to ensure their quality, safety and reliability.</p>",
+      "content_p2": "<p>We specialize in storage furniture: stylish chests of drawers and bedside tables, dining and writing tables, coffee tables, shelves and racks. All models are created with ergonomics in mind and are suitable for both compact apartments and spacious houses. We constantly improve our products to make them convenient, reliable and safe.</p>",
       "features": [
         {
           "title": "Minimalism in design",

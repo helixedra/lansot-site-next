@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url(reset.css);
 
 @tailwind base;
@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 :root {
-  --font-family: 'Montserrat', sans-serif;
+  --font-family: "Montserrat", sans-serif;
   --max-site-width: 1600px;
   --color-dark-100: hsl(0, 0%, 10%);
   --color-dark-90: hsl(0, 0%, 15%);
@@ -25,7 +25,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
   color: var(--color-dark-100);
@@ -100,7 +100,8 @@ label {
   margin-right: 4px;
 }
 h1 {
-  @apply uppercase font-semibold text-[1.5rem] sm:text-[1.75rem] md:text-[2rem] lg:text-[2.5rem] lg:leading-[3.5rem] xl:text-[3rem];
+  /* @apply uppercase font-semibold text-[3.5vw]; */
+  @apply uppercase font-semibold text-[1.75rem] leading-[2.5rem] sm:text-[2rem] md:text-[2.25rem] md:leading-[2.75rem] lg:text-[2.5rem] lg:leading-[3.5rem] xl:text-[3rem];
 }
 h2 {
   @apply uppercase font-semibold text-[1.25rem] sm:text-[1.25rem] md:text-[1.75rem] lg:text-[2rem] lg:leading-[3rem];
