@@ -5,9 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { RiFunctionLine } from "react-icons/ri";
 
-export default function TopProductsSlider() {
+export default function TopProductsSlider({ ...props }) {
   return (
-    <div className={classes.container}>
+    <div className={classes.container} {...props}>
       <div className={classes.header}>
         <div className={classes.title}>Популярні продукти</div>
         <div className={classes.controls}>

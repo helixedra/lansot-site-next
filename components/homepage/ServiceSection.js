@@ -4,12 +4,12 @@ import Link from "next/link";
 import LinkButton from "@/components/shared/LinkButton";
 import ui from "@/app/data/ui.json";
 
-export default function ServiceSection({ content, locale }) {
+export default function ServiceSection({ content, locale, ...props }) {
   return (
-    <div className={classes.container}>
+    <div className={classes.container} {...props}>
       <div className={classes.inner_container}>
         <div className={classes.content}>
-          <h2 className={classes.title}>{content.title}</h2>
+          <h2 className="mb-4 lg:mb-6">{content.title}</h2>
           <p className={classes.text}>{content.content}</p>
           <LinkButton href="/services">{ui.global.see_more[locale]}</LinkButton>
         </div>

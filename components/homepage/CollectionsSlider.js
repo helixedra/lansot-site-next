@@ -3,9 +3,9 @@ import Image from "next/image";
 import ItemsSlider from "@/components/shared/ItemsSlider";
 import classes from "./CollectionsSlider.module.css";
 
-export default function CollectionsSlider() {
+export default function CollectionsSlider({ ...props }) {
   return (
-    <div className={classes.slider}>
+    <div className={classes.slider} {...props}>
       <ItemsSlider slideWidth={500}>
         <Link href="/collections/office">
           <Image alt="" src={"/images/collections-slider/slide_01.jpg"} style={{ objectFit: "contain" }} width={1024} height={800} />

@@ -7,7 +7,7 @@ import { RiArrowRightFill, RiArrowLeftFill } from "react-icons/ri";
 import ui from "@/app/data/ui.json";
 import { useState } from "react";
 
-export default function ArticlesSection({ articles, locale }) {
+export default function ArticlesSection({ articles, locale, ...props }) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   function handleSlider(direction) {
@@ -21,7 +21,7 @@ export default function ArticlesSection({ articles, locale }) {
   }
 
   return (
-    <div className={classes.container}>
+    <div className={classes.container} {...props}>
       <div className={classes.articles}>
         <div className={classes.image}>
           <Image src="/images/home_slider_img_1.jpg" alt="Article Image" style={{ objectFit: "cover" }} width={1350} height={700} />
