@@ -10,7 +10,7 @@
   /* font-size: clamp(2.125rem, 2.5vw, 3rem); */
   /* line-height: clamp(2.375rem, 3vw, 3.5rem); */
   /* font-weight: 600; */
-  /* @apply text-capitalize text-[56px]; */
+  /* @apply capitalize text-[56px]; */
 }
 .content {
   font-size: clamp(0.875rem, 2vw, 1.5rem);

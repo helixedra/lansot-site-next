@@ -151,7 +151,10 @@
       "info": {
         "payment": {
           "title": "Оплата",
-          "description": ["Оформлення замовлення здійснюється тільки за умови <strong>повної (100%) оплати</strong> рахунку.", "Оплата здійснюється тільки в національній валюті (грн.) на розрахунковий рахунок."]
+          "description": [
+            "Оформлення замовлення здійснюється тільки за умови <strong>повної (100%) оплати</strong> рахунку.",
+            "Оплата здійснюється тільки в національній валюті (грн.) на розрахунковий рахунок."
+          ]
         },
         "delivery": {
           "title": "Доставка",
@@ -176,7 +179,10 @@
       "info": {
         "payment": {
           "title": "Payment",
-          "description": ["Order processing is carried out only upon <strong>full (100%) payment</strong> of the invoice.", "Payment is made only in the national currency (UAH) to the current account."]
+          "description": [
+            "Order processing is carried out only upon <strong>full (100%) payment</strong> of the invoice.",
+            "Payment is made only in the national currency (UAH) to the current account."
+          ]
         },
         "delivery": {
           "title": "Delivery",
@@ -194,7 +200,32 @@
   "about": {
     "uk": {
       "title": "Про нас",
-      "content": "<p>Якісний продукт та турбота про клієнта – це основні цінності нашого бренду. Наші меблі відповідають високим стандартам якості та вимогам, які диктує ринок. Мінімалізм у дизайні, який не підвладний часу.</p><p>У наших колекціях робиться наголос на меблях для зберігання речей. Комоди та тумби для спальні та вітальні. Обідні столи, письмові столи для офісів та кабінетів, журнальні столики у вітальню. Полиці та стелажі для книг. Усі моделі виконані з урахуванням ергономіки та підійдуть як для власників компактних квартир, так і для великих заміських будинків.</p><p>Щодня ми вдосконалюємо наші продукти, щоб клієнти були впевнені в безпеці та надійності меблів.</p>",
+      "subtitle": "Сучасні інтер'єрні рішення в стилі мінімалізму",
+      "content_p1": "<p>Якість та турбота про клієнта – головні цінності нашого бренду. Ми створюємо меблі, що відповідають високим стандартам, поєднуючи сучасний дизайн із практичністю. Мінімалізм, який не втрачає актуальності з часом, – основа наших колекцій.</p>",
+      "content_p2": "<p>Ми спеціалізуємося на меблях для зберігання: стильні комоди та тумби для спальні й вітальні, зручні обідні та письмові столи для дому та офісу, а також журнальні столики, полиці та стелажі для книг. Кожна модель розроблена з урахуванням ергономіки, тому ідеально пасує як для компактних квартир, так і для просторих заміських будинків.</p><p>Ми постійно вдосконалюємо наші продукти, щоб ви були впевнені у їхній якості, безпеці та надійності.</p>",
+      "features": [
+        {
+          "title": "Мінімалізм у дизайні",
+          "text": "Ми створюємо меблі з чистими лініями та продуманими формами, які гармонійно доповнюють будь-який інтер’єр."
+        },
+        {
+          "title": "Інновації та стиль",
+          "text": "Ми використовуємо тільки перевірені матеріали та технології, щоб забезпечити довговічність і надійність."
+        },
+        {
+          "title": "Екологічність та відповідальність",
+          "text": "Наша продукція створюється з турботою про природу – ми обираємо екологічні матеріали та раціональні процеси виробництва."
+        },
+
+        {
+          "title": "Індивідуальний підхід",
+          "text": "Ми розуміємо, що кожен простір унікальний, тому пропонуємо рішення, які відповідають вашим потребам і бажанням."
+        },
+        {
+          "title": "Якість, яка триває роками",
+          "text": "Ми слідкуємо за новими тенденціями в дизайні, щоб пропонувати сучасні та функціональні рішення для вашої оселі."
+        }
+      ],
       "meta": {
         "title": "Про нас",
         "description": "Про нас",
@@ -203,7 +234,31 @@
     },
     "en": {
       "title": "About Us",
-      "content": "<p>Quality product and customer care are the main values of our brand. Our furniture meets high quality standards and market requirements. Design minimalism that is timeless.</p><p>Our collections focus on storage furniture. Chests of drawers and bedside tables for the bedroom and living room. Dining tables, writing desks for offices and cabinets, coffee tables in the living room. Shelves and bookcases. All models are designed with ergonomics in mind and are suitable for owners of compact apartments as well as large country houses.</p><p>Every day, we improve our products to ensure that customers are confident in the safety and reliability of the furniture.</p>",
+      "subtitle": "Modern interior solutions in the style of minimalism",
+      "content_p1": "<p>Quality and customer care are the main values of our brand. We create furniture that meets high standards, combining modern design with practicality. Minimalism that does not lose relevance over time is the basis of our collections.</p>",
+      "content_p2": "<p>We specialize in storage furniture: stylish chests of drawers and bedside tables for bedroom and living room, convenient dining and writing tables for home and office, as well as coffee tables, shelves and bookcases. Each model is designed with ergonomics in mind, so it is ideal for both compact apartments and spacious country houses.</p><p>We constantly improve our products to ensure their quality, safety and reliability.</p>",
+      "features": [
+        {
+          "title": "Minimalism in design",
+          "text": "We create furniture with clean lines and thoughtful shapes that harmoniously complement any interior."
+        },
+        {
+          "title": "Innovations and style",
+          "text": "We use only proven materials and technologies to ensure durability and reliability."
+        },
+        {
+          "title": "Ecology and responsibility",
+          "text": "Our products are created with care for nature - we choose ecological materials and rational production processes."
+        },
+        {
+          "title": "Individual approach",
+          "text": "We understand that every space is unique, so we offer solutions that meet your needs and desires."
+        },
+        {
+          "title": "Quality that lasts for years",
+          "text": "We keep up with new design trends to offer modern and functional solutions for your home."
+        }
+      ],
       "meta": {
         "title": "About Us",
         "description": "About Us",
@@ -221,11 +276,20 @@
         "keywords": "контакти"
       },
       "info": {
-        "office": { "title": "Офіс", "content": "Київ, вул. Туманяна, 1 (шоурум тимчасово зачинений)" },
+        "office": {
+          "title": "Офіс",
+          "content": "Київ, вул. Туманяна, 1 (шоурум тимчасово зачинений)"
+        },
         "phone": "+38 097 112 26 16",
         "email": "info@lansot.com",
-        "schedule": { "title": "Графік роботи", "content": "Пн-Пт: 10:00 - 20:00, Сб-Нд: Вихідний" },
-        "production": { "title": "Виробництво", "content": "Київ, вул. Віскозна, 8" }
+        "schedule": {
+          "title": "Графік роботи",
+          "content": "Пн-Пт: 10:00 - 20:00, Сб-Нд: Вихідний"
+        },
+        "production": {
+          "title": "Виробництво",
+          "content": "Київ, вул. Віскозна, 8"
+        }
       }
     },
     "en": {
@@ -237,11 +301,20 @@
         "keywords": "contacts"
       },
       "info": {
-        "office": { "title": "Office", "content": "Kyiv, Tumanyan St., 1 (showroom temporarily closed)" },
+        "office": {
+          "title": "Office",
+          "content": "Kyiv, Tumanyan St., 1 (showroom temporarily closed)"
+        },
         "phone": "+38 097 112 26 16",
         "email": "info@lansot.com",
-        "schedule": { "title": "Working hours", "content": "Mon-Fri: 10:00 - 20:00, Sat-Sun: Closed" },
-        "production": { "title": "Production", "content": "Kyiv, Viskozna St., 8" }
+        "schedule": {
+          "title": "Working hours",
+          "content": "Mon-Fri: 10:00 - 20:00, Sat-Sun: Closed"
+        },
+        "production": {
+          "title": "Production",
+          "content": "Kyiv, Viskozna St., 8"
+        }
       }
     }
   }
