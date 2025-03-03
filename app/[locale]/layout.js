@@ -1,8 +1,8 @@
-import Header from '@/components/header/Header';
-import './global.css';
-import { CartProvider } from '@/contexts/CartContext';
-import Footer from '@/components/footer/Footer';
-import { LocaleProvider } from '@/contexts/LocaleContext';
+import Header from "@/components/header/Header";
+import "./global.css";
+import { CartProvider } from "@/contexts/CartContext";
+import Footer from "@/components/footer/Footer";
+import { LocaleProvider } from "@/contexts/LocaleContext";
 
 export default async function RootLayout({ children, params }) {
   const { locale } = await params;
@@ -16,7 +16,7 @@ export default async function RootLayout({ children, params }) {
           </CartProvider>
         </LocaleProvider>
       </div>
-      <Footer />
+      <Footer locale={locale} />
     </>
   );
 }

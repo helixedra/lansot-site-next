@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import { useDrag } from "@use-gesture/react";
 import { RiArrowRightFill, RiArrowLeftFill } from "react-icons/ri";
 import classes from "./ItemsSlider.module.css";
 
@@ -72,18 +73,42 @@ export default function ItemsSlider({ children, slideWidth }) {
     }
   }
 
+  const bind = useDrag(({ down, movement: [mx], cancel }) => {
+    if (down && mx > 10) {
+      handleSlider(currentSlide, "prev");
+      cancel();
+    }
+    if (down && mx < -10) {
+      handleSlider(currentSlide, "next");
+      cancel();
+    }
+  });
+
   return (
     <div className={classes.container}>
       <div className={classes.slider}>
-        <div className={classes.slider__container} ref={sliderContainerRef}>
+        <div
+          className={classes.slider__container}
+          ref={sliderContainerRef}
+          style={{ touchAction: "none" }}
+          {...bind()}
+        >
           {children}
         </div>
       </div>
       <div className={classes.slider__nav}>
-        <button style={{ visibility: prev ? "visible" : "hidden" }} className={classes.slider__nav__prev} onClick={() => handleSlider(currentSlide, "prev")}>
+        <button
+          style={{ visibility: prev ? "visible" : "hidden" }}
+          className={classes.slider__nav__prev}
+          onClick={() => handleSlider(currentSlide, "prev")}
+        >
           <RiArrowLeftFill />
         </button>
-        <button style={{ visibility: next ? "visible" : "hidden" }} className={classes.slider__nav__next} onClick={() => handleSlider(currentSlide, "next")}>
+        <button
+          style={{ visibility: next ? "visible" : "hidden" }}
+          className={classes.slider__nav__next}
+          onClick={() => handleSlider(currentSlide, "next")}
+        >
           <RiArrowRightFill />
         </button>
       </div>

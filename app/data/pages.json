@@ -323,5 +323,19 @@
         }
       }
     }
+  },
+  "footer": {
+    "uk": {
+      "facebookPage": "Сторінка Facebook",
+      "instagramPage": "Сторінка Instagram",
+      "copyright": "© {currentYear} Lansot - Меблі в мінімалістичному стилі",
+      "terms": "Договір публічної оферти"
+    },
+    "en": {
+      "facebookPage": "Facebook Page",
+      "instagramPage": "Instagram Page",
+      "copyright": "© {currentYear} Lansot - Furniture in minimalist style",
+      "terms": "Public Offer Agreement"
+    }
   }
 }
