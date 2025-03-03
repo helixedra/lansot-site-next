@@ -119,13 +119,15 @@
   },
   "finishes": {
     "uk": {
-      "name": "Декори",
-      "title": "Декори",
+      "name": "Матеріали",
+      "title": "Матеріали",
+      "subtitle": "Всі матеріали для виробництва меблів",
       "meta": {
-        "title": "Декори",
-        "description": "Всі декори",
-        "keywords": "декори, всі"
+        "title": "Матеріали",
+        "description": "Всі матеріали для виробництва меблів",
+        "keywords": "матеріали, всі"
       },
+
       "info": "Всі представлені декори є репродукціями. Вибір придатного за кольором декору можливий тільки за допомогою оригінального зразка."
     },
     "en": {
@@ -152,7 +154,10 @@
       "info": {
         "payment": {
           "title": "Оплата",
-          "description": ["Оформлення замовлення здійснюється тільки за умови <strong>повної (100%) оплати</strong> рахунку.", "Оплата здійснюється тільки в національній валюті (грн.) на розрахунковий рахунок."]
+          "description": [
+            "Оформлення замовлення здійснюється тільки за умови <strong>повної (100%) оплати</strong> рахунку.",
+            "Оплата здійснюється тільки в національній валюті (грн.) на розрахунковий рахунок."
+          ]
         },
         "delivery": {
           "title": "Доставка",
@@ -178,7 +183,10 @@
       "info": {
         "payment": {
           "title": "Payment",
-          "description": ["Order processing is carried out only upon <strong>full (100%) payment</strong> of the invoice.", "Payment is made only in the national currency (UAH) to the current account."]
+          "description": [
+            "Order processing is carried out only upon <strong>full (100%) payment</strong> of the invoice.",
+            "Payment is made only in the national currency (UAH) to the current account."
+          ]
         },
         "delivery": {
           "title": "Delivery",
@@ -267,6 +275,7 @@
     "uk": {
       "name": "Контакти",
       "title": "Контакти",
+      "subtitle": "Контактна інформація",
       "meta": {
         "title": "Контакти",
         "description": "Контактна інформація",

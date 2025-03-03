@@ -16,20 +16,26 @@ export async function generateMetadata({ params }) {
 
 export default async function FinishingPage({ params }) {
   const { locale } = await params;
-  const content = page.finishes[locale];
+  const data = page.finishes[locale];
   return (
-    <div className="container">
-      <h1 className="page_heading">{content.title}</h1>
-      <div className={classes.info_wrapper}>
-        <div className={classes.info_icon}>
-          <RiInformationLine fontSize={24} />
-        </div>
-        <div className={classes.info_text}>{content.info}</div>
+    // <div className="container mx-auto max-w-[1600px]">
+    //   <h1 className="my-8">{content.title}</h1>
+    //   <div className={classes.info_wrapper}>
+    //     <div className={classes.info_icon}>
+    //       <RiInformationLine fontSize={24} />
+    //     </div>
+    //     <div className={classes.info_text}>{content.info}</div>
+    //   </div>
+
+    <div className="max-w-[1600px] mx-auto mb-12 px-6 lg:px-12">
+      <div data-aos="fade-up" data-aos-duration="300" className="PageHeader py-8 lg:py-24">
+        <div className="PageHeader__subheader text-zinc-500 font-semibold mb-8">{data.title}</div>
+        <h1 className="PageHeader__title max-w-[920px]">{data.subtitle}</h1>
       </div>
 
       {/* LDSP Section */}
       {mat?.ldsp && (
-        <div className={classes.decor_set}>
+        <div className={classes.decor_set} data-aos="zoom-out" data-aos-duration="300">
           <h3 className={classes.decor_set_title}>{mat.ldsp.title[locale]}</h3>
           {/* <div>{mat.ldsp.description[locale]}</div> */}
           <div className={classes.samples}>
@@ -51,14 +57,16 @@ export default async function FinishingPage({ params }) {
 
       {/* LDSP Wood Section */}
       {mat?.ldsp_wood && (
-        <div className={classes.decor_set}>
+        <div className={classes.decor_set} data-aos="zoom-out" data-aos-duration="300">
           <h3 className={classes.decor_set_title}>{mat.ldsp_wood.title[locale]}</h3>
           {/* <div>{mat.ldsp_wood.description[locale]}</div> */}
           <div className={classes.samples}>
             {mat.ldsp_wood.images.map((ldsp_wood, index) => (
               <div key={index} className={classes.sample_item_big}>
                 <div className={classes.sample_item_title}>
-                  <span className={classes.sample_item_title_item_pre_title}>{ldsp_wood.description[locale]}</span>
+                  <span className={classes.sample_item_title_item_pre_title}>
+                    {ldsp_wood.description[locale]}
+                  </span>
                   <br />
                   {ldsp_wood.title}
                 </div>
@@ -67,6 +75,16 @@ export default async function FinishingPage({ params }) {
                 </div>
               </div>
             ))}
+          </div>
+          <div
+            className="flex mt-12 bg-zinc-100 p-6 rounded-lg"
+            data-aos="fade-right"
+            data-aos-duration="300"
+          >
+            <div className={classes.info_icon}>
+              <RiInformationLine fontSize={24} />
+            </div>
+            <div className={classes.info_text}>{data.info}</div>
           </div>
         </div>
       )}

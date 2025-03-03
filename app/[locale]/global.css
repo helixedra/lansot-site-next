@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url(reset.css);
 
+/* @import "tailwindcss"; */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,6 +25,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
@@ -31,19 +33,23 @@ body {
   color: var(--color-dark-100);
   overflow-x: hidden;
 }
+
 .active {
   /* color: red; */
   font-weight: bold;
 }
+
 .container {
   width: 100%;
   padding: 0 24px;
 }
+
 .wrapper {
   /* max-width: 1600px;
   margin: 0 auto; */
   /* overflow-x: hidden; */
 }
+
 .button_main {
   background-color: var(--color-dark-90);
   color: white;
@@ -53,9 +59,11 @@ body {
   font-weight: 500;
   white-space: nowrap;
 }
+
 .button_main:hover {
   background-color: var(--color-dark-80);
 }
+
 .button_link {
   background: none;
   color: var(--color-dark-90);
@@ -91,6 +99,7 @@ textarea {
 ::placeholder {
   color: var(--color-dark-20);
 }
+
 label {
   display: block;
   font-size: 12px;
@@ -99,39 +108,48 @@ label {
   font-weight: 500;
   margin-right: 4px;
 }
+
 h1 {
   /* @apply uppercase font-semibold text-[3.5vw]; */
   @apply uppercase font-semibold text-[1.75rem] leading-[2.5rem] sm:text-[2rem] md:text-[2.25rem] md:leading-[2.75rem] lg:text-[2.5rem] lg:leading-[3.5rem] xl:text-[3rem];
 }
+
 h2 {
   @apply uppercase font-semibold text-[1.25rem] sm:text-[1.25rem] md:text-[1.75rem] lg:text-[2rem] lg:leading-[3rem];
 }
+
 h3 {
   font-size: 1.5rem;
   font-weight: 500;
 }
+
 h4 {
   font-size: 1.25rem;
   font-weight: 500;
 }
+
 p {
   padding: 1rem 0;
 }
+
 .section_title {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 2rem;
   margin-top: 3rem;
 }
+
 .page_heading {
   font-size: 2.5rem;
   font-weight: 600;
   text-align: center;
 }
+
 a:hover {
   transition: 0.3s ease-in-out;
   opacity: 0.85;
 }
+
 .BaseContainer {
   max-width: 1600px;
   margin: 0 auto;
