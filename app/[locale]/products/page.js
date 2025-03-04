@@ -31,11 +31,11 @@ export default async function ProductsPage({ params }) {
   const products = Array.isArray(productsData) ? productsData : Object.values(productsData);
 
   return (
-    <div className={`${classes.catalog} container`}>
+    <div className={`${classes.catalog} container `}>
       <CatalogMenu categories={categoriesList} locale={locale} />
       <CatalogMenuMobile categories={categoriesList} locale={locale} />
 
-      <div data-aos="fade-up">
+      <div data-aos="fade-up ">
         <h1 className={classes.category_title}>{content.name}</h1>
         <div className={classes.catalog_grid}>
           {products.map((product) => (

@@ -1,12 +1,12 @@
 {
   "homepage": {
     "uk": {
-      "name": "Головна",
-      "title": "Головна сторінка",
+      "name": "Lansot – Cучасні меблі для дому",
+      "title": "Lansot – Cучасні меблі для дому",
       "meta": {
-        "title": "Головна сторінка",
-        "description": "Головна сторінка",
-        "keywords": "головна сторінка"
+        "title": "Lansot – Cучасні меблі для дому",
+        "description": "Купуйте сучасні меблі в мінімалістичному стилі від Lansot. Ми пропонуємо стильні рішення для спальні, вітальні та всього дому. Висока якість, швидка доставка і доступні ціни. Високий рівень виконання та якісні матеріали. Великий вибір оздоблень та гнучкі розмірні сітки.",
+        "keywords": "меблі, купити, сучасні, мінімалістичний стиль, Lansot"
       },
       "herotext": {
         "title": "Естетика сучасних меблів для вишуканого життя",
@@ -18,12 +18,12 @@
       }
     },
     "en": {
-      "name": "Home Page",
-      "title": "Home Page",
+      "name": "Lansot – Modern Furniture For Home",
+      "title": "Lansot – Modern Furniture For Home",
       "meta": {
-        "title": "Home Page",
-        "description": "Home Page",
-        "keywords": "home page"
+        "title": "Lansot – Modern Furniture For Home",
+        "description": "Buy modern minimalist style furniture from Lansot. We offer stylish solutions for bedroom, living room and entire home. High quality, fast delivery and affordable prices. High level of performance and quality materials. Wide selection of finishes and flexible size grids.",
+        "keywords": "furniture, buy, modern, minimalist style, Lansot"
       },
       "herotext": {
         "title": "Aesthetics Of Modern Furniture For Sophisticated Living",
@@ -33,82 +33,20 @@
         "title": "Individual Approach",
         "content": "We understand that every space is unique, so we offer solutions that meet your needs and desires."
       }
-    },
-    "series": [
-      {
-        "url": "idea",
-        "title": "Idea",
-        "description": {
-          "uk": "Серія тумб для вітальні та спальні",
-          "en": "Series of bedside tables for living room and bedroom"
-        },
-        "size": "big",
-        "img": "/images/products/idea-sl/idea-sl_promo_img_2.jpg"
-      },
-      {
-        "url": "leon",
-        "title": "Leon",
-        "description": {
-          "uk": "Шафи та тумби для вітальні",
-          "en": "Wardrobes and bedside tables for living room"
-        },
-        "size": "small",
-        "img": "/images/leon-collection.jpg"
-      },
-      {
-        "url": "folio",
-        "title": "Folio",
-        "description": {
-          "uk": "Серія тумб та комодів для спальні та вітальні",
-          "en": "Series of bedside tables and chests of drawers for bedroom and living room"
-        },
-        "size": "small",
-        "img": "/images/folio-collection.jpg"
-      },
-      {
-        "url": "verona",
-        "title": "Verona",
-        "description": {
-          "uk": "Серія тумб та комодів для спальні та вітальні",
-          "en": "Series of bedside tables and chests of drawers for bedroom and living room"
-        },
-        "size": "small",
-        "img": "/images/verona_collection.jpg"
-      },
-      {
-        "url": "delta",
-        "title": "Delta",
-        "description": {
-          "uk": "Серія тумб для вітальні в зону ТБ",
-          "en": "Series of bedside tables for living room in TV area"
-        },
-        "size": "small",
-        "img": "/images/delta-collection.jpg"
-      },
-      {
-        "url": "edge",
-        "title": "Edge",
-        "description": {
-          "uk": "Серія тумб для спальні та вітальні",
-          "en": "Series of bedside tables for bedroom and living room"
-        },
-        "size": "big",
-        "img": "/images/products/edge-ll/edge-ll-interior_02_2.jpg"
-      }
-    ]
+    }
   },
   "products": {
     "uk": {
-      "name": "Каталог",
-      "title": "Каталог товарів",
+      "name": "Каталог меблів",
+      "title": "Каталог меблів",
       "meta": {
         "title": "Каталог товарів",
-        "description": "Всі товари",
-        "keywords": "products, all"
+        "description": "Всі меблі в каталозі Lansot",
+        "keywords": "меблі, всі"
       }
     },
     "en": {
-      "name": "Products",
+      "name": "Catalog of products",
       "title": "Catalog of products",
       "meta": {
         "title": "Catalog of products",

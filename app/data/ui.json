@@ -6,13 +6,20 @@
     "read_less": { "uk": "Згорнути", "en": "Collapse" },
     "showroom": { "uk": "Наявний в шоурумі", "en": "Available in showroom" },
     "from": { "uk": "Від", "en": "From" },
-    "price_tooltip": { "uk": "Ціна вказана для базової комплектації в мінімальних габаритах. Остаточна вартість може відрізнятися в залежності від вибраних опцій.", "en": "The price is listed for the basic option in the minimum dimensions. Final cost may vary based on customization or additional features." },
+    "price_tooltip": {
+      "uk": "Ціна вказана для базової комплектації в мінімальних габаритах. Остаточна вартість може відрізнятися в залежності від вибраних опцій.",
+      "en": "The price is listed for the basic option in the minimum dimensions. Final cost may vary based on customization or additional features."
+    },
     "currency": { "uk": "грн.", "en": "uah" },
     "request_price": { "uk": "Запросити прорахунок", "en": "Request Price" },
-    "request_price_subheading": { "uk": "Натисніть щоб надіслати запит у месенджер", "en": "Click to send a request via messenger" },
+    "request_price_subheading": {
+      "uk": "Натисніть щоб надіслати запит у месенджер",
+      "en": "Click to send a request via messenger"
+    },
     "how_to_buy": { "uk": "Як замовити?", "en": "How to buy?" },
     "or": { "uk": "або", "en": "or" },
-    "articles": { "uk": "Статті", "en": "Articles" }
+    "articles": { "uk": "Статті", "en": "Articles" },
+    "all_products": { "uk": "Всі товари", "en": "All products" }
   },
   "form": {
     "name": { "uk": "Ім'я", "en": "Name" },

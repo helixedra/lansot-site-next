@@ -70,25 +70,6 @@ export default async function DeliveryPage({ params }) {
           </li>
         </ul>
       </div>
-
-      {/* <div className="container">
-        <div className={classes.delivery_text}>
-          <h2>{data.info.payment.title}</h2>
-          <ul className={classes.info_bullets}>
-            {data.info.payment.description.map((item, index) => (
-              <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
-            ))}
-          </ul>
-        </div>
-        <div className={classes.delivery_text}>
-          <h2>{data.info.delivery.title}</h2>
-          <ul className={classes.info_bullets}>
-            {data.info.delivery.description.map((item, index) => (
-              <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
-            ))}
-          </ul>
-        </div>
-      </div> */}
     </div>
   );
 }
