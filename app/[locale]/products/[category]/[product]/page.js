@@ -42,7 +42,7 @@ export default async function ProductPage({ params }) {
     notFound();
   }
   return (
-    <div className="container">
+    <div className="container max-w-[1600px] mx-auto">
       <Breadcrumbs category={currentCategory} locale={locale} />
       <TopBlock product={productData} locale={locale} />
       {/* <ProductConfig productData={productData} locale={locale} /> */}

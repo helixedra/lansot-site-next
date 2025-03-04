@@ -11,10 +11,16 @@ import MobileMenu from "./MobileMenu";
 export default function Header({ locale }) {
   return (
     <>
-      <header className={classes.header}>
+      <header className={`${classes.header} max-w-[1600px] mx-auto`}>
         <div className={classes.header_container}>
           <Link href="/" className={classes.logo_сontainer}>
-            <Image src="/images/lansot-logo.svg" alt="Lansot logo" className={classes.logo_image} width={300} height={42}></Image>
+            <Image
+              src="/images/lansot-logo.svg"
+              alt="Lansot logo"
+              className={classes.logo_image}
+              width={300}
+              height={42}
+            ></Image>
           </Link>
           <nav className={classes.desktop_menu}>
             <div className={classes.desktop_menu__container}>

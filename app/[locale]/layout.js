@@ -8,11 +8,11 @@ export default async function RootLayout({ children, params }) {
   const { locale } = await params;
   return (
     <>
-      <div className="wrapper">
+      <div className="wrapper w-full">
         <LocaleProvider locale={locale}>
           <CartProvider>
             <Header locale={locale} />
-            <main className="main">{children}</main>
+            <main className="main overflow-hidden">{children}</main>
           </CartProvider>
         </LocaleProvider>
       </div>

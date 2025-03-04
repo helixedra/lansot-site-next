@@ -9,7 +9,14 @@ export default function TopBlock({ product, locale }) {
   return (
     <section className={classes.product_top}>
       <div className={classes.product_main_img}>
-        <Image data-aos="fade" src={`/images/products/${product.url}/${product.top_image}`} alt={`${product.sub[locale]} ${product.name}`} title={`${product.sub[locale]} ${product.name}`} width={1600} height={1200} />
+        <Image
+          data-aos="fade"
+          src={`/images/products/${product.url}/${product.top_image}`}
+          alt={`${product.sub[locale]} ${product.name}`}
+          title={`${product.sub[locale]} ${product.name}`}
+          width={1600}
+          height={1200}
+        />
       </div>
 
       <div className={classes.product_description}>

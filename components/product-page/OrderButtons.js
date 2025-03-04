@@ -37,7 +37,9 @@ export default function OrderButtons({ locale, product }) {
 
   return (
     <>
-      <div className={classes.order_buttons}>
+      <div
+        className={`${classes.order_buttons} flex-col sm:flex-row md:flex-row items-start justify-center sm:justify-start md:justify-start gap-4 mb-4`}
+      >
         <button className="button_main" onClick={() => setRequestDialog(true)}>
           {ui.global.request_price[locale]}
         </button>
@@ -45,7 +47,11 @@ export default function OrderButtons({ locale, product }) {
           {ui.global.how_to_buy[locale]}
         </button>
       </div>
-      <Dialog visibility={requestDialog} setVisibility={setRequestDialog} title={ui.global.request_price[locale]}>
+      <Dialog
+        visibility={requestDialog}
+        setVisibility={setRequestDialog}
+        title={ui.global.request_price[locale]}
+      >
         <form id="order" onSubmit={handleSubmit} className={classes.order_form}>
           <div className={classes.order_form_title}>
             {/* <div className={classes.heading}>{ui.global.request_price[locale]}</div> */}
@@ -76,7 +82,14 @@ export default function OrderButtons({ locale, product }) {
 
           <div className="form_group">
             <label htmlFor="nameInput">{ui.form.name[locale]}</label>
-            <input name="name" type="text" className="form_control" id="nameInput" aria-describedby="Name" required />
+            <input
+              name="name"
+              type="text"
+              className="form_control"
+              id="nameInput"
+              aria-describedby="Name"
+              required
+            />
           </div>
           <div className="form_group">
             <label htmlFor="phoneInput">{ui.form.phone[locale]}</label>
@@ -88,7 +101,13 @@ export default function OrderButtons({ locale, product }) {
           </div>
           <div className="form_group">
             <label htmlFor="messageInput">{ui.form.message[locale]}</label>
-            <textarea className="form_control" id="messageInput" name="message" rows="4" required></textarea>
+            <textarea
+              className="form_control"
+              id="messageInput"
+              name="message"
+              rows="4"
+              required
+            ></textarea>
           </div>
 
           <input type="hidden" name="productName" value={product.name} />
@@ -99,7 +118,11 @@ export default function OrderButtons({ locale, product }) {
           </button>
         </form>
       </Dialog>
-      <Dialog visibility={howDialog} setVisibility={setHowDialog} title={ui.global.how_to_buy[locale]}>
+      <Dialog
+        visibility={howDialog}
+        setVisibility={setHowDialog}
+        title={ui.global.how_to_buy[locale]}
+      >
         <div dangerouslySetInnerHTML={{ __html: ui.how_to_buy[locale] }} />
         <div className={classes.msg_links} style={{ marginTop: "2rem" }}>
           <a href="viber://pa?chatURI=Lansot_com" rel="nofollow">

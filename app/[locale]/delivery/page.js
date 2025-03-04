@@ -1,5 +1,22 @@
 import pages from "@/app/data/pages.json";
-import classes from "./page.module.css";
+
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+
+  const content = pages.delivery[locale];
+
+  return {
+    title: content.meta.title + " - Lansot",
+    description: content.meta.description,
+    keywords: content.meta.keywords,
+
+    openGraph: {
+      title: content.meta.title + " - Lansot",
+      description: content.meta.description,
+      keywords: content.meta.keywords,
+    },
+  };
+}
 
 export default async function DeliveryPage({ params }) {
   const { locale } = await params;

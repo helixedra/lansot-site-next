@@ -19,7 +19,7 @@ export default async function Footer({ locale }) {
               href="https://www.facebook.com/lansotcom/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={footerData.facebookPage}
+              aria-label={footerData?.facebookPage}
             >
               <Image src="/images/facebook.svg" alt="Facebook" width={24} height={24} />
             </a>
@@ -27,7 +27,7 @@ export default async function Footer({ locale }) {
               href="https://www.instagram.com/lansot_com/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={footerData.instagramPage}
+              aria-label={footerData?.instagramPage}
             >
               <Image src="/images/instagram.svg" alt="Instagram" width={24} height={24} />
             </a>
@@ -35,9 +35,9 @@ export default async function Footer({ locale }) {
         </div>
 
         <div className={classes.footer_bottom}>
-          <div>{footerData.copyright.replace("{currentYear}", currentYear)}</div>
+          <div>{footerData?.copyright.replace("{currentYear}", currentYear)}</div>
           <div className={classes.footer_links}>
-            <Link href="/terms">{footerData.terms}</Link>
+            <Link href="/terms">{footerData?.terms}</Link>
           </div>
         </div>
       </div>

@@ -7,8 +7,14 @@ export function middleware(request) {
   const { pathname } = request.nextUrl;
 
   // Ignore requests for static files
-  if (pathname.startsWith("/_next/static") || pathname.startsWith("/favicon.ico") || pathname.startsWith("/robots.txt") || pathname.startsWith("/sitemap.xml") || pathname.startsWith("/images")) {
-    return NextResponse.next();
+  if (
+    pathname.startsWith("/_next/static") ||
+    pathname.startsWith("/favicon.ico") ||
+    pathname.startsWith("/robots.txt") ||
+    pathname.startsWith("/sitemap.xml") ||
+    pathname.startsWith("/images")
+  ) {
+    return NextResponse.next("/public" + pathname);
   }
 
   // Check if a locale is specified in the URL

@@ -5,12 +5,20 @@ import { RiInformationLine } from "react-icons/ri";
 import page from "@/app/data/pages.json";
 
 export async function generateMetadata({ params }) {
-  const { locale } = params;
+  const { locale } = await params;
+
   const content = page.finishes[locale];
+
   return {
-    title: content.title,
-    description: content.description,
-    keywords: content.keywords,
+    title: content.meta.title + " - Lansot",
+    description: content.meta.description,
+    keywords: content.meta.keywords,
+
+    openGraph: {
+      title: content.meta.title + " - Lansot",
+      description: content.meta.description,
+      keywords: content.meta.keywords,
+    },
   };
 }
 
@@ -18,15 +26,6 @@ export default async function FinishingPage({ params }) {
   const { locale } = await params;
   const data = page.finishes[locale];
   return (
-    // <div className="container mx-auto max-w-[1600px]">
-    //   <h1 className="my-8">{content.title}</h1>
-    //   <div className={classes.info_wrapper}>
-    //     <div className={classes.info_icon}>
-    //       <RiInformationLine fontSize={24} />
-    //     </div>
-    //     <div className={classes.info_text}>{content.info}</div>
-    //   </div>
-
     <div className="max-w-[1600px] mx-auto mb-12 px-6 lg:px-12">
       <div data-aos="fade-up" data-aos-duration="300" className="PageHeader py-8 lg:py-24">
         <div className="PageHeader__subheader text-zinc-500 font-semibold mb-8">{data.title}</div>
@@ -46,8 +45,14 @@ export default async function FinishingPage({ params }) {
                   <br />
                   {ldsp.title}
                 </div>
-                <div className={classes.decor_sample}>
-                  <Image src={`/images/decors/ldsp/${ldsp.img}`} alt={ldsp.title} fill />
+                <div className={`w-full h-full ${classes.decor_sample}`}>
+                  <Image
+                    src={`/images/decors/ldsp/${ldsp.img}`}
+                    alt={ldsp.title}
+                    width={300}
+                    height={150}
+                    className="object-cover w-full h-full"
+                  />
                 </div>
               </div>
             ))}

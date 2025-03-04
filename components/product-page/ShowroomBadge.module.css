@@ -1,3 +1,6 @@
 .showroom_badge {
   color: var(--color-dark-50);
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
 }

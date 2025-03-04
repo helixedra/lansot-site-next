@@ -1,7 +1,23 @@
 import Image from "next/image";
-import classes from "./page.module.css";
 import page from "@/app/data/pages.json";
-import PageTitle from "@/components/shared/PageTitle";
+
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+
+  const content = page.about[locale];
+
+  return {
+    title: content.meta.title + " - Lansot",
+    description: content.meta.description,
+    keywords: content.meta.keywords,
+
+    openGraph: {
+      title: content.meta.title + " - Lansot",
+      description: content.meta.description,
+      keywords: content.meta.keywords,
+    },
+  };
+}
 
 export default async function AboutPage({ params }) {
   const { locale } = await params;

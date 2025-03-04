@@ -8,7 +8,12 @@ export default function Models({ product, locale }) {
       <h3 className="section_title">{ui.product_page.models[locale]}</h3>
       <div>
         {product.models.map((model, index) => (
-          <a key={index} href={`/models/${model.file}`} download={model.file} className={classes.download_link}>
+          <a
+            key={index}
+            href={`/models/${model.file}`}
+            download={model.file}
+            className={`${classes.download_link} w-full mb-8 md:w-auto md:min-w-[300px] p-8`}
+          >
             <div className={classes.model_title}>{model.title}</div>
             <RiFolderDownloadLine fontSize={24} className={classes.download_icon} />
           </a>
