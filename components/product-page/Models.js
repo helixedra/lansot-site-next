@@ -4,7 +4,7 @@ import classes from "./Models.module.css";
 
 export default function Models({ product, locale }) {
   return (
-    <section className={classes.product_downloads}>
+    <section className={`mb-12 ${classes.product_downloads}`}>
       <h3 className="section_title">{ui.product_page.models[locale]}</h3>
       <div>
         {product.models.map((model, index) => (

@@ -22,7 +22,7 @@
 
 @media (min-width: 1200px) {
   .catalog_grid {
-    grid-template-columns: 1fr 1fr 1;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 

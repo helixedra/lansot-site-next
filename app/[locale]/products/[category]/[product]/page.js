@@ -13,6 +13,7 @@ export async function generateMetadata({ params }) {
   const { locale, product } = await params;
 
   const productData = productsData[product];
+  const currentCategory = categories[productData.category][locale];
 
   if (!productData) {
     notFound();
@@ -21,12 +22,12 @@ export async function generateMetadata({ params }) {
   const content = productData;
 
   return {
-    title: content.meta.title[locale] + " - Lansot",
+    title: `${content.meta.title[locale]} - ${currentCategory.name} - Lansot`,
     description: content.meta.description[locale],
     keywords: content.meta.keywords[locale],
 
     openGraph: {
-      title: content.meta.title[locale] + " - Lansot",
+      title: `${content.meta.title[locale]} - ${currentCategory.name} - Lansot`,
       description: content.meta.description[locale],
       keywords: content.meta.keywords[locale],
     },

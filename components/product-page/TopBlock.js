@@ -20,7 +20,7 @@ export default function TopBlock({ product, locale }) {
       </div>
 
       <div className={classes.product_description}>
-        <h1>{product.name}</h1>
+        <h1 className="normal-case">{product.name}</h1>
         <p>{product.description[locale]}</p>
 
         <div className={classes.price}>
