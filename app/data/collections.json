@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": { "uk": "Collection 1", "en": "Collection 1" },
+    "meta": {
+      "title": { "uk": "Collection 1", "en": "Collection 1" },
+      "description": { "uk": "Collection 1", "en": "Collection 1" },
+      "keywords": { "uk": "Collection 1", "en": "Collection 1" }
+    },
+    "url": "collection-1",
+    "content": {
+      "uk": "<p>Collection 1 content in Ukrainian</p>",
+      "en": "<p>Collection 1 content in English</p>"
+    }
+  }
+]

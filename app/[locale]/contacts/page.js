@@ -108,7 +108,7 @@ export default async function ContactsPage({ params }) {
           ))}
         </div>
       </div>
-      <ContactSection />
+      <ContactSection locale={locale} />
     </>
   );
 }
