@@ -10,6 +10,19 @@ export async function generateMetadata({ params }) {
   const { locale } = await params;
   const content = pageContent.products[locale];
 
+  const path = `products`;
+  const fullPath = `/${locale}/${path}`;
+  const links = {
+    metadataBase: new URL("https://lansot.com"),
+    alternates: {
+      canonical: fullPath,
+      languages: {
+        uk: "/uk/" + path,
+        en: "/en/" + path,
+      },
+    },
+  };
+
   return {
     title: content.title + " - Lansot",
     description: content.description,
@@ -20,6 +33,7 @@ export async function generateMetadata({ params }) {
       description: content.description,
       keywords: content.keywords,
     },
+    ...links,
   };
 }
 

@@ -12,6 +12,19 @@ export async function generateMetadata({ params }) {
   const content = pageContent.products[locale];
   const categoryData = categories[category][locale];
 
+  const path = `products/${category}`;
+  const fullPath = `/${locale}/${path}`;
+  const links = {
+    metadataBase: new URL("https://lansot.com"),
+    alternates: {
+      canonical: fullPath,
+      languages: {
+        uk: "/uk/" + path,
+        en: "/en/" + path,
+      },
+    },
+  };
+
   return {
     title: `${categoryData.name} - ${content.title} - Lansot`,
     description: content.description,
@@ -22,6 +35,7 @@ export async function generateMetadata({ params }) {
       description: content.description,
       keywords: content.keywords,
     },
+    ...links,
   };
 }
 

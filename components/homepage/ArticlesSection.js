@@ -24,7 +24,13 @@ export default function ArticlesSection({ articles, locale, ...props }) {
     <div className={classes.container} {...props}>
       <div className={classes.articles}>
         <div className={classes.image}>
-          <Image src="/images/home_slider_img_1.jpg" alt="Article Image" style={{ objectFit: "cover" }} width={1350} height={700} />
+          <Image
+            src="/images/home_slider_img_1.jpg"
+            alt="Article Image"
+            style={{ objectFit: "cover" }}
+            width={1350}
+            height={700}
+          />
         </div>
         <div className={classes.content}>
           <div className={classes.content__header}>
@@ -35,12 +41,23 @@ export default function ArticlesSection({ articles, locale, ...props }) {
           </div>
           <div className={classes.article_container}>
             {articles.map((article, index) => (
-              <div key={article.id} className={`${classes.article} ${index === currentSlide ? classes.visible : classes.hidden}`}>
+              <div
+                key={article.id}
+                className={`${classes.article} ${
+                  index === currentSlide ? classes.visible : classes.hidden
+                }`}
+              >
                 <h3 className={classes.title}>{article.title[locale]}</h3>
                 <p className={classes.text}>{article.preview[locale]}</p>
                 <div className={classes.controls}>
-                  <LinkButton href={`/articles/${article.link}`}>{ui.global.read_more[locale]}</LinkButton>
-                  <SliderControls handleSlider={handleSlider} currentSlide={currentSlide} slidesCount={articles.length} />
+                  <LinkButton href={`/articles/${article.slug}`}>
+                    {ui.global.read_more[locale]}
+                  </LinkButton>
+                  <SliderControls
+                    handleSlider={handleSlider}
+                    currentSlide={currentSlide}
+                    slidesCount={articles.length}
+                  />
                 </div>
               </div>
             ))}
@@ -58,7 +75,11 @@ export function SliderControls({ handleSlider, currentSlide, slidesCount }) {
         <Button action={() => handleSlider("prev")} type="icon" disabled={currentSlide === 0}>
           <RiArrowLeftFill />
         </Button>
-        <Button action={() => handleSlider("next")} type="icon" disabled={currentSlide === slidesCount - 1}>
+        <Button
+          action={() => handleSlider("next")}
+          type="icon"
+          disabled={currentSlide === slidesCount - 1}
+        >
           <RiArrowRightFill />
         </Button>
       </div>

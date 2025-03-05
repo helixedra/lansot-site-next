@@ -7,6 +7,19 @@ export async function generateMetadata({ params }) {
 
   const content = page.contacts[locale];
 
+  const path = `contacts`;
+  const fullPath = `/${locale}/${path}`;
+  const links = {
+    metadataBase: new URL("https://lansot.com"),
+    alternates: {
+      canonical: fullPath,
+      languages: {
+        uk: "/uk/" + path,
+        en: "/en/" + path,
+      },
+    },
+  };
+
   return {
     title: content.meta.title + " - Lansot",
     description: content.meta.description,
@@ -17,6 +30,7 @@ export async function generateMetadata({ params }) {
       description: content.meta.description,
       keywords: content.meta.keywords,
     },
+    ...links,
   };
 }
 

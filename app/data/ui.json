@@ -12,6 +12,17 @@
     },
     "currency": { "uk": "грн.", "en": "uah" },
     "request_price": { "uk": "Запросити прорахунок", "en": "Request Price" },
+    "invite_to_contact": {
+      "uk": "Запрошуємо до контакту",
+      "en": "We invite you to contact us"
+    },
+    "popular_products": { "uk": "Популярні товари", "en": "Popular Products" },
+    "send": { "uk": "Надіслати", "en": "Send" },
+    "close": { "uk": "Закрити", "en": "Close" },
+    "name": { "uk": "Ім'я", "en": "Name" },
+    "phone": { "uk": "Телефон", "en": "Phone" },
+    "email": { "uk": "Email", "en": "Email" },
+    "message": { "uk": "Повідомлення", "en": "Message" },
     "request_price_subheading": {
       "uk": "Натисніть щоб надіслати запит у месенджер",
       "en": "Click to send a request via messenger"

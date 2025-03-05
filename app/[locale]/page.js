@@ -15,10 +15,29 @@ import articles from "@/app/data/articles.json";
 export async function generateMetadata({ params }) {
   const { locale } = await params;
   const content = data.homepage[locale];
+
+  const links = {
+    metadataBase: new URL("https://lansot.com"),
+    alternates: {
+      canonical: "/",
+      languages: {
+        uk: "/uk",
+        en: "/en",
+      },
+    },
+  };
+
   return {
     title: content.title,
     description: content.description,
     keywords: content.keywords,
+
+    openGraph: {
+      title: content.title,
+      description: content.meta.description,
+      keywords: content.meta.keywords,
+    },
+    ...links,
   };
 }
 export default async function HomePage({ params }) {
@@ -38,15 +57,27 @@ export default async function HomePage({ params }) {
 
       <IntroText data-aos="fade-down" data-aos-duration="500">
         <h1 className={classes.title}>{data.homepage[locale].herotext.title}</h1>
-        <p className="text-base md:text-lg lg:text-xl font-medium leading-relaxed">{data.homepage[locale].herotext.content}</p>
+        <p className="text-base md:text-lg lg:text-xl font-medium leading-relaxed">
+          {data.homepage[locale].herotext.content}
+        </p>
       </IntroText>
 
       <CollectionsSlider data-aos="fade-up" data-aos-duration="500" />
 
-      <ServiceSection content={data.homepage[locale].service} locale={locale} data-aos="fade-up" data-aos-duration="500" />
-      <TopProductsSlider data-aos="fade-up" data-aos-duration="500" />
-      <ArticlesSection data-aos="zoom-out" data-aos-duration="500" articles={articles} locale={locale} />
-      <ContactSection />
+      <ServiceSection
+        content={data.homepage[locale].service}
+        locale={locale}
+        data-aos="fade-up"
+        data-aos-duration="500"
+      />
+      <TopProductsSlider data-aos="fade-up" data-aos-duration="500" locale={locale} />
+      <ArticlesSection
+        data-aos="zoom-out"
+        data-aos-duration="500"
+        articles={articles}
+        locale={locale}
+      />
+      <ContactSection locale={locale} />
     </>
   );
 }

@@ -6,6 +6,7 @@ import { LocaleProvider } from "@/contexts/LocaleContext";
 
 export default async function RootLayout({ children, params }) {
   const { locale } = await params;
+
   return (
     <>
       <div className="wrapper w-full">

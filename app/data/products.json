@@ -47,6 +47,7 @@
   },
   "leon": {
     "id": "leon",
+    "popular": true,
     "meta": {
       "title": { "uk": "Тумба Leon S2", "en": "Sideboard Leon S2" },
       "description": {
@@ -93,6 +94,7 @@
   },
   "idea-sl": {
     "id": "idea-sl",
+    "popular": true,
     "meta": {
       "title": { "uk": "Тумба Idea SL", "en": "Sideboard Idea SL" },
       "description": {
@@ -331,6 +333,7 @@
   },
   "verona-6": {
     "id": "verona-6",
+    "popular": true,
     "meta": {
       "title": { "uk": "Комод Verona 6", "en": "Dresser Verona 6" },
       "description": {
@@ -741,6 +744,7 @@
       }
     },
     "url": "edge-ns",
+    "popular": true,
     "category": "bedside-tables",
     "collection": "edge",
     "name": "Edge NS",
@@ -960,6 +964,7 @@
   },
   "delta-t3": {
     "id": "delta-t3",
+    "popular": true,
     "meta": {
       "title": { "uk": "Тумба під ТВ Delta Type 3", "en": "TV Stand Delta Type 3" },
       "description": {
@@ -1149,6 +1154,7 @@
   },
   "theo": {
     "id": "theo",
+    "popular": true,
     "meta": {
       "title": { "uk": "Журнальний столик - Theo", "en": "Coffee Table - Theo" },
       "description": {
@@ -1304,6 +1310,7 @@
   },
   "edge-lh": {
     "id": "edge-lh",
+    "popular": true,
     "meta": {
       "title": { "uk": "Тумба Edge LH", "en": "Cabinet Edge LH" },
       "description": {

@@ -1,34 +1,46 @@
+"use client";
 import classes from "./ContactSection.module.css";
-export default function ContactSection() {
+import ui from "@/app/data/ui";
+import pages from "@/app/data/pages";
+
+export default function ContactSection({ locale }) {
+  const handleForm = (e) => {
+    e.preventDefault();
+    console.log("Form submitted");
+  };
   return (
     <div className={classes.container}>
       <div className={classes.inner_container}>
         <div className={classes.contact_info}>
-          <div className={classes.contact_title}>Запрошуємо до контакту</div>
+          <div className={classes.contact_title}>{ui.global.invite_to_contact[locale]}</div>
           <div className={classes.contact_text}>
             <div>
               <div className={classes.label}>Tel</div>
-              <div>38 097 112 26 16</div>
+              <div>{pages.contacts[locale].info.phone}</div>
             </div>
             <div>
               <div className={classes.label}>Email</div>
-              <div>info@lansot.com</div>
+              <div>{pages.contacts[locale].info.email}</div>
             </div>
           </div>
         </div>
         <div className={classes.contact_form}>
-          <form action={console.log("form submitted")} method="POST" className={classes.form_container}>
+          <form action={handleForm} className={classes.form_container}>
             <div>
               <div className={classes.inputs}>
-                <input className={classes.input} type="text" placeholder="Ім'я" />
-                <input className={classes.input} type="text" placeholder="Email" />
+                <input className={classes.input} type="text" placeholder={ui.global.name[locale]} />
+                <input
+                  className={classes.input}
+                  type="text"
+                  placeholder={ui.global.email[locale]}
+                />
               </div>
               <div className={classes.inputs}>
-                <textarea className={classes.textarea} placeholder="Повідомлення" />
+                <textarea className={classes.textarea} placeholder={ui.global.message[locale]} />
               </div>
             </div>
             <button className={classes.button} type="submit">
-              Відправити
+              {ui.global.send[locale]}
             </button>
           </form>
         </div>
