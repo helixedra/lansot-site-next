@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import classes from "./ResponsiveCarousel.module.css";
+import Image from "next/image";
 
 export default function ResponsiveCarousel({ images, delay }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -32,7 +33,15 @@ export default function ResponsiveCarousel({ images, delay }) {
       >
         {images.map((image, index) => (
           <div key={index} className={classes.carousel_slide}>
-            <img src={image.img} alt={image.alt} className={classes.carousel_image} />
+            <Image
+              src={image.img}
+              alt={image.alt}
+              className={classes.carousel_image}
+              width={1600}
+              height={900}
+              loading={index === 0 ? "eager" : "lazy"}
+              priority={index === 0}
+            />
           </div>
         ))}
       </div>

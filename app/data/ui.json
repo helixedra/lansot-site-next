@@ -5,6 +5,7 @@
     "see_more": { "uk": "Детальніше", "en": "See More" },
     "read_less": { "uk": "Згорнути", "en": "Collapse" },
     "showroom": { "uk": "Наявний в шоурумі", "en": "Available in showroom" },
+    "collection": { "uk": "Колекція", "en": "Collection" },
     "from": { "uk": "Від", "en": "From" },
     "price_tooltip": {
       "uk": "Ціна вказана для базової комплектації в мінімальних габаритах. Остаточна вартість може відрізнятися в залежності від вибраних опцій.",
@@ -14,7 +15,7 @@
     "request_price": { "uk": "Запросити прорахунок", "en": "Request Price" },
     "invite_to_contact": {
       "uk": "Запрошуємо до контакту",
-      "en": "We invite you to contact us"
+      "en": "Get in touch with us"
     },
     "popular_products": { "uk": "Популярні товари", "en": "Popular Products" },
     "send": { "uk": "Надіслати", "en": "Send" },
@@ -50,6 +51,7 @@
     "height": { "uk": "Висота (см)", "en": "Height (cm)" },
     "depth": { "uk": "Глибина (см)", "en": "Depth (cm)" },
     "price": { "uk": "Ціна", "en": "Price" },
+
     "face_material": {
       "uk": "Матеріал лицевих панелей",
       "en": "Face material"

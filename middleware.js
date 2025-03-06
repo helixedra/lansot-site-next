@@ -23,6 +23,7 @@ export function middleware(request) {
     // Store the locale in cookies
     const response = NextResponse.next();
     response.cookies.set("locale", localeInPath, { path: "/" });
+
     return response;
   }
 

@@ -9,7 +9,7 @@ export default function ContactSection({ locale }) {
     console.log("Form submitted");
   };
   return (
-    <div className={classes.container}>
+    <div className={`${classes.container} py-12 md:py-[8rem]`}>
       <div className={classes.inner_container}>
         <div className={classes.contact_info}>
           <div className={classes.contact_title}>{ui.global.invite_to_contact[locale]}</div>
@@ -25,7 +25,7 @@ export default function ContactSection({ locale }) {
           </div>
         </div>
         <div className={classes.contact_form}>
-          <form action={handleForm} className={classes.form_container}>
+          <form className={`${classes.form_container}`} onSubmit={handleForm}>
             <div>
               <div className={classes.inputs}>
                 <input className={classes.input} type="text" placeholder={ui.global.name[locale]} />

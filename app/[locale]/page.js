@@ -1,10 +1,7 @@
-import Image from "next/image";
 import ResponsiveCarousel from "@/components/homepage/ResponsiveCarousel";
 import classes from "./homepage.module.css";
 import data from "@/app/data/pages.json";
-import Link from "next/link";
 import IntroText from "@/components/homepage/IntroText";
-import ItemsSlider from "@/components/shared/ItemsSlider";
 import CollectionsSlider from "@/components/homepage/CollectionsSlider";
 import ServiceSection from "@/components/homepage/ServiceSection";
 import TopProductsSlider from "@/components/homepage/TopProductsSlider";
@@ -62,7 +59,7 @@ export default async function HomePage({ params }) {
         </p>
       </IntroText>
 
-      <CollectionsSlider data-aos="fade-up" data-aos-duration="500" />
+      <CollectionsSlider data-aos="fade-up" data-aos-duration="500" locale={locale} />
 
       <ServiceSection
         content={data.homepage[locale].service}

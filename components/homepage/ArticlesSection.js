@@ -21,7 +21,7 @@ export default function ArticlesSection({ articles, locale, ...props }) {
   }
 
   return (
-    <div className={classes.container} {...props}>
+    <div className={`${classes.container} mx-auto mb-[8rem]`} {...props}>
       <div className={classes.articles}>
         <div className={classes.image}>
           <Image

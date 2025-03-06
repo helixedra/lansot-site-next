@@ -20,6 +20,7 @@ export default function Header({ locale }) {
               className={classes.logo_image}
               width={300}
               height={42}
+              priority={true}
             ></Image>
           </Link>
           <nav className={classes.desktop_menu}>

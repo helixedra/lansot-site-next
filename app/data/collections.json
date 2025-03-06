@@ -1,16 +1,67 @@
 [
   {
     "id": 1,
-    "name": { "uk": "Collection 1", "en": "Collection 1" },
+    "name": { "uk": "Вітальня", "en": "Living room" },
+    "title": { "uk": "Меблі для вітальні", "en": "Living room furniture" },
     "meta": {
-      "title": { "uk": "Collection 1", "en": "Collection 1" },
-      "description": { "uk": "Collection 1", "en": "Collection 1" },
-      "keywords": { "uk": "Collection 1", "en": "Collection 1" }
+      "title": { "uk": "Вітальня", "en": "Living room" },
+      "description": { "uk": "Вітальня", "en": "Living room" },
+      "keywords": { "uk": "Вітальня", "en": "Living room" }
     },
-    "url": "collection-1",
+
+    "url": "living-room",
+    "cover": "living-room.jpg",
     "content": {
       "uk": "<p>Collection 1 content in Ukrainian</p>",
       "en": "<p>Collection 1 content in English</p>"
+    }
+  },
+  {
+    "id": 2,
+    "name": { "uk": "Кухня", "en": "Kitchen" },
+    "title": { "uk": "Кухня", "en": "Kitchen" },
+    "meta": {
+      "title": { "uk": "Кухня", "en": "Kitchen" },
+      "description": { "uk": "Кухня", "en": "Kitchen" },
+      "keywords": { "uk": "Кухня", "en": "Kitchen" }
+    },
+    "url": "kitchen",
+    "cover": "kitchen.jpg",
+    "content": {
+      "uk": "<p>Collection 2 content in Ukrainian</p>",
+      "en": "<p>Collection 2 content in English</p>"
+    }
+  },
+  {
+    "id": 3,
+    "name": { "uk": "Спальня", "en": "Bedroom" },
+    "title": { "uk": "Спальня", "en": "Bedroom" },
+    "meta": {
+      "title": { "uk": "Спальня", "en": "Bedroom" },
+      "description": { "uk": "Спальня", "en": "Bedroom" },
+      "keywords": { "uk": "Спальня", "en": "Bedroom" }
+    },
+    "url": "bedroom",
+    "cover": "bedroom.jpg",
+    "content": {
+      "uk": "<p>Collection 3 content in Ukrainian</p>",
+      "en": "<p>Collection 3 content in English</p>"
+    }
+  },
+  {
+    "id": 4,
+    "name": { "uk": "Домашній офіс", "en": "Home office" },
+    "title": { "uk": "Домашній офіс", "en": "Home office" },
+    "meta": {
+      "title": { "uk": "Домашній офіс", "en": "Home office" },
+      "description": { "uk": "Домашній офіс", "en": "Home office" },
+      "keywords": { "uk": "Домашній офіс", "en": "Home office" }
+    },
+    "url": "home-office",
+    "cover": "home-office.jpg",
+    "content": {
+      "uk": "<p>Collection 4 content in Ukrainian</p>",
+      "en": "<p>Collection 4 content in English</p>"
     }
   }
 ]
