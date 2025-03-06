@@ -1,6 +1,100 @@
 [
   {
     "id": 1,
+    "name": { "uk": "Спальня", "en": "Bedroom" },
+    "linked_products": [
+      "edge-stl",
+      "edge-ll",
+      "edge-lh",
+      "edge-sl",
+      "edge-ns",
+      "idea-s1w2",
+      "idea-sl",
+      "verona-3",
+      "verona-ns",
+      "folio-dh",
+      "folio-d",
+      "folio-dv"
+    ],
+    "title": { "uk": "Меблі для спальні", "en": "Bedroom furniture" },
+    "meta": {
+      "title": { "uk": "Меблі для спальні", "en": "Bedroom furniture" },
+      "description": {
+        "uk": "Створіть ідеальну атмосферу затишку та комфорту у вашій спальні з нашими стильними меблевими колекціями.",
+        "en": "Create the perfect atmosphere of coziness and comfort in your bedroom with our stylish furniture collections."
+      },
+      "keywords": {
+        "uk": "Спальня, меблі, затишок, комфорт",
+        "en": "Bedroom, furniture, coziness, comfort"
+      }
+    },
+    "url": "bedroom",
+    "cover": "bedroom.jpg",
+    "content": {
+      "main": {
+        "text": {
+          "uk": "Створіть ідеальну атмосферу затишку та комфорту у вашій спальні з нашими стильними меблевими колекціями. Витончені дизайни, якісні матеріали та продумана функціональність – усе для вашого бездоганного відпочинку. Обирайте ідеальне рішення для свого інтер’єру!",
+          "en": "Create the perfect atmosphere of coziness and comfort in your bedroom with our stylish furniture collections. Sophisticated designs, quality materials, and thoughtful functionality – all for your perfect relaxation. Choose the perfect solution for your interior!"
+        },
+        "image": [""]
+      },
+
+      "sections": [
+        {
+          "layout": "cols-3",
+          "title": { "uk": "Серія Edge", "en": "Edge series" },
+          "text": {
+            "uk": "Серія тумб для вітальні та спальної кімнати, що відповідає останнім тенденціям дизайну. Гармонійні та сучасні рішення для зберігання речей. Виступаючі грані лежать в основі дизайну серії Edge. Вони утворюють форму контейнера зверху та виконують функцію ручок.",
+            "en": "A series of bedside tables for the living room and bedroom that meets the latest design trends. Harmonious and modern solutions for storing things. Protruding edges are at the heart of the Edge series design. They form a container shape from above and serve as handles."
+          },
+          "images": [
+            "/products/edge-stl/edge_stl_promo_img_5.jpg",
+            "/products/edge-ll/edge-ll-interior_02_2.jpg",
+            "/products/edge-ns/edge_ns_promo_img_7.jpg"
+          ]
+        },
+        {
+          "layout": "cols-2",
+          "title": { "uk": "Серія Idea", "en": "Idea series" },
+          "text": {
+            "uk": "Меблі з цієї серії вирізняються тонкими гранями корпусу та майже непомітними стиками, що підкреслюють витонченість і надають виробу візуальної легкості. Шухлядки відкриваються легким натисканням, а відсутність ручок усуває зайві деталі та спрощує догляд за меблями.",
+            "en": "Furniture from this series is distinguished by thin edges of the body and almost imperceptible joints that emphasize sophistication and give the product visual lightness. The drawers open with a light press, and the absence of handles eliminates unnecessary details and simplifies furniture care."
+          },
+          "images": [
+            "/products/idea-s1w2/idea_s1w2_promo_img_1.jpg",
+            "/products/idea-sl/idea-sl_promo_img_2.jpg"
+          ]
+        },
+        {
+          "layout": "cols-2",
+          "title": { "uk": "Серія Verona", "en": "Verona series" },
+          "text": {
+            "uk": "Вдале поєднання матеріалів, практичність та вишуканий дизайн роблять цю колекцію ідеальним вибором для спальні або вбиральні кімнати. Місткі ящики з широким вибором декорів для фасадів, лаконічні металеві ручки та ретельно продумані деталі надають меблям унікальності. Комоди, тумби та приліжкові тумби цієї серії створені для комфорту та стилю у вашому інтер’єрі.",
+            "en": "A successful combination of materials, practicality, and sophisticated design make this collection an ideal choice for a bedroom or dressing room. Spacious drawers with a wide selection of decor for the facades, concise metal handles, and carefully thought-out details give the furniture uniqueness. Chests of drawers, cabinets, and bedside tables of this series are created for comfort and style in your interior."
+          },
+          "images": [
+            "/products/verona-3/verona_3_promo_img_2.jpg",
+            "/products/verona-ns/verona_ns_promo_img_1.jpg"
+          ]
+        },
+        {
+          "layout": "cols-3",
+          "title": { "uk": "Серія Folio", "en": "Folio series" },
+          "text": {
+            "uk": "Меблі серії Folio вирізняються сучасним дизайном, де гармонійно поєднуються витонченість і практичність. Тонкі грані корпусу надають конструкціям візуальної легкості, а майже непомітні стики підкреслюють їхню монолітність. Ергономічні ручки доповнюють лаконічний вигляд і забезпечують зручність у використанні.",
+            "en": "Furniture from the Folio series is distinguished by a modern design that harmoniously combines sophistication and practicality. Thin edges of the body give the structures visual lightness, and almost imperceptible joints emphasize their monolithic nature. Ergonomic handles complement the laconic look and provide convenience in use."
+          },
+          "images": [
+            "/products/folio/folio_promo_img_4.jpg",
+            "/products/folio/folio_promo_img_2.jpg",
+            "/products/folio-d/folio_d_promo_img_3.jpg"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
     "name": { "uk": "Вітальня", "en": "Living room" },
     "title": { "uk": "Меблі для вітальні", "en": "Living room furniture" },
     "meta": {
@@ -16,8 +110,9 @@
       "en": "<p>Collection 1 content in English</p>"
     }
   },
+
   {
-    "id": 2,
+    "id": 3,
     "name": { "uk": "Кухня", "en": "Kitchen" },
     "title": { "uk": "Кухня", "en": "Kitchen" },
     "meta": {
@@ -30,22 +125,6 @@
     "content": {
       "uk": "<p>Collection 2 content in Ukrainian</p>",
       "en": "<p>Collection 2 content in English</p>"
-    }
-  },
-  {
-    "id": 3,
-    "name": { "uk": "Спальня", "en": "Bedroom" },
-    "title": { "uk": "Спальня", "en": "Bedroom" },
-    "meta": {
-      "title": { "uk": "Спальня", "en": "Bedroom" },
-      "description": { "uk": "Спальня", "en": "Bedroom" },
-      "keywords": { "uk": "Спальня", "en": "Bedroom" }
-    },
-    "url": "bedroom",
-    "cover": "bedroom.jpg",
-    "content": {
-      "uk": "<p>Collection 3 content in Ukrainian</p>",
-      "en": "<p>Collection 3 content in English</p>"
     }
   },
   {

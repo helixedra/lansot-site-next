@@ -9,6 +9,16 @@
       "url": "/en/products"
     }
   },
+  "collections": {
+    "uk": {
+      "name": "Колекції",
+      "url": "/uk/collections"
+    },
+    "en": {
+      "name": "Collections",
+      "url": "/en/collections"
+    }
+  },
   "finishes": {
     "uk": {
       "name": "Матеріали",
