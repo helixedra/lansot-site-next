@@ -2,6 +2,8 @@ import collections from "@/app/data/collections.json";
 import ui from "@/app/data/ui.json";
 import Link from "next/link";
 import pages from "@/app/data/pages.json";
+import Image from "next/image";
+import LinkButton from "@/components/shared/LinkButton";
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -49,17 +51,39 @@ export default async function CollectionsPage({ params }) {
           <h1 className="PageHeader__title max-w-[920px]">{content.subtitle}</h1>
         </div>
 
-        <div className="grid grid-cols-1 gap-8  pb-32 pt-8 mt-8 lg:mt-24">
+        <div className="gap-8 pb-32 pt-8 mt-8 lg:mt-24">
           {collections.map((collection) => (
             <div key={collection.id}>
-              <Link
-                className="block py-8 border-t border-black hover:bg-zinc-100 h-96"
-                href={`/collections/${collection.url}`}
+              <div
+                className="grid grid-cols-1 lg:grid-cols-2 py-8 border-t border-black"
                 key={collection.id}
               >
-                <h2>{collection.name[locale]}</h2>
-                <div>{collection.content.main.text[locale]}</div>
-              </Link>
+                <div>
+                  <Link href={`/${locale}/collections/${collection.url}`}>
+                    <h2 className="mb-8">{collection.name[locale]}</h2>
+                  </Link>
+
+                  <div className="py-4 pr-8 text-xl leading-relaxed">
+                    {collection.content.main.text[locale]}
+                  </div>
+                  <LinkButton className="mt-8" href={`/${locale}/collections/${collection.url}`}>
+                    {ui.global.see_more[locale]}
+                  </LinkButton>
+                </div>
+
+                <div>
+                  <Link href={`/${locale}/collections/${collection.url}`}>
+                    <Image
+                      alt={collection.name[locale]}
+                      src={`/images/collections/${collection.cover}`}
+                      style={{ objectFit: "contain" }}
+                      width={1024}
+                      height={800}
+                      className="w-auto h-auto"
+                    />
+                  </Link>
+                </div>
+              </div>
             </div>
           ))}
         </div>
