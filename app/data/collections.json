@@ -106,8 +106,13 @@
     "url": "living-room",
     "cover": "living-room.jpg",
     "content": {
-      "uk": "<p>Collection 1 content in Ukrainian</p>",
-      "en": "<p>Collection 1 content in English</p>"
+      "main": {
+        "text": {
+          "uk": "Collection 1 content in Ukrainian",
+          "en": "Collection 1 content in English"
+        },
+        "image": [""]
+      }
     }
   },
 
@@ -123,8 +128,13 @@
     "url": "kitchen",
     "cover": "kitchen.jpg",
     "content": {
-      "uk": "<p>Collection 2 content in Ukrainian</p>",
-      "en": "<p>Collection 2 content in English</p>"
+      "main": {
+        "text": {
+          "uk": "Collection 1 content in Ukrainian",
+          "en": "Collection 1 content in English"
+        },
+        "image": [""]
+      }
     }
   },
   {
@@ -139,8 +149,13 @@
     "url": "home-office",
     "cover": "home-office.jpg",
     "content": {
-      "uk": "<p>Collection 4 content in Ukrainian</p>",
-      "en": "<p>Collection 4 content in English</p>"
+      "main": {
+        "text": {
+          "uk": "Collection 1 content in Ukrainian",
+          "en": "Collection 1 content in English"
+        },
+        "image": [""]
+      }
     }
   }
 ]
