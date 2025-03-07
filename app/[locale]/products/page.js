@@ -25,13 +25,13 @@ export async function generateMetadata({ params }) {
 
   return {
     title: content.title + " - Lansot",
-    description: content.description,
-    keywords: content.keywords,
+    description: content.meta.description,
+    keywords: content.meta.keywords,
 
     openGraph: {
       title: content.title + " - Lansot",
-      description: content.description,
-      keywords: content.keywords,
+      description: content.meta.description,
+      keywords: content.meta.keywords,
     },
     ...links,
   };

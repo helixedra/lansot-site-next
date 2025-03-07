@@ -7,16 +7,18 @@ import Link from "next/link";
 import Image from "next/image";
 import Burger from "./Burger";
 import MobileMenu from "./MobileMenu";
+import ui from "@/app/data/ui.json";
 
 export default function Header({ locale }) {
   return (
     <>
       <header className={`${classes.header} max-w-[1600px] mx-auto`}>
         <div className={classes.header_container}>
-          <Link href="/" className={classes.logo_сontainer}>
+          <Link href="/" className={classes.logo_сontainer} title={ui.global.home_link[locale]}>
             <Image
               src="/images/lansot-logo.svg"
               alt="Lansot logo"
+              title="Lansot"
               className={classes.logo_image}
               width={300}
               height={42}
@@ -28,7 +30,11 @@ export default function Header({ locale }) {
               <ul className={classes.desktop_menu__list}>
                 {Object.keys(menu).map((item) => (
                   <li key={item} className={classes.desktop_menu__item}>
-                    <ActiveMenuItem href={menu[item][locale].url} locale={locale}>
+                    <ActiveMenuItem
+                      title={menu[item][locale].name}
+                      href={menu[item][locale].url}
+                      locale={locale}
+                    >
                       {menu[item][locale].name}
                     </ActiveMenuItem>
                   </li>

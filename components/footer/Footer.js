@@ -12,7 +12,13 @@ export default async function Footer({ locale }) {
       <div className="wrapper max-w-[1600px] mx-auto px-6">
         <div className={classes.footer_top}>
           <div className={classes.footer_logo}>
-            <Image src="/images/lansot-logo-small.svg" alt="lansot logo" width={100} height={50} />
+            <Image
+              src="/images/lansot-logo-small.svg"
+              alt="lansot logo"
+              title="Lansot"
+              width={100}
+              height={50}
+            />
           </div>
           <div className={`${classes.social_icons} flex`}>
             <a
@@ -20,16 +26,30 @@ export default async function Footer({ locale }) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={footerData?.facebookPage}
+              title={footerData?.facebookPage}
             >
-              <Image src="/images/facebook.svg" alt="Facebook" width={24} height={24} />
+              <Image
+                src="/images/facebook.svg"
+                title={footerData?.facebookPage}
+                alt="Facebook"
+                width={24}
+                height={24}
+              />
             </a>
             <a
               href="https://www.instagram.com/lansot_com/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label={footerData?.instagramPage}
+              title={footerData?.instagramPage}
             >
-              <Image src="/images/instagram.svg" alt="Instagram" width={24} height={24} />
+              <Image
+                src="/images/instagram.svg"
+                title={footerData?.instagramPage}
+                alt="Instagram"
+                width={24}
+                height={24}
+              />
             </a>
           </div>
         </div>

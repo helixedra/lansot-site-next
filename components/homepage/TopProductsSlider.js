@@ -38,9 +38,11 @@ export default async function TopProductsSlider({ locale, ...props }) {
                 href={`/products/${product.category}/${product.url}`}
                 key={product.url}
                 className={classes.slider__item}
+                title={product.name}
               >
                 <Image
                   alt={product.meta.title[locale]}
+                  title={product.meta.title[locale]}
                   src={`/images/products/${product.url}/${product.cover}`}
                   style={{ objectFit: "contain" }}
                   width={640}

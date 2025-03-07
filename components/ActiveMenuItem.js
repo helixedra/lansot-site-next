@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-export default function ActiveMenuItem({ href, children, locale }) {
+export default function ActiveMenuItem({ href, children, locale, title }) {
   const pathname = usePathname();
 
   const isActive = () => {
@@ -17,7 +17,7 @@ export default function ActiveMenuItem({ href, children, locale }) {
     }
   };
   return (
-    <Link href={href} prefetch={true} className={isActive() ? "active" : ""}>
+    <Link href={href} prefetch={true} title={title} className={isActive() ? "active" : ""}>
       {children}
     </Link>
   );

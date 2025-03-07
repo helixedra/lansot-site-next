@@ -14,7 +14,14 @@ export default function ServiceSection({ content, locale, ...props }) {
           <LinkButton href="/services">{ui.global.see_more[locale]}</LinkButton>
         </div>
         <div className={classes.image}>
-          <Image src="/images/homepage/folio-collection_2.jpg" alt="Service section" style={{ objectFit: "contain" }} width={1082} height={800} />
+          <Image
+            src="/images/homepage/folio-collection_2.jpg"
+            title={content.title}
+            alt={content.title}
+            style={{ objectFit: "contain" }}
+            width={1082}
+            height={800}
+          />
         </div>
       </div>
     </div>

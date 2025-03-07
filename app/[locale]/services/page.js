@@ -1,5 +1,38 @@
 import pages from "@/app/data/pages.json";
 import Link from "next/link";
+
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+
+  const content = pages.services[locale];
+
+  const path = `services`;
+  const fullPath = `/${locale}/${path}`;
+  const links = {
+    metadataBase: new URL("https://lansot.com"),
+    alternates: {
+      canonical: fullPath,
+      languages: {
+        uk: "/uk/" + path,
+        en: "/en/" + path,
+      },
+    },
+  };
+
+  return {
+    title: content.meta.title + " - Lansot",
+    description: content.meta.description,
+    keywords: content.meta.keywords,
+
+    openGraph: {
+      title: content.meta.title + " - Lansot",
+      description: content.meta.description,
+      keywords: content.meta.keywords,
+    },
+    ...links,
+  };
+}
+
 export default function ServicesPage({ params }) {
   const { locale } = params;
   const content = pages.services[locale];

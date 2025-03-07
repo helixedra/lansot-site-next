@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import classes from "./ResponsiveCarousel.module.css";
 import Image from "next/image";
 
-export default function ResponsiveCarousel({ images, delay }) {
+export default function ResponsiveCarousel({ images, delay, locale }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Auto-advance logic
@@ -35,7 +35,8 @@ export default function ResponsiveCarousel({ images, delay }) {
           <div key={index} className={classes.carousel_slide}>
             <Image
               src={image.img}
-              alt={image.alt}
+              alt={image.alt[locale]}
+              title={image.alt[locale]}
               className={classes.carousel_image}
               width={1600}
               height={900}

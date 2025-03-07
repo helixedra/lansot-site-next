@@ -71,7 +71,7 @@ export default async function CollectionsPage({ params }) {
                   </LinkButton>
                 </div>
 
-                <div>
+                <div className="flex justify-end items-center">
                   <Link href={`/${locale}/collections/${collection.url}`}>
                     <Image
                       alt={collection.name[locale]}

@@ -7,6 +7,7 @@
     "showroom": { "uk": "Наявний в шоурумі", "en": "Available in showroom" },
     "collection": { "uk": "Колекція", "en": "Collection" },
     "from": { "uk": "Від", "en": "From" },
+    "home_link": { "uk": "Головна", "en": "Home" },
     "price_tooltip": {
       "uk": "Ціна вказана для базової комплектації в мінімальних габаритах. Остаточна вартість може відрізнятися в залежності від вибраних опцій.",
       "en": "The price is listed for the basic option in the minimum dimensions. Final cost may vary based on customization or additional features."

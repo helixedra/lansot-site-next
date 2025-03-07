@@ -10,9 +10,14 @@ export default function CollectionsSlider({ locale, ...props }) {
     <div className={classes.slider} {...props}>
       <ItemsSlider slideWidth={500}>
         {collections.map((collection) => (
-          <Link href={`/collections/${collection.url}`} key={collection.id}>
+          <Link
+            href={`/collections/${collection.url}`}
+            key={collection.id}
+            title={collection.name[locale]}
+          >
             <Image
               alt={collection.name[locale]}
+              title={collection.name[locale]}
               src={`/images/collections/${collection.cover}`}
               style={{ objectFit: "contain" }}
               width={1024}
