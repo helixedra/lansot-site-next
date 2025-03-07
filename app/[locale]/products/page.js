@@ -45,13 +45,13 @@ export default async function ProductsPage({ params }) {
   const products = Array.isArray(productsData) ? productsData : Object.values(productsData);
 
   return (
-    <div className={`${classes.catalog} container `}>
+    <div className={`${classes.catalog} max-w-[1600px] mx-auto px-6 lg:px-12`}>
       <CatalogMenu categories={categoriesList} locale={locale} />
       <CatalogMenuMobile categories={categoriesList} locale={locale} />
 
-      <div data-aos="fade-up ">
+      <div className="w-full" data-aos="fade-up">
         <h1 className={classes.category_title}>{content.name}</h1>
-        <div className={classes.catalog_grid}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
           {products.map((product) => (
             <ProductCard key={product.url} product={product} locale={locale} />
           ))}

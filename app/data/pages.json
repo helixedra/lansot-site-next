@@ -40,9 +40,9 @@
       "name": "Каталог меблів",
       "title": "Каталог меблів",
       "meta": {
-        "title": "Каталог товарів",
-        "description": "Всі меблі в каталозі Lansot",
-        "keywords": "меблі, всі"
+        "title": "Каталог меблів",
+        "description": "Ознайомтеся з нашим каталогом меблів, щоб знайти стильні та функціональні рішення для вашого інтер'єру. Висока якість та сучасний дизайн.",
+        "keywords": "меблі, каталог, стильні, сучасні"
       }
     },
     "en": {
@@ -50,8 +50,8 @@
       "title": "Catalog of products",
       "meta": {
         "title": "Catalog of products",
-        "description": "All products",
-        "keywords": "products, all"
+        "description": "Explore our catalog of furniture to find stylish and functional solutions for your interior. High quality and modern design.",
+        "keywords": "furniture, catalog, stylish, modern"
       }
     }
   },
@@ -62,8 +62,8 @@
       "subtitle": "Всі матеріали для виробництва меблів",
       "meta": {
         "title": "Матеріали",
-        "description": "Всі матеріали для виробництва меблів",
-        "keywords": "матеріали, всі"
+        "description": "Всі матеріали для виробництва меблів від Lansot. Високий рівень виконання та якісні матеріали. Великий вибір оздоблень та гнучкі розмірні сітки.",
+        "keywords": "матеріали, меблі, Lansot, високий рівень виконання, якісні матеріали"
       },
 
       "info": "Всі представлені декори є репродукціями. Вибір придатного за кольором декору можливий тільки за допомогою оригінального зразка."
@@ -73,8 +73,8 @@
       "title": "All finishes",
       "meta": {
         "title": "All finishes",
-        "description": "All finishes",
-        "keywords": "finishes, all"
+        "description": "All finishes for furniture production from Lansot. High level of performance and quality materials. Wide selection of finishes and flexible size grids.",
+        "keywords": "finishes, furniture, Lansot, high level of performance, quality materials"
       },
       "info": "All presented finishes are reproductions. The choice of a suitable color decor is possible only with the the original sample."
     }
@@ -109,7 +109,7 @@
       "subtitle": "Умови оплати замовлення та доставки меблів",
       "meta": {
         "title": "Оплата та доставка",
-        "description": "Інформація про оплату та доставку",
+        "description": "Інформація про оплату та доставку меблів від Lansot. Висока якість, швидка доставка і доступні ціни.",
         "keywords": "оплата, доставка, умови"
       },
       "info": {
@@ -138,7 +138,7 @@
       "subtitle": "Information about payment and delivery",
       "meta": {
         "title": "Payment and Delivery",
-        "description": "Information about payment and delivery",
+        "description": "Information about payment and delivery of furniture from Lansot. High quality, fast delivery and affordable prices.",
         "keywords": "payment, delivery, terms"
       },
       "info": {
@@ -194,8 +194,8 @@
 
       "meta": {
         "title": "Про нас",
-        "description": "Про нас",
-        "keywords": "про нас"
+        "description": "Дізнайтеся більше про нас, наші цінності та підхід до створення меблів. Ми пропонуємо сучасні інтер'єрні рішення в стилі мінімалізму, що поєднують високу якість та турботу про клієнта.",
+        "keywords": "про нас, меблі, мінімалізм, Lansot"
       }
     },
     "en": {
@@ -227,8 +227,8 @@
       ],
       "meta": {
         "title": "About Us",
-        "description": "About Us",
-        "keywords": "about us"
+        "description": "Learn more about us, our values and approach to creating furniture. We offer modern interior solutions in the style of minimalism that combine high quality and customer care.",
+        "keywords": "about us, furniture, minimalism, Lansot"
       }
     }
   },
@@ -239,7 +239,7 @@
       "subtitle": "Контактна інформація",
       "meta": {
         "title": "Контакти",
-        "description": "Контактна інформація",
+        "description": "Контактна інформація. Зв'яжіться з нами для отримання додаткової інформації про наші продукти та послуги.",
         "keywords": "контакти"
       },
       "info": {
@@ -264,7 +264,7 @@
       "title": "Contacts",
       "meta": {
         "title": "Contacts",
-        "description": "Contact information",
+        "description": "Contact information. Contact us for more information about our products and services.",
         "keywords": "contacts"
       },
       "info": {
@@ -282,6 +282,53 @@
           "title": "Production",
           "content": "Kyiv, Viskozna St., 8"
         }
+      }
+    }
+  },
+
+  "services": {
+    "uk": {
+      "name": "Індивідуальний підхід",
+      "title": "Індивідуальний підхід",
+      "subtitle": "Меблі, які підлаштовуються під вас",
+      "meta": {
+        "title": "Індивідуальний підхід",
+        "description": "Ми пропонуємо можливість персоналізації: ви обираєте матеріали, коригуєте розміри – ми виготовляємо меблі, ідеально адаптовані до вашого простору.",
+        "keywords": "індивідуальний підхід, меблі, персоналізація"
+      },
+      "content": {
+        "p1": "Мінімалізм – це не про обмеження, а про продуманість і гармонію. Ми створюємо серійні меблі в сучасному стилі, але розуміємо, що кожен простір унікальний. Саме тому пропонуємо можливість персоналізації: ви обираєте матеріали, коригуєте розміри – ми виготовляємо меблі, ідеально адаптовані до вашого простору.",
+        "title1": "Як це працює?",
+        "list": [
+          "<strong>Виберіть модель</strong> з нашої серійної колекції.",
+          "<strong>Скоригуйте параметри</strong> – змініть розміри, конфігурацію чи пропорції.",
+          "<strong>Обирайте матеріали та відтінки</strong> – від текстури дерева до кольору металевих елементів.",
+          "<strong>Отримуйте меблі, що відповідають саме вашим потребам</strong> – стильні, функціональні, ідеально вмонтовані в інтер’єр."
+        ],
+        "p2": "Ми не просто виготовляємо меблі – ми допомагаємо вам створити комфортний та естетичний простір, де кожен елемент працює на ваш стиль життя.",
+        "p3": "{a}Зв’яжіться з нами{a}, щоб обговорити деталі та отримати консультацію."
+      }
+    },
+    "en": {
+      "name": "Individual Approach",
+      "title": "Individual Approach",
+      "subtitle": "Furniture that adapts to you",
+      "meta": {
+        "title": "Individual Approach",
+        "description": "We offer the possibility of personalization: you choose materials, adjust sizes - we make furniture that is perfectly adapted to your space.",
+        "keywords": "individual approach, furniture, personalization"
+      },
+      "content": {
+        "p1": "Minimalism is not about limitation, but about thoughtfulness and harmony. We create serial furniture in a modern style, but we understand that every space is unique. That is why we offer the possibility of personalization: you choose materials, adjust sizes - we make furniture that is perfectly adapted to your space.",
+        "title1": "How it works?",
+        "list": [
+          "Choose a model from our serial collection.",
+          "Adjust the parameters - change sizes, configuration or proportions.",
+          "Choose materials and shades - from the texture of wood to the color of metal elements.",
+          "Get furniture that meets your needs - stylish, functional, perfectly integrated into the interior."
+        ],
+        "p2": "We don't just make furniture - we help you create a comfortable and aesthetic space where every element works for your lifestyle.",
+        "p3": "{a}Contact us{a} to discuss the details and get advice."
       }
     }
   },

@@ -54,7 +54,7 @@ export default async function HomePage({ params }) {
 
       <IntroText data-aos="fade-down" data-aos-duration="500">
         <h1 className={classes.title}>{data.homepage[locale].herotext.title}</h1>
-        <p className="text-base md:text-lg lg:text-xl font-medium leading-relaxed mt-6">
+        <p className="text-base md:text-lg lg:text-xl leading-relaxed lg:leading-relaxed mt-6">
           {data.homepage[locale].herotext.content}
         </p>
       </IntroText>
