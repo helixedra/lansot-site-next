@@ -1,7 +1,7 @@
 import Image from "next/image";
 import collections from "@/app/data/collections.json";
 import ui from "@/app/data/ui.json";
-import ProductsSlider from "@/components/homepage/__ProductsSlider";
+import ProductsSlider from "@/components/homepage/ProductsSlider";
 
 export async function generateMetadata({ params }) {
   const { locale, slug } = await params;
@@ -63,7 +63,7 @@ export default async function ContactsPage({ params }) {
         </div>
 
         {content.content.sections.map((section) => (
-          <div>
+          <div key={section.title[locale]}>
             <div className="grid grid-cols-1 lg:grid-cols-2 my-[8rem] lg:my-[12rem]">
               <div className="mb-4">
                 <h2>{section.title[locale]}</h2>
