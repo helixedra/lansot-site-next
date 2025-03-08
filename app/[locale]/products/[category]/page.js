@@ -49,15 +49,15 @@ export default async function ProductsPage({ params }) {
   const productsFiltered = products.filter((product) => product.category === category);
 
   return (
-    <div className={`${classes.catalog} container`}>
+    <div className={`${classes.catalog} max-w-[1600px] mx-auto px-6 lg:px-12`}>
       <CatalogMenu categories={categoriesList} locale={locale} />
       <CatalogMenuMobile categories={categoriesList} locale={locale} />
 
-      <div data-aos="fade-up">
+      <div className="w-full" data-aos="fade-up">
         <h1 className={`normal-case ${classes.category_title}`}>
           {categories[category][locale].name}
         </h1>
-        <div className={classes.catalog_grid}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
           {productsFiltered.map((product) => (
             <ProductCard key={product.url} product={product} locale={locale} />
           ))}
