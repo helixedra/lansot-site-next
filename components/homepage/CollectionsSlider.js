@@ -11,7 +11,7 @@ export default function CollectionsSlider({ locale, ...props }) {
       <ItemsSlider slideWidth={500} locale={locale}>
         {collections.map((collection) => (
           <Link
-            href={`/collections/${collection.url}`}
+            href={`/${locale}/collections/${collection.url}`}
             key={collection.id}
             title={collection.name[locale]}
           >
