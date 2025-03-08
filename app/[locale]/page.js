@@ -8,6 +8,7 @@ import TopProductsSlider from "@/components/homepage/TopProductsSlider";
 import ArticlesSection from "@/components/homepage/ArticlesSection";
 import ContactSection from "@/components/homepage/ContactSection";
 import articles from "@/app/data/articles.json";
+import { AOSInit } from "@/components/AOSInit";
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -60,33 +61,34 @@ export default async function HomePage({ params }) {
 
   return (
     <>
-      <div data-aos="fade-up" data-aos-duration="500" className={`${classes.image_slider}`}>
+      <div data-aos="fade-up" data-aos-duration="300" className={`${classes.image_slider}`}>
         <ResponsiveCarousel images={sliderImages} delay={6500} locale={locale} />
       </div>
 
-      <IntroText data-aos="fade-down" data-aos-duration="500">
+      <IntroText data-aos="fade-down" data-aos-duration="300">
         <h1 className={classes.title}>{pages.homepage[locale].herotext.title}</h1>
         <p className="text-base md:text-lg lg:text-xl leading-relaxed lg:leading-relaxed mt-6">
           {pages.homepage[locale].herotext.content}
         </p>
       </IntroText>
 
-      <CollectionsSlider data-aos="fade-up" data-aos-duration="500" locale={locale} />
+      <CollectionsSlider data-aos="fade-up" data-aos-duration="300" locale={locale} />
 
       <ServiceSection
         content={pages.homepage[locale].service}
         locale={locale}
         data-aos="fade-up"
-        data-aos-duration="500"
+        data-aos-duration="300"
       />
-      <TopProductsSlider data-aos="fade-up" data-aos-duration="500" locale={locale} />
+      <TopProductsSlider data-aos="fade-up" data-aos-duration="300" locale={locale} />
       <ArticlesSection
         data-aos="zoom-out"
-        data-aos-duration="500"
+        data-aos-duration="300"
         articles={articles}
         locale={locale}
       />
       <ContactSection locale={locale} />
+      <AOSInit />
     </>
   );
 }
