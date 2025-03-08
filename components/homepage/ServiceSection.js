@@ -15,12 +15,13 @@ export default function ServiceSection({ content, locale, ...props }) {
         </div>
         <div className={classes.image}>
           <Image
-            src="/images/homepage/folio-collection_2.jpg"
+            src="/api/images/homepage/folio-collection_2.jpg"
             title={content.title}
             alt={content.title}
             style={{ objectFit: "contain" }}
             width={1082}
             height={800}
+            priority={true}
           />
         </div>
       </div>

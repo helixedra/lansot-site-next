@@ -32,7 +32,7 @@ export default async function AboutPage({ params }) {
         ></div>
         <div data-aos="fade-up" data-aos-duration="300" className="w-full sm:w-full lg:w-8/12">
           <Image
-            src={"/images/home_slider_img_0.jpg"}
+            src={"/api/images/home_slider_img_0.jpg"}
             width={1600}
             height={830}
             alt="Idea SL"
@@ -63,7 +63,7 @@ export default async function AboutPage({ params }) {
         <Image
           data-aos="fade-up"
           data-aos-duration="300"
-          src={"/images/products/delta-t2/delta_t2_promo_img_4.jpg"}
+          src={"/api/images/products/delta-t2/delta_t2_promo_img_4.jpg"}
           width={2000}
           height={1500}
           style={{ objectFit: "cover" }}

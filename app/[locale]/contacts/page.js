@@ -18,14 +18,14 @@ export default async function ContactsPage({ params }) {
   const data = await pages.contacts[locale];
 
   const contacts = [
-    { href: "viber://pa?chatURI=Lansot_com", icon: "/images/viber.png", alt: "viber" },
-    { href: "https://t.me/lansot_com", icon: "/images/telegram.png", alt: "telegram" },
+    { href: "viber://pa?chatURI=Lansot_com", icon: "/api/images/viber.png", alt: "viber" },
+    { href: "https://t.me/lansot_com", icon: "/api/images/telegram.png", alt: "telegram" },
     {
       href: "https://www.messenger.com/t/lansotcom",
-      icon: "/images/messenger.png",
+      icon: "/api/images/messenger.png",
       alt: "messenger",
     },
-    { href: "https://wa.me/380971122616", icon: "/images/whatsapp.png", alt: "whatsapp" },
+    { href: "https://wa.me/380971122616", icon: "/api/images/whatsapp.png", alt: "whatsapp" },
   ];
   return (
     <>

@@ -43,10 +43,11 @@ export default async function TopProductsSlider({ locale, ...props }) {
                 <Image
                   alt={product.meta.title[locale]}
                   title={product.meta.title[locale]}
-                  src={`/images/products/${product.url}/${product.cover}`}
+                  src={`/api/images/products/${product.url}/${product.cover}`}
                   style={{ objectFit: "contain" }}
                   width={640}
                   height={600}
+                  priority={true}
                 />
                 <div className={classes.slider__content}>
                   <div>{categories[product.category][locale].name}</div>

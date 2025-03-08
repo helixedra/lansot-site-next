@@ -55,7 +55,7 @@ export default async function CollectionsPage({ params }) {
                   <Link href={`/${locale}/collections/${collection.url}`}>
                     <Image
                       alt={collection.name[locale]}
-                      src={`/images/collections/${collection.cover}`}
+                      src={`/api/images/collections/${collection.cover}`}
                       style={{ objectFit: "cover" }}
                       width={1024}
                       height={800}

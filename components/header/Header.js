@@ -21,7 +21,7 @@ export default function Header({ locale }) {
             title={ui.global.home_link[locale]}
           >
             <Image
-              src="/images/lansot-logo.svg"
+              src="/api/images/lansot-logo.svg"
               alt="Lansot logo"
               title="Lansot"
               className={classes.logo_image}

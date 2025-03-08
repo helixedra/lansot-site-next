@@ -18,11 +18,12 @@ export default function CollectionsSlider({ locale, ...props }) {
             <Image
               alt={collection.name[locale]}
               title={collection.name[locale]}
-              src={`/images/collections/${collection.cover}`}
+              src={`/api/images/collections/${collection.cover}`}
               style={{ objectFit: "cover" }}
               className="w-[500px] h-[350px]"
               width={1024}
               height={700}
+              priority={true}
             />
             <div className={classes.slider__content}>
               <div>{ui.global.collection[locale]}</div>

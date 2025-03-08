@@ -25,12 +25,13 @@ export default function ArticlesSection({ articles, locale, ...props }) {
       <div className={classes.articles}>
         <div className={classes.image}>
           <Image
-            src="/images/home_slider_img_1.jpg"
+            src="/api/images/home_slider_img_1.jpg"
             alt={ui.global.articles[locale]}
             title={ui.global.articles[locale]}
             style={{ objectFit: "cover" }}
             width={1350}
             height={700}
+            priority={true}
           />
         </div>
         <div className={classes.content}>

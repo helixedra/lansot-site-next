@@ -14,7 +14,8 @@ export function middleware(request) {
     pathname.startsWith("/robots.txt") ||
     pathname.startsWith("/sitemap.xml") ||
     pathname.startsWith("/images") ||
-    pathname.startsWith("/models")
+    pathname.startsWith("/models") ||
+    pathname.startsWith("/api")
   ) {
     return NextResponse.next("/public" + pathname);
   }

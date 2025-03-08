@@ -8,8 +8,18 @@ export default function Technical({ product, locale }) {
 
       <div className={classes.drawings_container}>
         {product.drawings.map((image, index) => (
-          <div key={index} href={`/images/products/${product.url}/${image}`} className={classes.drawing}>
-            <Image data-aos="zoom-in-up" src={`/images/products/${product.url}/${image}`} alt={product.name} width={840} height={720} />
+          <div
+            key={index}
+            href={`/api/images/products/${product.url}/${image}`}
+            className={classes.drawing}
+          >
+            <Image
+              data-aos="zoom-in-up"
+              src={`/api/images/products/${product.url}/${image}`}
+              alt={product.name}
+              width={840}
+              height={720}
+            />
           </div>
         ))}
       </div>

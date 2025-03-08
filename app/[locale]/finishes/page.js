@@ -40,7 +40,7 @@ export default async function FinishingPage({ params }) {
                 </div>
                 <div className={`w-full h-full ${classes.decor_sample}`}>
                   <Image
-                    src={`/images/decors/ldsp/${ldsp.img}`}
+                    src={`/api/images/decors/ldsp/${ldsp.img}`}
                     alt={ldsp.title}
                     width={300}
                     height={150}
@@ -69,7 +69,12 @@ export default async function FinishingPage({ params }) {
                   {ldsp_wood.title}
                 </div>
                 <div className={classes.decor_sample}>
-                  <Image src={`/images/decors/ldsp/${ldsp_wood.img}`} alt={ldsp_wood.title} fill />
+                  <Image
+                    src={`/api/images/decors/ldsp/${ldsp_wood.img}`}
+                    alt={ldsp_wood.title}
+                    fill
+                    sizes="w-[405px] h-[226px]"
+                  />
                 </div>
               </div>
             ))}
