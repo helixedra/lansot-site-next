@@ -12,6 +12,12 @@
       "uk": "Ціна вказана для базової комплектації в мінімальних габаритах. Остаточна вартість може відрізнятися в залежності від вибраних опцій.",
       "en": "The price is listed for the basic option in the minimum dimensions. Final cost may vary based on customization or additional features."
     },
+    "slider": {
+      "uk": "Галерея зображень",
+      "en": "Image gallery"
+    },
+    "back": { "uk": "Назад", "en": "Back" },
+    "next": { "uk": "Далі", "en": "Next" },
     "currency": { "uk": "грн.", "en": "uah" },
     "request_price": { "uk": "Запросити прорахунок", "en": "Request Price" },
     "invite_to_contact": {

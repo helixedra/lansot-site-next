@@ -8,7 +8,7 @@ import ui from "@/app/data/ui.json";
 export default function CollectionsSlider({ locale, ...props }) {
   return (
     <div className={classes.slider} {...props}>
-      <ItemsSlider slideWidth={500}>
+      <ItemsSlider slideWidth={500} locale={locale}>
         {collections.map((collection) => (
           <Link
             href={`/collections/${collection.url}`}

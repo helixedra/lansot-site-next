@@ -33,7 +33,7 @@ export default async function TopProductsSlider({ locale, includes, header, ...p
         </div>
       </div>
       <div className={classes.slider}>
-        <ItemsSlider slideWidth={440}>
+        <ItemsSlider slideWidth={440} locale={locale}>
           {products &&
             products.map((product) => (
               <Link

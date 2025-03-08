@@ -3,8 +3,9 @@ import { useState, useEffect, useRef } from "react";
 import { useDrag } from "@use-gesture/react";
 import { RiArrowRightFill, RiArrowLeftFill } from "react-icons/ri";
 import classes from "./ItemsSlider.module.css";
+import ui from "@/app/data/ui.json";
 
-export default function ItemsSlider({ children, slideWidth }) {
+export default function ItemsSlider({ children, slideWidth, locale }) {
   const [currentSlide, setCurrentSlide] = useState(1);
   const [prev, setPrev] = useState(false);
   const [next, setNext] = useState(true);
@@ -92,6 +93,8 @@ export default function ItemsSlider({ children, slideWidth }) {
           ref={sliderContainerRef}
           style={{ touchAction: "none" }}
           {...bind()}
+          role="region"
+          aria-label={ui.global.slider[locale]}
         >
           {children}
         </div>
@@ -101,6 +104,8 @@ export default function ItemsSlider({ children, slideWidth }) {
           style={{ visibility: prev ? "visible" : "hidden" }}
           className={classes.slider__nav__prev}
           onClick={() => handleSlider(currentSlide, "prev")}
+          aria-label={ui.global.back[locale] || "Back"}
+          title={ui.global.back[locale] || "Back"}
         >
           <RiArrowLeftFill />
         </button>
@@ -108,6 +113,8 @@ export default function ItemsSlider({ children, slideWidth }) {
           style={{ visibility: next ? "visible" : "hidden" }}
           className={classes.slider__nav__next}
           onClick={() => handleSlider(currentSlide, "next")}
+          aria-label={ui.global.next[locale] || "Next"}
+          title={ui.global.next[locale] || "Next"}
         >
           <RiArrowRightFill />
         </button>

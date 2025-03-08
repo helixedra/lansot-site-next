@@ -1,7 +1,7 @@
 import Image from "next/image";
 import collections from "@/app/data/collections.json";
 import ui from "@/app/data/ui.json";
-import ProductsSlider from "@/components/homepage/ProductsSlider";
+import ProductsSlider from "@/components/homepage/__ProductsSlider";
 
 export async function generateMetadata({ params }) {
   const { locale, slug } = await params;
