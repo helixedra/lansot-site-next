@@ -22,13 +22,27 @@ export default function LanguageVersion({ locale }) {
     },
   };
 
+  function handleSetLanguage(newLocale) {
+    document.cookie = `locale=${newLocale};path=/;SameSite=Lax`;
+  }
+
   return (
     <div className="flex items-center gap-1 text-md lg:text-sm">
       {/* <RiGlobalLine /> */}
-      <Link href={`${path.uk.href}`} title={`${path.uk.title}`} className={active.uk}>
+      <Link
+        href={`${path.uk.href}`}
+        title={`${path.uk.title}`}
+        className={active.uk}
+        onClick={() => handleSetLanguage("uk")}
+      >
         УКР
       </Link>
-      <Link href={`${path.en.href}`} title={`${path.en.title}`} className={active.en}>
+      <Link
+        href={`${path.en.href}`}
+        title={`${path.en.title}`}
+        className={active.en}
+        onClick={() => handleSetLanguage("en")}
+      >
         EN
       </Link>
     </div>
