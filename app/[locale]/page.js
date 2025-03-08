@@ -14,30 +14,30 @@ export async function generateMetadata({ params }) {
   const { locale } = await params;
   const content = pages.homepage[locale];
 
-  const links = {
-    metadataBase: new URL("https://lansot.com"),
-    alternates: {
-      canonical: "/",
-      languages: {
-        uk: "/uk",
-        en: "/en",
-      },
-    },
-  };
+  const baseUrl = "https://lansot.com";
 
   return {
     title: content.meta.title,
     description: content.meta.description,
-    keywords: content.meta.keywords,
 
     openGraph: {
       title: content.meta.title,
       description: content.meta.description,
-      keywords: content.meta.keywords,
     },
-    ...links,
+
+    metadataBase: new URL(baseUrl),
+
+    alternates: {
+      canonical: `${baseUrl}/${locale === "uk" ? "uk" : "en"}`,
+      languages: {
+        uk: `${baseUrl}/uk`,
+        en: `${baseUrl}/en`,
+        "x-default": baseUrl, // Helps Google understand the default version
+      },
+    },
   };
 }
+
 export default async function HomePage({ params }) {
   const { locale } = await params;
 

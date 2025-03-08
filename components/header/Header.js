@@ -8,6 +8,7 @@ import Image from "next/image";
 import Burger from "./Burger";
 import MobileMenu from "./MobileMenu";
 import ui from "@/app/data/ui.json";
+import LanguageVersion from "@/components/header/LanguageVersion";
 
 export default function Header({ locale }) {
   return (
@@ -41,7 +42,8 @@ export default function Header({ locale }) {
                 ))}
                 <li>{/* <ShoppingCart /> */}</li>
               </ul>
-              <LanguageSwitcher locale={locale} />
+              {/* <LanguageSwitcher locale={locale} /> */}
+              <LanguageVersion locale={locale} />
             </div>
           </nav>
           <MobileMenu menu={menu} locale={locale} />

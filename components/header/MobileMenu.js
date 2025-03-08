@@ -3,6 +3,7 @@ import Burger from "./Burger";
 import classes from "./Header.module.css";
 import ActiveMenuItem from "@/components/ActiveMenuItem";
 import LanguageSwitcher from "@/components/header/LanguageSwitcher";
+import LanguageVersion from "@/components/header/LanguageVersion";
 import { useState } from "react";
 
 export default function MobileMenu({ menu, locale }) {
@@ -11,7 +12,9 @@ export default function MobileMenu({ menu, locale }) {
     <>
       <Burger active={menuOpen} toggle={setMenuOpen} />
 
-      <nav className={menuOpen ? `${classes.mobile_menu}` : `${classes.mobile_menu} ${classes.hide}`}>
+      <nav
+        className={menuOpen ? `${classes.mobile_menu}` : `${classes.mobile_menu} ${classes.hide}`}
+      >
         <ul className={classes.mobile_menu__list}>
           {Object.keys(menu).map((item) => (
             <li key={item} className={classes.mobile_menu__item} onClick={() => setMenuOpen(false)}>
@@ -23,7 +26,10 @@ export default function MobileMenu({ menu, locale }) {
           <li>{/* <ShoppingCart /> */}</li>
         </ul>
         <div className={classes.language_switcher}>
-          <LanguageSwitcher />
+          {/* <LanguageSwitcher /> */}
+          <div className="flex items-center gap-1 px-6 py-2">
+            <LanguageVersion locale={locale} />
+          </div>
         </div>
       </nav>
     </>

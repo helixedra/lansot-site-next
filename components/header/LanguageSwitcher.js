@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useRouter, usePathname } from 'next/navigation';
-import { useState } from 'react';
-import { useLocale } from '@/contexts/LocaleContext';
-import classes from '@/components/header/LanguageSwitcher.module.css';
-import { RiGlobalLine } from 'react-icons/ri';
+import { useRouter, usePathname } from "next/navigation";
+import { useState } from "react";
+import { useLocale } from "@/contexts/LocaleContext";
+import classes from "@/components/header/LanguageSwitcher.module.css";
+import { RiGlobalLine } from "react-icons/ri";
 
 export default function LanguageSwitcher() {
   const currentLocale = useLocale();
@@ -14,38 +14,36 @@ export default function LanguageSwitcher() {
 
   const switchLanguage = (newLocale) => {
     if (isChanging || currentLocale === newLocale) return;
-
     setIsChanging(true);
 
-    document.cookie = `locale=${newLocale};path=/`; // set cookie
+    document.cookie = `locale=${newLocale};path=/;SameSite=Lax`; // More secure
 
-    const newPath = pathname.replace(`/${currentLocale}`, `/${newLocale}`);
+    const newPath = pathname.startsWith(`/${currentLocale}`)
+      ? `/${newLocale}${pathname.substring(currentLocale.length + 1)}`
+      : `/${newLocale}${pathname}`;
 
     router.push(newPath);
-    router.refresh();
   };
 
   return (
     <div className={classes.language_switcher}>
       <RiGlobalLine />
       <button
-        onClick={() => switchLanguage('uk')}
+        onClick={() => switchLanguage("uk")}
         disabled={isChanging}
-        className={
-          currentLocale === 'uk'
-            ? `${classes.active} ${classes.language_switcher__item}`
-            : `${classes.language_switcher__item}`
-        }>
+        className={`${classes.language_switcher__item} ${
+          currentLocale === "uk" ? classes.active : ""
+        }`}
+      >
         УКР
       </button>
       <button
-        onClick={() => switchLanguage('en')}
+        onClick={() => switchLanguage("en")}
         disabled={isChanging}
-        className={
-          currentLocale === 'en'
-            ? `${classes.active} ${classes.language_switcher__item}`
-            : `${classes.language_switcher__item}`
-        }>
+        className={`${classes.language_switcher__item} ${
+          currentLocale === "en" ? classes.active : ""
+        }`}
+      >
         ENG
       </button>
     </div>
