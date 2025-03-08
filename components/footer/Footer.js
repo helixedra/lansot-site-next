@@ -2,7 +2,6 @@ import classes from "./Footer.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import page from "@/app/data/pages.json";
-import AdditionalVersion from "../header/LanguageVersion";
 
 export default async function Footer({ locale }) {
   const currentYear = await new Date().getFullYear();

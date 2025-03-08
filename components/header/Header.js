@@ -15,7 +15,11 @@ export default function Header({ locale }) {
     <>
       <header className={`${classes.header} max-w-[1600px] mx-auto`}>
         <div className={classes.header_container}>
-          <Link href="/" className={classes.logo_сontainer} title={ui.global.home_link[locale]}>
+          <Link
+            href={`/${locale}`}
+            className={classes.logo_сontainer}
+            title={ui.global.home_link[locale]}
+          >
             <Image
               src="/images/lansot-logo.svg"
               alt="Lansot logo"

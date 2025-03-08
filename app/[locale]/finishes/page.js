@@ -2,43 +2,22 @@ import classes from "./page.module.css";
 import mat from "@/app/data/decors.json";
 import Image from "next/image";
 import { RiInformationLine } from "react-icons/ri";
-import page from "@/app/data/pages.json";
+import pages from "@/app/data/pages.json";
+import { MetaData } from "@/utils/metadata";
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-
-  const content = page.finishes[locale];
-
-  const path = `finishes`;
-  const fullPath = `/${locale}/${path}`;
-  const links = {
-    metadataBase: new URL("https://lansot.com"),
-    alternates: {
-      canonical: fullPath,
-      languages: {
-        uk: "/uk/" + path,
-        en: "/en/" + path,
-      },
-    },
-  };
-
-  return {
-    title: content.meta.title + " - Lansot",
+  const content = pages.finishes[locale];
+  const meta = {
+    title: content.meta.title + ` ${process.env.SITE_NAME}`,
     description: content.meta.description,
-    keywords: content.meta.keywords,
-
-    openGraph: {
-      title: content.meta.title + " - Lansot",
-      description: content.meta.description,
-      keywords: content.meta.keywords,
-    },
-    ...links,
   };
+  return MetaData({ locale, meta, pathname: "finishes" });
 }
 
 export default async function FinishingPage({ params }) {
   const { locale } = await params;
-  const data = page.finishes[locale];
+  const data = pages.finishes[locale];
   return (
     <div className="max-w-[1600px] mx-auto mb-12 px-6 lg:px-12">
       <div data-aos="fade-up" data-aos-duration="300" className="PageHeader py-8 lg:py-24">

@@ -6,37 +6,18 @@ import classes from "../products.module.css";
 import CatalogMenu from "@/components/products/CatalogMenu";
 import CatalogMenuMobile from "@/components/products/CatalogMenuMobile";
 import TextMore from "@/components/shared/TextMore";
+import { MetaData } from "@/utils/metadata";
 
 export async function generateMetadata({ params }) {
   const { locale, category } = await params;
   const content = pageContent.products[locale];
   const categoryData = categories[category][locale];
 
-  const path = `products/${category}`;
-  const fullPath = `/${locale}/${path}`;
-  const links = {
-    metadataBase: new URL("https://lansot.com"),
-    alternates: {
-      canonical: fullPath,
-      languages: {
-        uk: "/uk/" + path,
-        en: "/en/" + path,
-      },
-    },
-  };
-
-  return {
-    title: `${categoryData.name} - ${content.title} - Lansot`,
+  const meta = {
+    title: `${categoryData.name} - ${content.title} - ${process.env.SITE_NAME}`,
     description: categoryData.meta.description,
-    keywords: categoryData.meta.keywords,
-
-    openGraph: {
-      title: `${categoryData.name} - ${content.title} - Lansot`,
-      description: categoryData.meta.description,
-      keywords: categoryData.meta.keywords,
-    },
-    ...links,
   };
+  return MetaData({ locale, meta, pathname: `products/${category}` });
 }
 
 export default async function ProductsPage({ params }) {

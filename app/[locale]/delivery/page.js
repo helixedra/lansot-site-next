@@ -1,35 +1,14 @@
 import pages from "@/app/data/pages.json";
+import { MetaData } from "@/utils/metadata";
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-
   const content = pages.delivery[locale];
-
-  const path = `delivery`;
-  const fullPath = `/${locale}/${path}`;
-  const links = {
-    metadataBase: new URL("https://lansot.com"),
-    alternates: {
-      canonical: fullPath,
-      languages: {
-        uk: "/uk/" + path,
-        en: "/en/" + path,
-      },
-    },
-  };
-
-  return {
-    title: content.meta.title + " - Lansot",
+  const meta = {
+    title: content.meta.title + ` ${process.env.SITE_NAME}`,
     description: content.meta.description,
-    keywords: content.meta.keywords,
-
-    openGraph: {
-      title: content.meta.title + " - Lansot",
-      description: content.meta.description,
-      keywords: content.meta.keywords,
-    },
-    ...links,
   };
+  return MetaData({ locale, meta, pathname: "delivery" });
 }
 
 export default async function DeliveryPage({ params }) {
@@ -63,7 +42,7 @@ export default async function DeliveryPage({ params }) {
                       data-aos="fade-up-left"
                       data-aos-duration="300"
                       className="mb-16 lg:mb-32 text-xl"
-                      key={index}
+                      key={`${index}-payment`}
                       dangerouslySetInnerHTML={{ __html: item }}
                     ></div>
                     {/* <div className="h-1 bg-zinc-800 w-16 mb-8"></div> */}
@@ -90,7 +69,7 @@ export default async function DeliveryPage({ params }) {
                       data-aos="fade-up-left"
                       data-aos-duration="300"
                       className="mb-16 lg:mb-32 text-xl"
-                      key={index}
+                      key={`${index}-delivery`}
                       dangerouslySetInnerHTML={{ __html: item }}
                     ></div>
                     {/* <div className="h-1 bg-zinc-800 w-16 mb-8"></div> */}

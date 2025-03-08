@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { RiGlobalLine } from "react-icons/ri";
+import { setCookie } from "../../utils/cookieUtils";
 
 export default function LanguageVersion({ locale }) {
   const pathname = usePathname();
@@ -23,7 +24,7 @@ export default function LanguageVersion({ locale }) {
   };
 
   function handleSetLanguage(newLocale) {
-    document.cookie = `locale=${newLocale};path=/;SameSite=Lax`;
+    setCookie("locale", newLocale, { sameSite: "Lax" });
   }
 
   return (

@@ -4,37 +4,17 @@ import Link from "next/link";
 import pages from "@/app/data/pages.json";
 import Image from "next/image";
 import LinkButton from "@/components/shared/LinkButton";
+import { MetaData } from "@/utils/metadata";
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-
   const content = pages.collections[locale];
 
-  const path = `collections`;
-  const fullPath = `/${locale}/${path}`;
-  const links = {
-    metadataBase: new URL("https://lansot.com"),
-    alternates: {
-      canonical: fullPath,
-      languages: {
-        uk: "/uk/" + path,
-        en: "/en/" + path,
-      },
-    },
-  };
-
-  return {
-    title: content.meta.title + " - Lansot",
+  const meta = {
+    title: content.meta.title + ` ${process.env.SITE_NAME}`,
     description: content.meta.description,
-    keywords: content.meta.keywords,
-
-    openGraph: {
-      title: content.meta.title + " - Lansot",
-      description: content.meta.description,
-      keywords: content.meta.keywords,
-    },
-    ...links,
   };
+  return MetaData({ locale, meta, pathname: `collections` });
 }
 
 export default async function CollectionsPage({ params }) {
@@ -55,10 +35,10 @@ export default async function CollectionsPage({ params }) {
           {collections.map((collection) => (
             <div key={collection.id}>
               <div
-                className="grid grid-cols-1 lg:grid-cols-2 py-8 border-t border-black"
+                className="flex flex-col lg:flex-row py-8 border-t border-black"
                 key={collection.id}
               >
-                <div>
+                <div className="w-full lg:w-1/2 order-last lg:order-first mt-12 mb-8 lg:mt-0">
                   <Link href={`/${locale}/collections/${collection.url}`}>
                     <h2 className="mb-8">{collection.name[locale]}</h2>
                   </Link>
@@ -71,15 +51,15 @@ export default async function CollectionsPage({ params }) {
                   </LinkButton>
                 </div>
 
-                <div className="flex justify-end items-center">
+                <div className="w-full lg:w-1/2 flex lg:justify-end">
                   <Link href={`/${locale}/collections/${collection.url}`}>
                     <Image
                       alt={collection.name[locale]}
                       src={`/images/collections/${collection.cover}`}
-                      style={{ objectFit: "contain" }}
+                      style={{ objectFit: "cover" }}
                       width={1024}
                       height={800}
-                      className="w-auto h-auto"
+                      className="w-full h-auto"
                     />
                   </Link>
                 </div>

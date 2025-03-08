@@ -1,41 +1,20 @@
 import Image from "next/image";
-import page from "@/app/data/pages.json";
+import pages from "@/app/data/pages.json";
+import { MetaData } from "@/utils/metadata";
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-
-  const content = page.about[locale];
-
-  const path = `about`;
-  const fullPath = `/${locale}/${path}`;
-  const links = {
-    metadataBase: new URL("https://lansot.com"),
-    alternates: {
-      canonical: fullPath,
-      languages: {
-        uk: "/uk/" + path,
-        en: "/en/" + path,
-      },
-    },
-  };
-
-  return {
-    title: content.meta.title + " - Lansot",
+  const content = pages.about[locale];
+  const meta = {
+    title: content.meta.title + ` ${process.env.SITE_NAME}`,
     description: content.meta.description,
-    keywords: content.meta.keywords,
-
-    openGraph: {
-      title: content.meta.title + " - Lansot",
-      description: content.meta.description,
-      keywords: content.meta.keywords,
-    },
-    ...links,
   };
+  return MetaData({ locale, meta, pathname: "about" });
 }
 
 export default async function AboutPage({ params }) {
   const { locale } = await params;
-  const data = await page.about[locale];
+  const data = await pages.about[locale];
 
   return (
     <div className="max-w-[1600px] mx-auto mb-12 px-6 lg:px-12">

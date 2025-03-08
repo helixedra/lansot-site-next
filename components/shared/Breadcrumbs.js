@@ -7,13 +7,13 @@ export default function breadcrumbs({ category, locale }) {
     <div className={classes.breadcrumbs_container}>
       <ul className={classes.breadcrumbs_list}>
         <li className={classes.breadcrumbs_list_item}>
-          <Link href="/">{pages.homepage[locale].name}</Link>
+          <Link href={`/${locale}`}>{pages.homepage[locale].name}</Link>
         </li>
         <li className={classes.breadcrumbs_list_item}>
-          <Link href="/products">{pages.products[locale].name}</Link>
+          <Link href={`/${locale}/products`}>{pages.products[locale].name}</Link>
         </li>
         <li className={classes.breadcrumbs_list_item}>
-          <Link href={`/products/${category[locale].url}`}>{category[locale].name}</Link>
+          <Link href={`/${locale}/products/${category[locale].url}`}>{category[locale].name}</Link>
         </li>
       </ul>
     </div>

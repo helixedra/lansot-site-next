@@ -9,33 +9,16 @@ import ArticlesSection from "@/components/homepage/ArticlesSection";
 import ContactSection from "@/components/homepage/ContactSection";
 import articles from "@/app/data/articles.json";
 import { AOSInit } from "@/components/AOSInit";
+import { MetaData } from "@/utils/metadata";
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
   const content = pages.homepage[locale];
-
-  const baseUrl = "https://lansot.com";
-
-  return {
+  const meta = {
     title: content.meta.title,
     description: content.meta.description,
-
-    openGraph: {
-      title: content.meta.title,
-      description: content.meta.description,
-    },
-
-    metadataBase: new URL(baseUrl),
-
-    alternates: {
-      canonical: `${baseUrl}/${locale === "uk" ? "uk" : "en"}`,
-      languages: {
-        uk: `${baseUrl}/uk`,
-        en: `${baseUrl}/en`,
-        "x-default": baseUrl, // Helps Google understand the default version
-      },
-    },
   };
+  return MetaData({ locale, meta, pathname: "" });
 }
 
 export default async function HomePage({ params }) {

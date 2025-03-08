@@ -2,37 +2,17 @@ import Image from "next/image";
 import collections from "@/app/data/collections.json";
 import ui from "@/app/data/ui.json";
 import ProductsSlider from "@/components/homepage/ProductsSlider";
+import { MetaData } from "@/utils/metadata";
 
 export async function generateMetadata({ params }) {
   const { locale, slug } = await params;
-
   const content = await collections.find((collection) => collection.url === slug);
 
-  const path = `collections/${slug}`;
-  const fullPath = `/${locale}/${path}`;
-  const links = {
-    metadataBase: new URL("https://lansot.com"),
-    alternates: {
-      canonical: fullPath,
-      languages: {
-        uk: "/uk/" + path,
-        en: "/en/" + path,
-      },
-    },
-  };
-
-  return {
-    title: content.meta.title[locale] + " - Lansot",
+  const meta = {
+    title: content.meta.title[locale] + ` ${process.env.SITE_NAME}`,
     description: content.meta.description[locale],
-    keywords: content.meta.keywords[locale],
-
-    openGraph: {
-      title: content.meta.title[locale] + " - Lansot",
-      description: content.meta.description[locale],
-      keywords: content.meta.keywords[locale],
-    },
-    ...links,
   };
+  return MetaData({ locale, meta, pathname: `collections/${slug}` });
 }
 
 export default async function ContactsPage({ params }) {

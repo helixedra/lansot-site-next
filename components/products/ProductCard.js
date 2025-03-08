@@ -5,7 +5,7 @@ import classes from "./ProductCard.module.css";
 export default function ProductCard({ product, locale }) {
   return (
     <div className={classes.product_card} key={product.url}>
-      <Link href={`/products/${product.category}/${product.url}`} title={product.name}>
+      <Link href={`/${locale}/products/${product.category}/${product.url}`} title={product.name}>
         <Image
           data-aos="zoom-in"
           src={`/images/products/${product.url}/${product.cover}`}

@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { setCookie } from "./utils/cookieUtils";
 
 const SUPPORTED_LOCALES = ["en", "uk"]; // List of supported locales
 const DEFAULT_LOCALE = "uk"; // Default locale
@@ -12,7 +13,8 @@ export function middleware(request) {
     pathname.startsWith("/favicon.ico") ||
     pathname.startsWith("/robots.txt") ||
     pathname.startsWith("/sitemap.xml") ||
-    pathname.startsWith("/images")
+    pathname.startsWith("/images") ||
+    pathname.startsWith("/models")
   ) {
     return NextResponse.next("/public" + pathname);
   }

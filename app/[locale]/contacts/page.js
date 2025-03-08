@@ -1,42 +1,21 @@
 import Image from "next/image";
-import page from "@/app/data/pages.json";
+import pages from "@/app/data/pages.json";
 import ContactSection from "@/components/homepage/ContactSection";
+import { MetaData } from "@/utils/metadata";
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-
-  const content = page.contacts[locale];
-
-  const path = `contacts`;
-  const fullPath = `/${locale}/${path}`;
-  const links = {
-    metadataBase: new URL("https://lansot.com"),
-    alternates: {
-      canonical: fullPath,
-      languages: {
-        uk: "/uk/" + path,
-        en: "/en/" + path,
-      },
-    },
-  };
-
-  return {
-    title: content.meta.title + " - Lansot",
+  const content = pages.contacts[locale];
+  const meta = {
+    title: content.meta.title + ` ${process.env.SITE_NAME}`,
     description: content.meta.description,
-    keywords: content.meta.keywords,
-
-    openGraph: {
-      title: content.meta.title + " - Lansot",
-      description: content.meta.description,
-      keywords: content.meta.keywords,
-    },
-    ...links,
   };
+  return MetaData({ locale, meta, pathname: "contacts" });
 }
 
 export default async function ContactsPage({ params }) {
   const { locale } = await params;
-  const data = await page.contacts[locale];
+  const data = await pages.contacts[locale];
 
   const contacts = [
     { href: "viber://pa?chatURI=Lansot_com", icon: "/images/viber.png", alt: "viber" },

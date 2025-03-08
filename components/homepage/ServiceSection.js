@@ -11,7 +11,7 @@ export default function ServiceSection({ content, locale, ...props }) {
         <div className={classes.content}>
           <h2 className="mb-4 lg:mb-6">{content.title}</h2>
           <p className={classes.text}>{content.content}</p>
-          <LinkButton href="/services">{ui.global.see_more[locale]}</LinkButton>
+          <LinkButton href={`${locale}/services`}>{ui.global.see_more[locale]}</LinkButton>
         </div>
         <div className={classes.image}>
           <Image

@@ -17,7 +17,7 @@ export default async function TopProductsSlider({ locale, ...props }) {
         <div className={classes.title}>{ui.global.popular_products[locale]}</div>
         <div className={classes.controls}>
           <LinkButton
-            href="/products"
+            href={`${locale}/products`}
             title={ui.global.all_products[locale]}
             type="icon"
             customStyle={{
@@ -35,7 +35,7 @@ export default async function TopProductsSlider({ locale, ...props }) {
           {products &&
             products.map((product) => (
               <Link
-                href={`/products/${product.category}/${product.url}`}
+                href={`${locale}/products/${product.category}/${product.url}`}
                 key={product.url}
                 className={classes.slider__item}
                 title={product.name}

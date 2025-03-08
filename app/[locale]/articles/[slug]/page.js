@@ -1,37 +1,17 @@
 import articles from "@/app/data/articles.json";
 import ui from "@/app/data/ui.json";
 import { notFound } from "next/navigation";
+import { MetaData } from "@/utils/metadata";
 
 export async function generateMetadata({ params }) {
   const { locale, slug } = await params;
-
   const content = await articles.find((article) => article.slug === slug);
 
-  const path = `articles/${slug}`;
-  const fullPath = `/${locale}/${path}`;
-  const links = {
-    metadataBase: new URL("https://lansot.com"),
-    alternates: {
-      canonical: fullPath,
-      languages: {
-        uk: "/uk/" + path,
-        en: "/en/" + path,
-      },
-    },
-  };
-
-  return {
-    title: content.title[locale] + " - Lansot",
+  const meta = {
+    title: content.title[locale] + ` ${process.env.SITE_NAME}`,
     description: content.meta.description[locale],
-    keywords: content.meta.keywords[locale],
-
-    openGraph: {
-      title: content.title[locale] + " - Lansot",
-      description: content.meta.description[locale],
-      keywords: content.meta.keywords[locale],
-    },
-    ...links,
   };
+  return MetaData({ locale, meta, pathname: `articles/${slug}` });
 }
 
 export default async function ArticlePage({ params }) {
