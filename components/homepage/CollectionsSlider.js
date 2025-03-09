@@ -18,7 +18,7 @@ export default function CollectionsSlider({ locale, ...props }) {
             <Image
               alt={collection.name[locale]}
               title={collection.name[locale]}
-              src={`/api/images/collections/${collection.cover}`}
+              src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/collections/${collection.cover}`}
               style={{ objectFit: "cover" }}
               className="w-[500px] h-[350px]"
               width={1024}

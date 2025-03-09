@@ -43,7 +43,7 @@ export default async function TopProductsSlider({ locale, includes, header, ...p
               >
                 <Image
                   alt={product.meta.title[locale]}
-                  src={`/api/images/products/${product.url}/${product.cover}`}
+                  src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/products/${product.url}/${product.cover}`}
                   style={{ objectFit: "contain" }}
                   width={640}
                   height={600}

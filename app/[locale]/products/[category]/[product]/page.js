@@ -21,7 +21,7 @@ export async function generateMetadata({ params }) {
   const content = productData;
 
   const meta = {
-    title: `${content.meta.title[locale]} - ${currentCategory.name} - ${process.env.SITE_NAME}`,
+    title: `${content.meta.title[locale]} - ${currentCategory.name} - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
     description: content.meta.description[locale],
   };
   return MetaData({ locale, meta, pathname: `products/${currentCategory.url}/${productData.url}` });

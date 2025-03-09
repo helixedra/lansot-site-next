@@ -19,7 +19,7 @@ export default function ServiceSection({ content, locale, ...props }) {
         </div>
         <div className={classes.image}>
           <Image
-            src="/api/images/homepage/folio-collection_2.jpg"
+            src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/homepage/folio-collection_2.jpg`}
             title={content.title}
             alt={content.title}
             style={{ objectFit: "contain" }}

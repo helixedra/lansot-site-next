@@ -21,7 +21,7 @@ export default function Promo({ product, locale }) {
             promo.images.map((image, imgIndex) => (
               <Image
                 key={imgIndex}
-                src={`/api/images/products/${product.url}/${image.img}`}
+                src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/products/${product.url}/${image.img}`}
                 alt={image.alt[locale]}
                 title={image.alt[locale]}
                 data-aos="fade-up"

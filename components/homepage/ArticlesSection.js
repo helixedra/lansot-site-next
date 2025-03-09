@@ -26,7 +26,7 @@ export default function ArticlesSection({ articles, locale, ...props }) {
       <div className={classes.articles}>
         <div className={classes.image}>
           <Image
-            src="/api/images/home_slider_img_1.jpg"
+            src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/home_slider_img_1.jpg`}
             alt={ui.global.articles[locale]}
             title={ui.global.articles[locale]}
             style={{ objectFit: "cover" }}

@@ -10,12 +10,12 @@ export default function Technical({ product, locale }) {
         {product.drawings.map((image, index) => (
           <div
             key={index}
-            href={`/api/images/products/${product.url}/${image}`}
+            href={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/products/${product.url}/${image}`}
             className={classes.drawing}
           >
             <Image
               data-aos="zoom-in-up"
-              src={`/api/images/products/${product.url}/${image}`}
+              src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/products/${product.url}/${image}`}
               alt={product.name}
               width={840}
               height={720}

@@ -11,7 +11,7 @@ export async function generateMetadata({ params }) {
   const content = pages.collections[locale];
 
   const meta = {
-    title: content.meta.title + ` ${process.env.SITE_NAME}`,
+    title: content.meta.title + ` ${process.env.NEXT_PUBLIC_SITE_NAME}`,
     description: content.meta.description,
   };
   return MetaData({ locale, meta, pathname: `collections` });
@@ -55,7 +55,7 @@ export default async function CollectionsPage({ params }) {
                   <Link href={`/${locale}/collections/${collection.url}`}>
                     <Image
                       alt={collection.name[locale]}
-                      src={`/api/images/collections/${collection.cover}`}
+                      src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/collections/${collection.cover}`}
                       style={{ objectFit: "cover" }}
                       width={1024}
                       height={800}

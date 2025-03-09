@@ -9,7 +9,7 @@ export async function generateMetadata({ params }) {
   const { locale } = await params;
   const content = pages.finishes[locale];
   const meta = {
-    title: content.meta.title + ` ${process.env.SITE_NAME}`,
+    title: content.meta.title + ` ${process.env.NEXT_PUBLIC_SITE_NAME}`,
     description: content.meta.description,
   };
   return MetaData({ locale, meta, pathname: "finishes" });
@@ -40,7 +40,7 @@ export default async function FinishingPage({ params }) {
                 </div>
                 <div className={`w-full h-full ${classes.decor_sample}`}>
                   <Image
-                    src={`/api/images/decors/ldsp/${ldsp.img}`}
+                    src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/decors/ldsp/${ldsp.img}`}
                     alt={ldsp.title}
                     width={300}
                     height={150}
@@ -70,7 +70,7 @@ export default async function FinishingPage({ params }) {
                 </div>
                 <div className={classes.decor_sample}>
                   <Image
-                    src={`/api/images/decors/ldsp/${ldsp_wood.img}`}
+                    src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/decors/ldsp/${ldsp_wood.img}`}
                     alt={ldsp_wood.title}
                     fill
                     sizes="w-[405px] h-[226px]"

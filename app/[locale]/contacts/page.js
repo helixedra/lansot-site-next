@@ -7,7 +7,7 @@ export async function generateMetadata({ params }) {
   const { locale } = await params;
   const content = pages.contacts[locale];
   const meta = {
-    title: content.meta.title + ` ${process.env.SITE_NAME}`,
+    title: content.meta.title + ` ${process.env.NEXT_PUBLIC_SITE_NAME}`,
     description: content.meta.description,
   };
   return MetaData({ locale, meta, pathname: "contacts" });
@@ -18,14 +18,26 @@ export default async function ContactsPage({ params }) {
   const data = await pages.contacts[locale];
 
   const contacts = [
-    { href: "viber://pa?chatURI=Lansot_com", icon: "/api/images/viber.png", alt: "viber" },
-    { href: "https://t.me/lansot_com", icon: "/api/images/telegram.png", alt: "telegram" },
+    {
+      href: "viber://pa?chatURI=Lansot_com",
+      icon: `${process.env.NEXT_PUBLIC_IMAGE_PATH}/viber.png`,
+      alt: "viber",
+    },
+    {
+      href: "https://t.me/lansot_com",
+      icon: `${process.env.NEXT_PUBLIC_IMAGE_PATH}/telegram.png`,
+      alt: "telegram",
+    },
     {
       href: "https://www.messenger.com/t/lansotcom",
-      icon: "/api/images/messenger.png",
+      icon: `${process.env.NEXT_PUBLIC_IMAGE_PATH}/messenger.png`,
       alt: "messenger",
     },
-    { href: "https://wa.me/380971122616", icon: "/api/images/whatsapp.png", alt: "whatsapp" },
+    {
+      href: "https://wa.me/380971122616",
+      icon: `${process.env.NEXT_PUBLIC_IMAGE_PATH}/whatsapp.png`,
+      alt: "whatsapp",
+    },
   ];
   return (
     <>

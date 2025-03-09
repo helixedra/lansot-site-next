@@ -1,5 +1,5 @@
 export async function MetaData({ locale, meta, pathname }) {
-  const baseUrl = process.env.HOST;
+  const baseUrl = process.env.NEXT_PUBLIC_HOST;
 
   return {
     title: meta.title,

@@ -13,7 +13,7 @@ export default async function Footer({ locale }) {
         <div className={classes.footer_top}>
           <div className={classes.footer_logo}>
             <Image
-              src="/api/images/lansot-logo-small.svg"
+              src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/lansot-logo-small.svg`}
               alt="lansot logo"
               title="Lansot"
               width={100}
@@ -29,7 +29,7 @@ export default async function Footer({ locale }) {
               title={footerData?.facebookPage}
             >
               <Image
-                src="/api/images/facebook.svg"
+                src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/facebook.svg`}
                 title={footerData?.facebookPage}
                 alt="Facebook"
                 width={24}
@@ -44,7 +44,7 @@ export default async function Footer({ locale }) {
               title={footerData?.instagramPage}
             >
               <Image
-                src="/api/images/instagram.svg"
+                src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/instagram.svg`}
                 title={footerData?.instagramPage}
                 alt="Instagram"
                 width={24}

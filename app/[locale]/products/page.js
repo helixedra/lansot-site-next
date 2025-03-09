@@ -11,7 +11,7 @@ export async function generateMetadata({ params }) {
   const { locale } = await params;
   const content = pageContent.products[locale];
   const meta = {
-    title: content.meta.title + ` ${process.env.SITE_NAME}`,
+    title: content.meta.title + ` ${process.env.NEXT_PUBLIC_SITE_NAME}`,
     description: content.meta.description,
   };
   return MetaData({ locale, meta, pathname: "products" });

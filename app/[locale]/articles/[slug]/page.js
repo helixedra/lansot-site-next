@@ -8,7 +8,7 @@ export async function generateMetadata({ params }) {
   const content = await articles.find((article) => article.slug === slug);
 
   const meta = {
-    title: content.title[locale] + ` ${process.env.SITE_NAME}`,
+    title: content.title[locale] + ` ${process.env.NEXT_PUBLIC_SITE_NAME}`,
     description: content.meta.description[locale],
   };
   return MetaData({ locale, meta, pathname: `articles/${slug}` });

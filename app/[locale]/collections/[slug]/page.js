@@ -9,7 +9,7 @@ export async function generateMetadata({ params }) {
   const content = await collections.find((collection) => collection.url === slug);
 
   const meta = {
-    title: content.meta.title[locale] + ` ${process.env.SITE_NAME}`,
+    title: content.meta.title[locale] + ` ${process.env.NEXT_PUBLIC_SITE_NAME}`,
     description: content.meta.description[locale],
   };
   return MetaData({ locale, meta, pathname: `collections/${slug}` });
@@ -34,7 +34,7 @@ export default async function ContactsPage({ params }) {
           <div className="text-xl leading-relaxed">{content.content.main.text[locale]}</div>
           <Image
             alt={content.title[locale]}
-            src={`/api/images/collections/${content.cover}`}
+            src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/collections/${content.cover}`}
             style={{ objectFit: "contain" }}
             width={1024}
             height={800}
@@ -57,7 +57,7 @@ export default async function ContactsPage({ params }) {
                 section.images.map((image, index) => (
                   <div key={index} className="h-full lg:max-h-[600px]">
                     <Image
-                      src={`/api/images${image}`}
+                      src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}${image}`}
                       alt={section.title[locale]}
                       className="h-full w-full object-cover"
                       width={1024}

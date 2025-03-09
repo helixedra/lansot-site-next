@@ -60,16 +60,36 @@ export default function OrderButtons({ locale, product }) {
           <div className={classes.send_to_msg}>
             <div className={classes.msg_links} style={{ textAlign: "center" }}>
               <a target="_blank" rel="nofollow" href="https://t.me/lansot_com">
-                <Image src="/api/images/telegram.png" alt="telegram" width={32} height={32} />
+                <Image
+                  src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/telegram.png`}
+                  alt="telegram"
+                  width={32}
+                  height={32}
+                />
               </a>
               <a target="_blank" rel="nofollow" href="https://wa.me/380971122616">
-                <Image src="/api/images/whatsapp.png" alt="whatsapp" width={32} height={32} />
+                <Image
+                  src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/whatsapp.png`}
+                  alt="whatsapp"
+                  width={32}
+                  height={32}
+                />
               </a>
               <a target="_blank" rel="nofollow" href="viber://pa?chatURI=Lansot_com">
-                <Image src="/api/images/viber.png" alt="viber" width={32} height={32} />
+                <Image
+                  src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/viber.png`}
+                  alt="viber"
+                  width={32}
+                  height={32}
+                />
               </a>
               <a target="_blank" rel="nofollow" href="https://www.messenger.com/t/lansotcom">
-                <Image src="/api/images/messenger.png" alt="messenger" width={32} height={32} />
+                <Image
+                  src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/messenger.png`}
+                  alt="messenger"
+                  width={32}
+                  height={32}
+                />
               </a>
             </div>
           </div>
@@ -126,18 +146,38 @@ export default function OrderButtons({ locale, product }) {
         <div dangerouslySetInnerHTML={{ __html: ui.how_to_buy[locale] }} />
         <div className={classes.msg_links} style={{ marginTop: "2rem" }}>
           <a href="viber://pa?chatURI=Lansot_com" rel="nofollow">
-            <Image src="/api/images/viber.png" alt="viber" width={32} height={32} />
+            <Image
+              src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/viber.png`}
+              alt="viber"
+              width={32}
+              height={32}
+            />
           </a>
           <a target="_blank" rel="nofollow" href="https://t.me/lansot_com">
-            <Image src="/api/images/telegram.png" alt="telegram" width={32} height={32} />
+            <Image
+              src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/telegram.png`}
+              alt="telegram"
+              width={32}
+              height={32}
+            />
           </a>
 
           <a target="_blank" rel="nofollow" href="https://www.messenger.com/t/lansotcom">
-            <Image src="/api/images/messenger.png" alt="messenger" width={32} height={32} />
+            <Image
+              src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/messenger.png`}
+              alt="messenger"
+              width={32}
+              height={32}
+            />
           </a>
 
           <a target="_blank" rel="nofollow" href="https://wa.me/380971122616">
-            <Image src="/api/images/whatsapp.png" alt="whatsapp" width={32} height={32} />
+            <Image
+              src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/whatsapp.png`}
+              alt="whatsapp"
+              width={32}
+              height={32}
+            />
           </a>
         </div>
       </Dialog>

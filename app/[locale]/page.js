@@ -26,15 +26,15 @@ export default async function HomePage({ params }) {
 
   const sliderImages = [
     {
-      img: "/api/images/home_slider_img_12.jpg",
+      img: `${process.env.NEXT_PUBLIC_IMAGE_PATH}/home_slider_img_12.jpg`,
       alt: { uk: "Комод Folio DH від Lansot", en: "Drawer Folio DH by Lansot" },
     },
     {
-      img: "/api/images/home_slider_img_8.jpg",
+      img: `${process.env.NEXT_PUBLIC_IMAGE_PATH}/home_slider_img_8.jpg`,
       alt: { uk: "Стіл Frank в інтер'єрі кухні", en: "Frank table in the kitchen interior" },
     },
     {
-      img: "/api/images/home_slider_img_9.jpg",
+      img: `${process.env.NEXT_PUBLIC_IMAGE_PATH}/home_slider_img_9.jpg`,
       alt: {
         uk: "Тумба Leon в інтер'єрі вітальні",
         en: "Leon cabinet in the living room interior",

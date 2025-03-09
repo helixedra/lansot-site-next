@@ -6,7 +6,7 @@ export async function generateMetadata({ params }) {
   const { locale } = await params;
   const content = pages.about[locale];
   const meta = {
-    title: content.meta.title + ` ${process.env.SITE_NAME}`,
+    title: content.meta.title + ` ${process.env.NEXT_PUBLIC_SITE_NAME}`,
     description: content.meta.description,
   };
   return MetaData({ locale, meta, pathname: "about" });
@@ -32,7 +32,7 @@ export default async function AboutPage({ params }) {
         ></div>
         <div data-aos="fade-up" data-aos-duration="300" className="w-full sm:w-full lg:w-8/12">
           <Image
-            src={"/api/images/home_slider_img_0.jpg"}
+            src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/home_slider_img_0.jpg`}
             width={1600}
             height={830}
             alt="Idea SL"
@@ -63,7 +63,7 @@ export default async function AboutPage({ params }) {
         <Image
           data-aos="fade-up"
           data-aos-duration="300"
-          src={"/api/images/products/delta-t2/delta_t2_promo_img_4.jpg"}
+          src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/products/delta-t2/delta_t2_promo_img_4.jpg`}
           width={2000}
           height={1500}
           style={{ objectFit: "cover" }}
