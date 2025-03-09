@@ -1,7 +1,7 @@
 import Image from "next/image";
 import classes from "./ServiceSection.module.css";
 import Link from "next/link";
-import LinkButton from "@/components/shared/LinkButton";
+import Button from "@/components/shared/Button";
 import ui from "@/app/data/ui.json";
 
 export default function ServiceSection({ content, locale, ...props }) {
@@ -9,9 +9,13 @@ export default function ServiceSection({ content, locale, ...props }) {
     <div className={classes.container} {...props}>
       <div className={classes.inner_container}>
         <div className={classes.content}>
-          <h2 className="mb-4 lg:mb-6">{content.title}</h2>
+          <Link href={`/${locale}/services`}>
+            <h2 className="mb-4 lg:mb-6">{content.title}</h2>
+          </Link>
           <p className={classes.text}>{content.content}</p>
-          <LinkButton href={`/${locale}/services`}>{ui.global.see_more[locale]}</LinkButton>
+          <Button title={ui.global.see_more[locale]} href={`/${locale}/services`}>
+            {ui.global.see_more[locale]}
+          </Button>
         </div>
         <div className={classes.image}>
           <Image
@@ -21,7 +25,6 @@ export default function ServiceSection({ content, locale, ...props }) {
             style={{ objectFit: "contain" }}
             width={1082}
             height={800}
-            priority={true}
           />
         </div>
       </div>

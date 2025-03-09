@@ -42,6 +42,7 @@ export default function ResponsiveCarousel({ images, delay, locale }) {
               height={900}
               loading={index === 0 ? "eager" : "lazy"}
               priority={index === 0}
+              quality={75}
             />
           </div>
         ))}

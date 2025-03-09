@@ -6,6 +6,7 @@ import Image from "next/image";
 import { RiArrowRightFill, RiArrowLeftFill } from "react-icons/ri";
 import ui from "@/app/data/ui.json";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function ArticlesSection({ articles, locale, ...props }) {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -31,7 +32,6 @@ export default function ArticlesSection({ articles, locale, ...props }) {
             style={{ objectFit: "cover" }}
             width={1350}
             height={700}
-            priority={true}
           />
         </div>
         <div className={classes.content}>
@@ -49,16 +49,22 @@ export default function ArticlesSection({ articles, locale, ...props }) {
                   index === currentSlide ? classes.visible : classes.hidden
                 }`}
               >
-                <h3 className={classes.title}>{article.title[locale]}</h3>
+                <Link href={`/${locale}/articles/${article.slug}`}>
+                  <h3 className={classes.title}>{article.title[locale]}</h3>
+                </Link>
                 <p className={classes.text}>{article.preview[locale]}</p>
                 <div className={classes.controls}>
-                  <LinkButton href={`/articles/${article.slug}`}>
+                  <Button
+                    href={`/${locale}/articles/${article.slug}`}
+                    title={ui.global.read_more[locale]}
+                  >
                     {ui.global.read_more[locale]}
-                  </LinkButton>
+                  </Button>
                   <SliderControls
                     handleSlider={handleSlider}
                     currentSlide={currentSlide}
                     slidesCount={articles.length}
+                    locale={locale}
                   />
                 </div>
               </div>
@@ -70,14 +76,20 @@ export default function ArticlesSection({ articles, locale, ...props }) {
   );
 }
 
-export function SliderControls({ handleSlider, currentSlide, slidesCount }) {
+export function SliderControls({ handleSlider, currentSlide, slidesCount, locale }) {
   return (
     <div className={classes.slider_controls}>
       <div className={classes.buttons}>
-        <Button action={() => handleSlider("prev")} type="icon" disabled={currentSlide === 0}>
+        <Button
+          title={ui.global.back[locale]}
+          action={() => handleSlider("prev")}
+          type="icon"
+          disabled={currentSlide === 0}
+        >
           <RiArrowLeftFill />
         </Button>
         <Button
+          title={ui.global.next[locale]}
           action={() => handleSlider("next")}
           type="icon"
           disabled={currentSlide === slidesCount - 1}

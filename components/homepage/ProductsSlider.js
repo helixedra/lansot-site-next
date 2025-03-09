@@ -47,7 +47,6 @@ export default async function TopProductsSlider({ locale, includes, header, ...p
                   style={{ objectFit: "contain" }}
                   width={640}
                   height={600}
-                  priority={true}
                 />
                 <div className={classes.slider__content}>
                   <div>{categories[product.category][locale].name}</div>

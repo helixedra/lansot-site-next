@@ -2,7 +2,7 @@
   background-color: var(--color-dark-100);
   color: white;
   margin-top: 4rem;
-  border-bottom: 1px solid var(--color-dark-80);
+  border-bottom: 1px solid var(--color-dark-90);
 }
 
 .inner_container {
@@ -17,20 +17,16 @@
 
 .input {
   background-color: transparent;
-  border-bottom: 1px solid var(--color-dark-70);
+  border-bottom: 1px solid var(--color-dark-50);
   line-height: 46px;
   height: 46px;
   color: white;
   border-radius: 0 !important;
 }
 
-.input::placeholder {
-  color: var(--color-dark-60);
-}
-
 .textarea {
   background-color: transparent;
-  border-bottom: 1px solid var(--color-dark-70);
+  border-bottom: 1px solid var(--color-dark-50);
   line-height: 24px;
   height: 46px;
   color: white;
@@ -39,8 +35,11 @@
   border-radius: 0 !important;
 }
 
-.textarea::placeholder {
-  color: var(--color-dark-60);
+
+.label,
+.textarea::placeholder,
+.input::placeholder {
+  color: var(--color-dark-50);
 }
 
 .inputs {
@@ -76,15 +75,13 @@
   gap: 1rem;
 }
 
-.label {
-  color: var(--color-dark-50);
-}
+
 
 .button {
   color: white;
   height: 46px;
   line-height: 46px;
-  background-color: var(--color-dark-80);
+  background-color: var(--color-dark-60);
   border: none;
   padding: 0 2rem;
   font-size: 1rem;

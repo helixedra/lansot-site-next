@@ -23,7 +23,6 @@ export default function CollectionsSlider({ locale, ...props }) {
               className="w-[500px] h-[350px]"
               width={1024}
               height={700}
-              priority={true}
             />
             <div className={classes.slider__content}>
               <div>{ui.global.collection[locale]}</div>
