@@ -10,7 +10,7 @@ export default function Models({ product, locale }) {
         {product.models.map((model, index) => (
           <a
             key={index}
-            href={`/models/${model.file}`}
+            href={`${process.env.NEXT_PUBLIC_MODEL_PATH}/${model.file}`}
             download={model.file}
             className={`${classes.download_link} w-full mb-8 md:w-auto md:min-w-[300px] p-8`}
           >

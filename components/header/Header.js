@@ -1,11 +1,9 @@
 import menu from "@/app/data/menu.json";
-import LanguageSwitcher from "@/components/header/LanguageSwitcher";
 import ActiveMenuItem from "@/components/ActiveMenuItem";
 import ShoppingCart from "@/components/ShoppingCart";
 import classes from "@/components/header/Header.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import Burger from "./Burger";
 import MobileMenu from "./MobileMenu";
 import ui from "@/app/data/ui.json";
 import LanguageVersion from "@/components/header/LanguageVersion";
@@ -13,8 +11,10 @@ import LanguageVersion from "@/components/header/LanguageVersion";
 export default function Header({ locale }) {
   return (
     <>
-      <header className={`${classes.header} max-w-[1600px] mx-auto`}>
-        <div className={classes.header_container}>
+      <header
+        className={`${classes.header} flex items-center h-[80px]  fixed bg-white w-full top-0 z-50`}
+      >
+        <div className={`${classes.header_container} max-w-[1600px] mx-auto`}>
           <Link
             href={`/${locale}`}
             className={classes.logo_сontainer}
