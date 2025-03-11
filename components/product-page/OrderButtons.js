@@ -22,16 +22,31 @@ export default function OrderButtons({ locale, product }) {
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState("");
 
+  const handleToast = () => {
+    setStatus("");
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setStatus({ status: "pending", message: "Відправка..." });
 
+    if (!form.name || !form.email || !form.message || !form.phone) {
+      setStatus({ status: "error", message: "Будь ласка, заповніть всі поля." });
+      return;
+    }
+
+    const sanitizeInput = (input) => {
+      const div = document.createElement("div");
+      div.textContent = input;
+      return div.innerHTML;
+    };
+
     const templateParams = {
-      name: form.name,
-      email: form.email,
-      phone: form.phone,
-      productName: form.productName,
-      message: form.message,
+      name: sanitizeInput(form.name),
+      email: sanitizeInput(form.email),
+      phone: sanitizeInput(form.phone),
+      productName: sanitizeInput(form.productName),
+      message: sanitizeInput(form.message),
     };
 
     emailjs
@@ -221,7 +236,7 @@ export default function OrderButtons({ locale, product }) {
           </a>
         </div>
       </Dialog>
-      {status && <Toast message={status.message} status={status.status} />}
+      {status && <Toast message={status.message} onClose={handleToast} status={status.status} />}
     </>
   );
 }

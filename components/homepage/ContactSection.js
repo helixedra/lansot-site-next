@@ -14,14 +14,29 @@ export default function ContactSection({ locale }) {
   });
   const [status, setStatus] = useState("");
 
+  const handleToast = () => {
+    setStatus("");
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setStatus({ status: "pending", message: "Відправка..." });
 
+    if (!form.name || !form.email || !form.message) {
+      setStatus({ status: "error", message: "Будь ласка, заповніть всі поля." });
+      return;
+    }
+
+    const sanitizeInput = (input) => {
+      const div = document.createElement("div");
+      div.textContent = input;
+      return div.innerHTML;
+    };
+
     const templateParams = {
-      name: form.name,
-      email: form.email,
-      message: form.message,
+      name: sanitizeInput(form.name),
+      email: sanitizeInput(form.email),
+      message: sanitizeInput(form.message),
     };
 
     emailjs
@@ -74,7 +89,7 @@ export default function ContactSection({ locale }) {
                 />
                 <input
                   className={classes.input}
-                  type="text"
+                  type="email"
                   name="email"
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
@@ -95,7 +110,9 @@ export default function ContactSection({ locale }) {
               {ui.global.send[locale]}
             </button>
           </form>
-          {status && <Toast message={status.message} status={status.status} />}
+          {status && (
+            <Toast message={status.message} onClose={handleToast} status={status.status} />
+          )}
         </div>
       </div>
     </div>
