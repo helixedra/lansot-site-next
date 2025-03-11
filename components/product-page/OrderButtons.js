@@ -4,35 +4,55 @@ import Dialog from "@/components/shared/Dialog";
 import classes from "./OrderButtons.module.css";
 import ui from "@/app/data/ui";
 import Image from "next/image";
+import emailjs from "@emailjs/browser";
+import Toast from "@/components/shared/Toast";
 
 export default function OrderButtons({ locale, product }) {
   const [requestDialog, setRequestDialog] = useState(false);
   const [howDialog, setHowDialog] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const initialForm = {
+    name: "",
+    phone: "",
+    email: "",
+    productName: product.name,
+    message: "",
+  };
+
+  const [form, setForm] = useState(initialForm);
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData.entries());
+    setStatus({ status: "pending", message: "Відправка..." });
 
-    try {
-      const response = await fetch("/api/request", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+    const templateParams = {
+      name: form.name,
+      email: form.email,
+      phone: form.phone,
+      productName: form.productName,
+      message: form.message,
+    };
+
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_REQUEST_ID,
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+      )
+      .then(
+        (response) => {
+          // console.log("SUCCESS!", response.status, response.text);
+          setStatus({ status: "success", message: "Повідомлення успішно відправлено!" });
+          setRequestDialog(false);
+          setForm(initialForm);
         },
-        body: JSON.stringify(data),
-      });
-
-      const result = await response.json();
-
-      if (result.status === "ok") {
-        alert("Дякуємо, ваш запит успішно відправлено");
-      } else {
-        alert("Виникла помилка!");
-      }
-    } catch (error) {
-      alert("Виникла помилка!");
-    }
+        (error) => {
+          console.log("FAILED...", error);
+          setStatus({ status: "success", message: "Помилка при відправці" });
+        }
+      );
   };
 
   return (
@@ -105,19 +125,37 @@ export default function OrderButtons({ locale, product }) {
             <input
               name="name"
               type="text"
+              onChange={(e) => setForm({ ...form, name: e.target.value })}
               className="form_control"
               id="nameInput"
+              value={form.name}
               aria-describedby="Name"
               required
             />
           </div>
           <div className="form_group">
             <label htmlFor="phoneInput">{ui.form.phone[locale]}</label>
-            <input name="phone" type="tel" className="form_control" id="phoneInput" required />
+            <input
+              name="phone"
+              type="phone"
+              className="form_control"
+              id="phoneInput"
+              onChange={(e) => setForm({ ...form, phone: e.target.value })}
+              value={form.phone}
+              required
+            />
           </div>
           <div className="form_group">
             <label htmlFor="emailInput">{ui.form.email[locale]}</label>
-            <input name="email" type="email" className="form_control" id="emailInput" required />
+            <input
+              name="email"
+              type="email"
+              onChange={(e) => setForm({ ...form, email: e.target.value })}
+              value={form.email}
+              className="form_control"
+              id="emailInput"
+              required
+            />
           </div>
           <div className="form_group">
             <label htmlFor="messageInput">{ui.form.message[locale]}</label>
@@ -125,6 +163,8 @@ export default function OrderButtons({ locale, product }) {
               className="form_control"
               id="messageInput"
               name="message"
+              value={form.message}
+              onChange={(e) => setForm({ ...form, message: e.target.value })}
               rows="4"
               required
             ></textarea>
@@ -181,6 +221,7 @@ export default function OrderButtons({ locale, product }) {
           </a>
         </div>
       </Dialog>
+      {status && <Toast message={status.message} status={status.status} />}
     </>
   );
 }
