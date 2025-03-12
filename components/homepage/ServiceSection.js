@@ -12,7 +12,7 @@ export default function ServiceSection({ content, locale, ...props }) {
           <Link href={`/${locale}/services`}>
             <h2 className="mb-4 lg:mb-6">{content.title}</h2>
           </Link>
-          <p className={classes.text}>{content.content}</p>
+          <p className='md:text-xl mb-8'>{content.content}</p>
           <Button title={ui.global.see_more[locale]} href={`/${locale}/services`}>
             {ui.global.see_more[locale]}
           </Button>

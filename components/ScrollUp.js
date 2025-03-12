@@ -28,22 +28,15 @@ const ScrollUp = () => {
   }, []);
 
   return (
-    <div className="scroll-to-top">
+    <div className="fixed  bottom-4 right-4 lg:bottom-10 lg:right-10 z-50">
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="scroll-button flex items-center justify-center h-12 w-12 bg-zinc-900 border border-white text-white"
+          className="scroll-button flex items-center justify-center h-12 w-12 bg-zinc-900 hover:bg-zinc-700 text-white"
         >
           <RiArrowUpFill style={{ width: "24px", height: "24px" }} />
         </button>
       )}
-      <style jsx>{`
-        .scroll-to-top {
-          position: fixed;
-          bottom: 50px;
-          right: 50px;
-        }
-      `}</style>
     </div>
   );
 };
