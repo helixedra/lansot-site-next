@@ -4,7 +4,6 @@ import Dialog from "@/components/shared/Dialog";
 import classes from "./OrderButtons.module.css";
 import ui from "@/app/data/ui";
 import Image from "next/image";
-import emailjs from "@emailjs/browser";
 import Toast from "@/components/shared/Toast";
 
 export default function OrderButtons({ locale, product }) {
@@ -26,7 +25,7 @@ export default function OrderButtons({ locale, product }) {
     setStatus("");
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus({ status: "pending", message: "Відправка..." });
 
@@ -49,25 +48,28 @@ export default function OrderButtons({ locale, product }) {
       message: sanitizeInput(form.message),
     };
 
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_REQUEST_ID,
-        templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID
-      )
-      .then(
-        (response) => {
-          // console.log("SUCCESS!", response.status, response.text);
-          setStatus({ status: "success", message: "Повідомлення успішно відправлено!" });
-          setRequestDialog(false);
-          setForm(initialForm);
+    try {
+      const response = await fetch("/api/request", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        (error) => {
-          console.log("FAILED...", error);
-          setStatus({ status: "success", message: "Помилка при відправці" });
-        }
-      );
+        body: JSON.stringify(templateParams),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setStatus({ status: "success", message: result.message });
+        setForm(initialForm);
+        setRequestDialog(false);
+      } else {
+        setStatus({ status: "error", message: result.message });
+      }
+    } catch (error) {
+      console.error("FAILED...", error);
+      setStatus({ status: "error", message: "Помилка при відправці" });
+    }
   };
 
   return (
@@ -90,10 +92,10 @@ export default function OrderButtons({ locale, product }) {
         <form id="order" onSubmit={handleSubmit} className={classes.order_form}>
           <div className={classes.order_form_title}>
             {/* <div className={classes.heading}>{ui.global.request_price[locale]}</div> */}
-            <div className={classes.subheading}>{ui.global.request_price_subheading[locale]}</div>
+            {/* <div className={classes.subheading}>{ui.global.request_price_subheading[locale]}</div> */}
           </div>
-          <div className={classes.send_to_msg}>
-            <div className={classes.msg_links} style={{ textAlign: "center" }}>
+          <div className="flex justify-center">
+            <div className="flex justify-center gap-8" style={{ textAlign: "center" }}>
               <a target="_blank" rel="nofollow" href="https://t.me/lansot_com">
                 <Image
                   src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/telegram.png`}

@@ -18,6 +18,7 @@ export default async function Footer({ locale }) {
               title="Lansot"
               width={100}
               height={50}
+              priority={true}
             />
           </div>
           <div className={`${classes.social_icons} flex`}>

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@emailjs/nodejs": "^5.0.2",
     "@tailwindcss/postcss": "^4.0.9",
     "@use-gesture/react": "^10.3.1",
     "aos": "^2.3.4",

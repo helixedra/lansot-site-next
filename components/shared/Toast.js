@@ -16,7 +16,7 @@ const Toast = ({ message, duration = 3500, onClose, status }) => {
 
   return (
     <div
-      className={`fixed top-32 left-1/2 transform -translate-x-1/2 px-4 py-2 shadow-lg transition-opacity duration-300 ${
+      className={`fixed z-[100] top-32 left-1/2 transform -translate-x-1/2 px-4 py-2 shadow-lg transition-opacity duration-300 ${
         visible ? "opacity-100" : "opacity-0"
       } ${
         status === "success" ? "bg-green-600" : status === "pending" ? "bg-black" : "bg-red-500"

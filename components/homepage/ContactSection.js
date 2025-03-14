@@ -3,7 +3,6 @@ import classes from "./ContactSection.module.css";
 import ui from "@/app/data/ui";
 import pages from "@/app/data/pages";
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
 import Toast from "@/components/shared/Toast";
 
 export default function ContactSection({ locale }) {
@@ -18,7 +17,7 @@ export default function ContactSection({ locale }) {
     setStatus("");
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus({ status: "pending", message: "Відправка..." });
 
@@ -39,24 +38,27 @@ export default function ContactSection({ locale }) {
       message: sanitizeInput(form.message),
     };
 
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_CONTACT_ID,
-        templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID
-      )
-      .then(
-        (response) => {
-          // console.log("SUCCESS!", response.status, response.text);
-          setStatus({ status: "success", message: "Повідомлення успішно відправлено!" });
-          setForm({ name: "", email: "", message: "" });
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        (error) => {
-          console.log("FAILED...", error);
-          setStatus({ status: "success", message: "Помилка при відправці" });
-        }
-      );
+        body: JSON.stringify(templateParams),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setStatus({ status: "success", message: result.message });
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        setStatus({ status: "error", message: result.message });
+      }
+    } catch (error) {
+      console.error("FAILED...", error);
+      setStatus({ status: "error", message: "Помилка при відправці" });
+    }
   };
 
   return (
