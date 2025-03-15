@@ -8,8 +8,8 @@ export default function LanguageVersion({ locale }) {
   const pathname = usePathname();
 
   const active = {
-    uk: locale === "uk" ? "active font-semibold" : "",
-    en: locale === "en" ? "active font-semibold" : "",
+    uk: locale === "uk" ? "font-semibold" : "opacity-50 font-semibold",
+    en: locale === "en" ? "font-semibold" : "opacity-50 font-semibold",
   };
 
   const path = {
@@ -28,7 +28,7 @@ export default function LanguageVersion({ locale }) {
   }
 
   return (
-    <div className="flex items-center gap-1 text-md lg:text-sm">
+    <div className="flex items-center gap-3 text-md lg:text-sm md:ml-4">
       {/* <RiGlobalLine /> */}
       <Link
         href={`${path.uk.href}`}
