@@ -2,20 +2,6 @@
   {
     "id": 1,
     "name": { "uk": "Спальня", "en": "Bedroom" },
-    "linked_products": [
-      "edge-stl",
-      "edge-ll",
-      "edge-lh",
-      "edge-sl",
-      "edge-ns",
-      "idea-s1w2",
-      "idea-sl",
-      "verona-3",
-      "verona-ns",
-      "folio-dh",
-      "folio-d",
-      "folio-dv"
-    ],
     "title": { "uk": "Меблі для спальні", "en": "Bedroom furniture" },
     "meta": {
       "title": { "uk": "Меблі для спальні", "en": "Bedroom furniture" },
@@ -30,6 +16,20 @@
     },
     "url": "bedroom",
     "cover": "bedroom.jpg",
+    "linked_products": [
+      "edge-stl",
+      "edge-ll",
+      "edge-lh",
+      "edge-sl",
+      "edge-ns",
+      "idea-s1w2",
+      "idea-sl",
+      "verona-3",
+      "verona-ns",
+      "folio-dh",
+      "folio-d",
+      "folio-dv"
+    ],
     "content": {
       "main": {
         "text": {
@@ -98,21 +98,99 @@
     "name": { "uk": "Вітальня", "en": "Living room" },
     "title": { "uk": "Меблі для вітальні", "en": "Living room furniture" },
     "meta": {
-      "title": { "uk": "Вітальня", "en": "Living room" },
-      "description": { "uk": "Вітальня", "en": "Living room" },
-      "keywords": { "uk": "Вітальня", "en": "Living room" }
+      "title": { "uk": "Меблі для вітальні", "en": "Living room furniture" },
+      "description": { "uk": "Купуйте стильні та функціональні меблі для вітальні від Lansot. Тумби, кавові столи, шафи та інші меблі для створення затишку в вашому домі. Ідеальний дизайн для будь-якого інтер'єру.", "en": "Buy stylish and functional living room furniture from Lansot. Cabinets, coffee tables, wardrobes, and other furniture to create coziness in your home. Perfect design for any interior." },
+      "keywords": { "uk": "меблі для вітальні, меблі для дому, меблі сучасного дизайну, тумби, шафи для вітальні, стильні меблі, інтер'єр вітальні, меблі на замовлення, комфортні меблі для дому", "en": "living room furniture, home furniture, modern design furniture, living room cabinets, stylish furniture, living room interior, custom furniture, comfortable home furniture" }
     },
-
     "url": "living-room",
     "cover": "living-room.jpg",
+    "linked_products": [
+      "leon-h2",
+      "leon",
+      "idea-sl",
+      "idea-4w2",
+      "edge-sl",
+      "verona-3",
+      "grid-s",
+      "frank",
+      "delta-t3",
+      "delta-t2",
+      "theo",
+      "edge-stl",
+      "edge-lh",
+      "edge-ll",
+      "edge-wml",
+      "quatro2"
+    ],
     "content": {
       "main": {
         "text": {
-          "uk": "Collection 1 content in Ukrainian",
-          "en": "Collection 1 content in English"
+          "uk": "Вітальня — це серце вашого дому, де збирається вся родина, приймаються гості і створюються найкращі спогади. Тому важливо обрати меблі, які поєднують у собі стиль, комфорт та практичність. У нашому асортименті ви знайдете ідеальні рішення для кожної вітальні, які доповнять ваш інтер'єр і зроблять його ще більш затишним та функціональним.",
+          "en": "The living room is the heart of your home, where the whole family gathers, guests are received, and the best memories are created. Therefore, it is important to choose furniture that combines style, comfort, and practicality. In our assortment, you will find perfect solutions for every living room that will complement your interior and make it even more cozy and functional."
         },
         "image": [""]
-      }
+      },
+      "sections": [
+        {
+          "layout": "cols-3",
+          "title": { "uk": "Серія Edge", "en": "Edge series" },
+          "text": {
+            "uk": "Серія тумб для вітальні та в зону ТБ, що відповідає останнім тенденціям дизайну. Гармонійні та сучасні рішення для зберігання речей. Виступаючі грані лежать в основі дизайну серії Edge. Вони утворюють форму контейнера зверху та виконують функцію ручок.",
+            "en": "A series of bedside tables for the living room and TV area that meets the latest design trends. Harmonious and modern solutions for storing things. Protruding edges are at the heart of the Edge series design. They form a container shape from above and serve as handles."
+          },
+          "images": [
+            "/products/edge-lh/edge_lh_promo_img_3.jpg",
+            "/products/edge-stl/edge_stl_promo_img_4.jpg",
+            "/products/edge-wml/edge_wml_promo_img_2.jpg"
+          ]
+        },
+        {
+          "layout": "cols-1",
+          "title": { "uk": "Тумби Leon", "en": "Leon cabinets" },
+          "text": {
+            "uk": "Це сучасні тумби для вітальні з мінімалістичним дизайном, що поєднують стиль і практичність. Вони оснащені скляними фасадами з вертикальними ребрами, які додають текстури та елегантності. Тумби стоять на тонких металевих ніжках, що створюють легкий і повітряний вигляд.",
+            "en": "These are modern living room cabinets with a minimalist design that combines style and practicality. They are equipped with glass facades with vertical ribs that add texture and elegance. The cabinets stand on thin metal legs, creating a light and airy look."
+          },
+          "images": [
+            "/products/leon/leon_promo_img_1.jpg"
+          ]
+        },
+        {
+          "layout": "cols-1",
+          "title": { "uk": "Тумби Idea", "en": "Idea cabinets" },
+          "text": {
+            "uk": "Тумби для вітальні Idea, втілюють концепцію сучасного дизайну з акцентом на тонкі панелі корпусу, які створюють легкий і витончений вигляд. Вони можуть бути виготовлені з шпонованих панелей, що додають натуральності та теплоти. Також можуть бути виготовлені з фарбованих МДФ панелей, які забезпечують гнучкість у виборі кольору для мінімалістичного чи сучасного інтер'єру.",
+            "en": "Idea living room cabinets embody the concept of modern design with an emphasis on thin body panels that create a light and sophisticated look. They can be made of veneered panels that add naturalness and warmth. They can also be made of painted MDF panels, which provide flexibility in choosing a color for a minimalist or modern interior."
+          },
+          "images": [
+            "/products/idea-sl/idea-sl_promo_img_2.jpg"
+          ]
+        },
+        {
+          "layout": "cols-2",
+          "title": { "uk": "Тумби Delta", "en": "Delta cabinets" },
+          "text": {
+            "uk": "Тумби Delta ідеально підходять для зони ТБ у вітальні, поєднуючи сучасний дизайн із практичністю. Тумби доступні в різних матеріалах: ЛДСП, що забезпечує економічність і міцність, фарбований МДФ для гладкої поверхні з можливістю вибору кольору, або шпоновані панелі, які підкреслюють натуральну текстуру дерева. Ці тумби гармонійно доповнять сучасний інтер’єр, додаючи стилю та практичності.",
+            "en": "Delta cabinets are ideal for the TV area in the living room, combining modern design with practicality. Cabinets are available in different materials: chipboard, which provides economy and strength, painted MDF for a smooth surface with a choice of color, or veneered panels that emphasize the natural texture of the wood. These cabinets will harmoniously complement the modern interior, adding style and practicality."
+          },
+          "images": [
+            "/products/delta-t3/delta_t3_promo_img_2.jpg",
+            "/products/delta-t2/delta_t2_promo_img_4.jpg"
+          ]
+        },
+        {
+          "layout": "cols-2",
+          "title": { "uk": "Кавові та журнальні столики", "en": "Coffee and side tables" },
+          "text": {
+            "uk": "Кавові столики для вітальні — це стильні та функціональні елементи інтер’єру, які додають затишку і практичності простору. Вони зазвичай мають компактні розміри, що робить їх ідеальними для розміщення поруч із диваном чи кріслами. Дизайн таких столиків часто виконаний у мінімалістичному стилі з акцентом на чисті лінії та прості форми.",
+            "en": "Coffee tables for the living room are stylish and functional interior elements that add coziness and practicality to the space. They usually have compact dimensions, making them ideal for placing next to a sofa or armchairs. The design of such tables is often done in a minimalist style with an emphasis on clean lines and simple shapes."
+          },
+          "images": [
+            "/products/theo/theo_promo_img_3.jpg",
+            "/products/quatro2/quatro_promo_2_3_f.jpg"
+          ]
+        }
+      ]
     }
   },
 
@@ -127,14 +205,47 @@
     },
     "url": "kitchen",
     "cover": "kitchen.jpg",
+    "linked_products": [
+      "frank",
+      "leon-h2",
+      "verona-3",
+      "theo",
+      "edge-stl",
+      "edge-lh",
+      "quatro2"
+    ],
     "content": {
       "main": {
         "text": {
-          "uk": "Collection 1 content in Ukrainian",
-          "en": "Collection 1 content in English"
+          "uk": "Меблі для кухні в нашій колекції — це стильні та функціональні рішення, що ідеально доповнять будь-який кухонний простір. Ми пропонуємо окремі елементи, такі як тумби, столи та стелажі, які легко інтегруються в існуючі кухонні гарнітури. Дизайн виконаний у сучасному стилі з акцентом на мінімалізм і практичність.",
+          "en": "Kitchen furniture in our collection is stylish and functional solutions that perfectly complement any kitchen space. We offer separate elements such as cabinets, tables, and racks that easily integrate into existing kitchen sets. The design is done in a modern style with an emphasis on minimalism and practicality."
         },
         "image": [""]
-      }
+      },
+      "sections": [
+        {
+          "layout": "cols-2",
+          "title": { "uk": "Столи для кухні", "en": "Kitchen tables" },
+          "text": {
+            "uk": "Столи для кухні — це не тільки місце для прийому їжі, але й центральний елемент інтер’єру. Важливо, щоб вони були стильними, функціональними та комфортними. У нашому асортименті ви знайдете рішення для кожного простору, які допоможуть вам створити ідеальне робоче місце вдома.",
+            "en": "Kitchen tables are not only a place for eating but also a central element of the interior. It is important that they are stylish, functional, and comfortable. In our assortment, you will find solutions for every space that will help you create the perfect workspace at home."
+          },
+          "images": [
+            "/products/frank/frank_promo_img_1.jpg",
+            "/products/quatro2/quatro_promo_2_3_f.jpg"
+          ]
+        },
+        {
+          "layout": "cols-1",
+          "title": { "uk": "Тумби Leon", "en": "Leon cabinets" },
+          "text": {
+            "uk": "Це сучасні тумби для вітальні з мінімалістичним дизайном, що поєднують стиль і практичність. Вони оснащені скляними фасадами з вертикальними ребрами, які додають текстури та елегантності. Тумби стоять на тонких металевих ніжках, що створюють легкий і повітряний вигляд.",
+            "en": "These are modern living room cabinets with a minimalist design that combines style and practicality. They are equipped with glass facades with vertical ribs that add texture and elegance. The cabinets stand on thin metal legs, creating a light and airy look."
+          },
+          "images": [
+            "/products/leon/leon_promo_img_1.jpg"
+          ]
+        }]
     }
   },
   {
@@ -143,19 +254,52 @@
     "title": { "uk": "Домашній офіс", "en": "Home office" },
     "meta": {
       "title": { "uk": "Домашній офіс", "en": "Home office" },
-      "description": { "uk": "Домашній офіс", "en": "Home office" },
+      "description": { "uk": "Створіть комфортний та продуктивний робочий простір у себе вдома з нашою колекцією меблів для домашнього офісу. Наші меблі поєднують у собі сучасний дизайн, функціональність і високу якість матеріалів, щоб забезпечити вам максимальний комфорт під час роботи.", "en": "Create a comfortable and productive workspace at home with our home office furniture collection. Our furniture combines modern design, functionality, and high-quality materials to provide you with maximum comfort while working." },
       "keywords": { "uk": "Домашній офіс", "en": "Home office" }
     },
     "url": "home-office",
     "cover": "home-office.jpg",
+    "linked_products": [
+      "apollo-2",
+      "folio-dv",
+      "grid-s",
+      "theo",
+      "edge-stl",
+      "edge-lh"
+    ],
     "content": {
       "main": {
         "text": {
-          "uk": "Collection 1 content in Ukrainian",
-          "en": "Collection 1 content in English"
+          "uk": "Меблі для домашнього офісу — це не тільки робоче місце, але й частина вашого інтер'єру. Важливо, щоб вони були стильними, функціональними та комфортними. У нашому асортименті ви знайдете рішення для кожного простору, які допоможуть вам створити ідеальне робоче місце вдома.",
+          "en": "Home office furniture is not only a workplace but also part of your interior. It is important that they are stylish, functional, and comfortable. In our assortment, you will find solutions for every space that will help you create the perfect workspace at home."
         },
         "image": [""]
-      }
+      },
+      "sections": [
+        {
+          "layout": "cols-1",
+          "title": { "uk": "Робочі столи", "en": "Desks" },
+          "text": {
+            "uk": "Робочий стіл — це центральний елемент будь-якого офісу, тому важливо обрати правильне рішення для вашого домашнього офісу. У нашому асортименті ви знайдете різноманітні моделі робочих столів, які поєднують у собі стиль, комфорт та функціональність.",
+            "en": "A desk is the central element of any office, so it is important to choose the right solution for your home office. In our assortment, you will find a variety of desk models that combine style, comfort, and functionality."
+          },
+          "images": [
+            "/products/apollo-2/apollo_2_promo_img_3.jpg"
+          ]
+        },
+        {
+          "layout": "cols-3",
+          "title": { "uk": "Зберігання речей", "en": "Storage" },
+          "text": {
+            "uk": "Для зручності роботи в домашньому офісі важливо мати належне зберігання речей. У нашому асортименті ви знайдете шафи, тумби та полиці, які допоможуть вам організувати робочий простір та зберегти необхідні документи та речі під рукою.",
+            "en": "For convenience in working in a home office, it is important to have proper storage. In our assortment, you will find cabinets, cabinets, and shelves that will help you organize your workspace and keep necessary documents and things at hand."
+          },
+          "images": [
+            "/products/edge-stl/edge_stl_promo_img_1.jpg",
+            "/products/folio-dv/folio_dv_promo_2_2.jpg",
+            "/products/grid-s/grid-s_promo_img_1.jpg"
+          ]
+        }]
     }
   }
 ]

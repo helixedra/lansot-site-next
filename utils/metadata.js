@@ -4,6 +4,7 @@ export async function MetaData({ locale, meta, pathname }) {
   return {
     title: meta.title,
     description: meta.description,
+    author: 'Lansot',
 
     openGraph: {
       title: meta.title,
