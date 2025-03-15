@@ -11,6 +11,18 @@ export function AOSInit() {
       mirror: true,
       once: false,
     });
+
+    AOS.refresh();
+
+  
+    const handleLoad = () => {
+      AOS.refresh();
+    };
+    window.addEventListener("load", handleLoad);
+
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
   }, []);
 
   return null;

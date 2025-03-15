@@ -37,16 +37,13 @@ export default async function DeliveryPage({ params }) {
             <div className="lg:w-1/2">
               <div>
                 {data.info.payment.description.map((item, index) => (
-                  <>
-                    <div
-                      data-aos="fade-up-left"
-                      data-aos-duration="300"
-                      className="mb-16 lg:mb-32 text-xl"
-                      key={`${index}-payment`}
-                      dangerouslySetInnerHTML={{ __html: item }}
-                    ></div>
-                    {/* <div className="h-1 bg-zinc-800 w-16 mb-8"></div> */}
-                  </>
+                  <div
+                    data-aos="fade-up-left"
+                    data-aos-duration="300"
+                    className="mb-16 lg:mb-32 text-xl"
+                    key={`${index}-payment`}
+                    dangerouslySetInnerHTML={{ __html: item }}
+                  ></div>
                 ))}
               </div>
             </div>
@@ -64,16 +61,13 @@ export default async function DeliveryPage({ params }) {
             <div className="lg:w-1/2">
               <div>
                 {data.info.delivery.description.map((item, index) => (
-                  <>
-                    <div
-                      data-aos="fade-up-left"
-                      data-aos-duration="300"
-                      className="mb-16 lg:mb-32 text-xl"
-                      key={`${index}-delivery`}
-                      dangerouslySetInnerHTML={{ __html: item }}
-                    ></div>
-                    {/* <div className="h-1 bg-zinc-800 w-16 mb-8"></div> */}
-                  </>
+                  <div
+                    data-aos="fade-up-left"
+                    data-aos-duration="300"
+                    className="mb-16 lg:mb-32 text-xl"
+                    key={`${index}-delivery`}
+                    dangerouslySetInnerHTML={{ __html: item }}
+                  ></div>
                 ))}
               </div>
             </div>
