@@ -9,6 +9,7 @@ export function middleware(request) {
 
   // Ignore requests for static files
   if (
+    pathname.startsWith("/_next") ||
     pathname.startsWith("/_next/static") ||
     pathname.startsWith("/favicon.ico") ||
     pathname.startsWith("/robots.txt") ||
