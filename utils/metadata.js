@@ -16,9 +16,9 @@ export async function MetaData({ locale, meta, pathname }) {
     alternates: {
       canonical: `${baseUrl}/${locale}`,
       languages: {
-        uk: `${baseUrl}/uk/${pathname}`,
-        en: `${baseUrl}/en/${pathname}`,
-        "x-default": `${baseUrl}/uk/${pathname}`,
+        uk: `${baseUrl}/${pathname ? `uk/${pathname}` : 'uk'}`,
+        en: `${baseUrl}/${pathname ? `en/${pathname}` : 'en'}`,
+        "x-default": `${baseUrl}/${pathname}`,
       },
     },
   };
