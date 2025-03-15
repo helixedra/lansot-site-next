@@ -24,7 +24,7 @@ export default function ResponsiveCarousel({ images, delay, locale }) {
   };
 
   return (
-    <div className={classes.carousel_container}>
+    <div className={`${classes.carousel_container}`}  >
       <div
         className={classes.carousel_track}
         style={{

@@ -6,6 +6,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang={lang.value}>
       <body>{children}</body>
+      
     </html>
   );
 }

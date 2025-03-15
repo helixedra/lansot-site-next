@@ -5,9 +5,9 @@ import classes from "./CollectionsSlider.module.css";
 import collections from "@/app/data/collections.json";
 import ui from "@/app/data/ui.json";
 
-export default function CollectionsSlider({ locale, ...props }) {
+export default function CollectionsSlider({ locale}) {
   return (
-    <div className={classes.slider} {...props}>
+    <div className={`${classes.slider}`}  >
       <ItemsSlider slideWidth={500} locale={locale}>
         {collections.map((collection) => (
           <Link

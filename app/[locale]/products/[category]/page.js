@@ -34,7 +34,7 @@ export default async function ProductsPage({ params }) {
       <CatalogMenu categories={categoriesList} locale={locale} />
       <CatalogMenuMobile categories={categoriesList} locale={locale} />
 
-      <div className="w-full" data-aos="fade-up">
+      <div className="w-full" >
         <h1 className={`normal-case ${classes.category_title}`}>
           {categories[category][locale].name}
         </h1>

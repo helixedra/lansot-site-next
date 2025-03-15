@@ -29,7 +29,7 @@ export default async function ProductsPage({ params }) {
       <CatalogMenu categories={categoriesList} locale={locale} />
       <CatalogMenuMobile categories={categoriesList} locale={locale} />
 
-      <div className="w-full" data-aos="fade-up">
+      <div className="w-full" >
         <h1 className={classes.category_title}>{content.name}</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
           {products.map((product) => (

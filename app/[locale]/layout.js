@@ -6,6 +6,7 @@ import { LocaleProvider } from "@/contexts/LocaleContext";
 import { Montserrat } from "next/font/google";
 import ScrollUp from "@/components/ScrollUp";
 
+
 const montserrat = Montserrat({
   subsets: ["latin", "cyrillic"],
   variable: "--font-montserrat",
@@ -22,10 +23,11 @@ export default async function RootLayout({ children, params }) {
             <Header locale={locale} />
             <main className="main overflow-hidden mt-[80px]">{children}</main>
             <ScrollUp />
+
           </CartProvider>
         </LocaleProvider>
       </div>
-      <Footer locale={locale} />
+      <Footer locale={locale} />    
     </>
   );
 }

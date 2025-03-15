@@ -24,9 +24,6 @@ export default function Promo({ product, locale }) {
                 src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/products/${product.url}/${image.img}`}
                 alt={image.alt[locale]}
                 title={image.alt[locale]}
-                data-aos="fade-up"
-                data-aos-duration="400"
-                data-aos-easing="ease-in-sine"
                 width={1600}
                 height={1600}
                 quality={90}

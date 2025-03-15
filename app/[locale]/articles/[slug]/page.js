@@ -25,7 +25,7 @@ export default async function ArticlePage({ params }) {
   return (
     <>
       <div className="max-w-[1600px] mx-auto mb-12 px-6 lg:px-12">
-        <div data-aos="fade-up" data-aos-duration="300" className="PageHeader py-8 lg:py-24">
+        <div  className="PageHeader py-8 lg:py-24">
           <div className="PageHeader__subheader text-zinc-500 font-semibold mb-8">
             {ui.global.articles[locale]}
           </div>

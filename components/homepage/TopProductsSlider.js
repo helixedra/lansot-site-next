@@ -8,11 +8,11 @@ import productsData from "@/app/data/products.json";
 import categories from "@/app/data/categories.json";
 import ui from "@/app/data/ui";
 
-export default async function TopProductsSlider({ locale, ...props }) {
+export default async function TopProductsSlider({ locale }) {
   const products = await Object.values(productsData).filter((product) => product.popular === true);
 
   return (
-    <div className={classes.container} {...props}>
+    <div className={`${classes.container}`} >
       <div className={classes.header}>
         <div className={classes.title}>{ui.global.popular_products[locale]}</div>
         <div className={classes.controls}>

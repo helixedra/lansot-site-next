@@ -7,7 +7,6 @@ export default function ProductCard({ product, locale }) {
     <div className={classes.product_card} key={product.url}>
       <Link href={`/${locale}/products/${product.category}/${product.url}`} title={product.name}>
         <Image
-          data-aos="zoom-in"
           src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/products/${product.url}/${product.cover}`}
           alt={`${product.sub[locale]} - ${product.name}`}
           title={`${product.sub[locale]} - ${product.name}`}

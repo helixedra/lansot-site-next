@@ -10,7 +10,6 @@ export default function TopBlock({ product, locale }) {
     <section className={classes.product_top}>
       <div className={classes.product_main_img}>
         <Image
-          data-aos="fade"
           src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/products/${product.url}/${product.top_image}`}
           alt={`${product.sub[locale]} ${product.name}`}
           title={`${product.sub[locale]} ${product.name}`}

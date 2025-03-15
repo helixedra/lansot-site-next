@@ -14,7 +14,7 @@ export default function Technical({ product, locale }) {
             className={classes.drawing}
           >
             <Image
-              data-aos="zoom-in-up"
+              
               src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/products/${product.url}/${image}`}
               alt={product.name}
               width={840}

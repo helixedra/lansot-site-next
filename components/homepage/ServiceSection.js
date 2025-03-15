@@ -6,7 +6,7 @@ import ui from "@/app/data/ui.json";
 
 export default function ServiceSection({ content, locale, ...props }) {
   return (
-    <div className={classes.container} {...props}>
+    <div className={`${classes.container}`} >
       <div className={classes.inner_container}>
         <div className={classes.content}>
           <Link href={`/${locale}/services`}>
