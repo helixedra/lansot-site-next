@@ -1,15 +1,15 @@
-import classes from "./page.module.css";
 import mat from "@/app/data/decors.json";
 import Image from "next/image";
 import { RiInformationLine } from "react-icons/ri";
 import pages from "@/app/data/pages.json";
 import { MetaData } from "@/utils/metadata";
+import PageHeader from "@/components/shared/PageHeader";
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
   const content = pages.finishes[locale];
   const meta = {
-    title: content.meta.title + ` ${process.env.NEXT_PUBLIC_SITE_NAME}`,
+    title: content.meta.title + ` - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
     description: content.meta.description,
   };
   return MetaData({ locale, meta, pathname: "finishes" });
@@ -20,25 +20,23 @@ export default async function FinishingPage({ params }) {
   const data = pages.finishes[locale];
   return (
     <div className="max-w-[1600px] mx-auto mb-12 px-6 lg:px-12">
-      <div  className="PageHeader py-8 lg:py-24">
-        <div className="PageHeader__subheader text-zinc-500 font-semibold mb-8">{data.title}</div>
-        <h1 className="PageHeader__title max-w-[920px]">{data.subtitle}</h1>
-      </div>
+      <PageHeader title={data.title} subtitle={data.subtitle} />
 
-      {/* LDSP Section */}
       {mat?.ldsp && (
-        <div className={classes.decor_set}  >
-          <h3 className={classes.decor_set_title}>{mat.ldsp.title[locale]}</h3>
-          {/* <div>{mat.ldsp.description[locale]}</div> */}
-          <div className={classes.samples}>
+        <div className="my-12 animate_fadeIn">
+          <h3 className="mt-12 mb-4">{mat.ldsp.title[locale]}</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 min-h-[150px]">
             {mat.ldsp.images.map((ldsp, index) => (
-              <div key={index} className={classes.sample_item}>
-                <div className={classes.sample_item_title}>
-                  <span className={classes.sample_item_pre_title}>{ldsp.description[locale]}</span>
+              <div
+                key={index}
+                className="relative mb-6 w-full h-full min-h-[150px]"
+              >
+                <div className="absolute left-2 bottom-3 text-white bg-black p-2 z-10">
+                  <span className="text-xs">{ldsp.description[locale]}</span>
                   <br />
                   {ldsp.title}
                 </div>
-                <div className={`w-full h-full ${classes.decor_sample}`}>
+                <div className="w-full h-full relative">
                   <Image
                     src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/decors/ldsp/${ldsp.img}`}
                     alt={ldsp.title}
@@ -53,22 +51,23 @@ export default async function FinishingPage({ params }) {
         </div>
       )}
 
-      {/* LDSP Wood Section */}
       {mat?.ldsp_wood && (
-        <div className={classes.decor_set}  >
-          <h3 className={classes.decor_set_title}>{mat.ldsp_wood.title[locale]}</h3>
-          {/* <div>{mat.ldsp_wood.description[locale]}</div> */}
-          <div className={classes.samples}>
+        <div className="my-12">
+          <h3 className="mt-12 mb-4">{mat.ldsp_wood.title[locale]}</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 min-h-[150px]">
             {mat.ldsp_wood.images.map((ldsp_wood, index) => (
-              <div key={index} className={classes.sample_item_big}>
-                <div className={classes.sample_item_title}>
-                  <span className={classes.sample_item_title_item_pre_title}>
+              <div
+                key={index}
+                className="relative mb-6 w-full h-full min-h-[450px]"
+              >
+                <div className="absolute left-2 bottom-3 text-white bg-black p-2 z-10">
+                  <span className="text-xs">
                     {ldsp_wood.description[locale]}
                   </span>
                   <br />
                   {ldsp_wood.title}
                 </div>
-                <div className={classes.decor_sample}>
+                <div className="relative w-full h-full">
                   <Image
                     src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/decors/ldsp/${ldsp_wood.img}`}
                     alt={ldsp_wood.title}
@@ -79,15 +78,11 @@ export default async function FinishingPage({ params }) {
               </div>
             ))}
           </div>
-          <div
-            className="flex mt-12 bg-zinc-100 p-6 rounded-lg"
-            
-            
-          >
-            <div className={classes.info_icon}>
+          <div className="flex mt-12 bg-zinc-100 p-6 rounded-lg">
+            <div className="text-zinc-900 min-w-8">
               <RiInformationLine fontSize={24} />
             </div>
-            <div className={classes.info_text}>{data.info}</div>
+            <div className="ml-3 leading-6">{data.info}</div>
           </div>
         </div>
       )}

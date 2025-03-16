@@ -263,6 +263,7 @@
     "en": {
       "name": "Contacts",
       "title": "Contacts",
+      "subtitle": "Contact information",
       "meta": {
         "title": "Contacts",
         "description": "Contact information. Contact us for more information about our products and services.",

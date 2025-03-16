@@ -1,5 +1,4 @@
 import ResponsiveCarousel from "@/components/homepage/ResponsiveCarousel";
-import classes from "./homepage.module.css";
 import pages from "@/app/data/pages.json";
 import IntroText from "@/components/homepage/IntroText";
 import CollectionsSlider from "@/components/homepage/CollectionsSlider";
@@ -31,7 +30,10 @@ export default async function HomePage({ params }) {
     },
     {
       img: `${process.env.NEXT_PUBLIC_IMAGE_PATH}/home_slider_img_8.jpg`,
-      alt: { uk: "Стіл Frank в інтер'єрі кухні", en: "Frank table in the kitchen interior" },
+      alt: {
+        uk: "Стіл Frank в інтер'єрі кухні",
+        en: "Frank table in the kitchen interior",
+      },
     },
     {
       img: `${process.env.NEXT_PUBLIC_IMAGE_PATH}/home_slider_img_9.jpg`,
@@ -44,30 +46,32 @@ export default async function HomePage({ params }) {
 
   return (
     <>
-      <div className={`${classes.image_slider}`}>
-        <ResponsiveCarousel images={sliderImages} delay={6500} locale={locale}  />
+      <div className="max-w-[var(--maxwidth-container)] mx-auto px-4 md:px-4 sm:px-0 animate_moveUp">
+        <ResponsiveCarousel
+          images={sliderImages}
+          delay={6500}
+          locale={locale}
+        />
       </div>
 
-      <IntroText  >
-        <h1 className={classes.title}>{pages.homepage[locale].herotext.title}</h1>
+      <IntroText>
+        <h1 className="text-4xl font-medium">
+          {pages.homepage[locale].herotext.title}
+        </h1>
         <p className="text-base md:text-lg lg:text-xl leading-relaxed lg:leading-relaxed mt-6">
           {pages.homepage[locale].herotext.content}
         </p>
       </IntroText>
 
-      <CollectionsSlider  locale={locale} />
+      <CollectionsSlider locale={locale} />
 
       <ServiceSection
         content={pages.homepage[locale].service}
         locale={locale}
       />
-      <TopProductsSlider  locale={locale} />
-      <ArticlesSection
-        articles={articles}
-        locale={locale}
-      />
+      <TopProductsSlider locale={locale} />
+      <ArticlesSection articles={articles} locale={locale} />
       <ContactSection locale={locale} />
-    
     </>
   );
 }

@@ -2,7 +2,6 @@ import pageContent from "@/app/data/pages.json";
 import categories from "@/app/data/categories.json";
 import ProductCard from "@/components/products/ProductCard";
 import productsData from "@/app/data/products.json";
-import classes from "../products.module.css";
 import CatalogMenu from "@/components/products/CatalogMenu";
 import CatalogMenuMobile from "@/components/products/CatalogMenuMobile";
 import TextMore from "@/components/shared/TextMore";
@@ -23,19 +22,25 @@ export async function generateMetadata({ params }) {
 export default async function ProductsPage({ params }) {
   const { locale, category } = await params;
   const content = categories[category][locale];
-  const categoriesList = Array.isArray(categories) ? categories : Object.values(categories);
+  const categoriesList = Array.isArray(categories)
+    ? categories
+    : Object.values(categories);
 
-  const products = Array.isArray(productsData) ? productsData : Object.values(productsData);
+  const products = Array.isArray(productsData)
+    ? productsData
+    : Object.values(productsData);
 
-  const productsFiltered = products.filter((product) => product.category === category);
+  const productsFiltered = products.filter(
+    (product) => product.category === category
+  );
 
   return (
-    <div className={`${classes.catalog} max-w-[1600px] mx-auto px-6 lg:px-12`}>
+    <div className="max-w-[1600px] mx-auto p-6 lg:px-12 flex flex-col md:flex-row items-start">
       <CatalogMenu categories={categoriesList} locale={locale} />
       <CatalogMenuMobile categories={categoriesList} locale={locale} />
 
-      <div className="w-full" >
-        <h1 className={`normal-case ${classes.category_title}`}>
+      <div className="w-full animate_moveUp">
+        <h1 className="normal-case text-2xl font-medium md:block hidden">
           {categories[category][locale].name}
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">

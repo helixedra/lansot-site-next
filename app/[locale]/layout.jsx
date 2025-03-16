@@ -1,11 +1,10 @@
-import Header from "@/components/header/Header";
-import "./global.css";
 import { CartProvider } from "@/contexts/CartContext";
-import Footer from "@/components/footer/Footer";
 import { LocaleProvider } from "@/contexts/LocaleContext";
 import { Montserrat } from "next/font/google";
+import Header from "@/components/header/Header";
+import Footer from "@/components/footer/Footer";
 import ScrollUp from "@/components/ScrollUp";
-
+import "./global.css";
 
 const montserrat = Montserrat({
   subsets: ["latin", "cyrillic"],
@@ -23,11 +22,10 @@ export default async function RootLayout({ children, params }) {
             <Header locale={locale} />
             <main className="main overflow-hidden mt-[80px]">{children}</main>
             <ScrollUp />
-
           </CartProvider>
         </LocaleProvider>
       </div>
-      <Footer locale={locale} />    
+      <Footer locale={locale} />
     </>
   );
 }

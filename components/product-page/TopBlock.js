@@ -7,7 +7,7 @@ import OrderButtons from "./OrderButtons";
 
 export default function TopBlock({ product, locale }) {
   return (
-    <section className={classes.product_top}>
+    <section className={`${classes.product_top} animate_moveUp`}>
       <div className={classes.product_main_img}>
         <Image
           src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/products/${product.url}/${product.top_image}`}
