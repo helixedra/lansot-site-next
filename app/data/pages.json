@@ -347,5 +347,17 @@
       "copyright": "© {currentYear} Lansot - Furniture in minimalist style",
       "terms": "Public Offer Agreement"
     }
+  },
+  "not_found": {
+    "uk": {
+      "title": "Сторінку не знайдено",
+      "content": "Вибачте, але сторінка, яку ви шукаєте, не існує або була видалена.",
+      "back": "Повернутися на головну"
+    },
+    "en": {
+      "title": "Page not found",
+      "content": "Sorry, the page you are looking for does not exist or has been deleted.",
+      "back": "Back to home"
+    }
   }
 }

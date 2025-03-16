@@ -4,7 +4,7 @@ import { Montserrat } from "next/font/google";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import ScrollUp from "@/components/ScrollUp";
-import "./global.css";
+import "@/app/styles/global.css";
 
 const montserrat = Montserrat({
   subsets: ["latin", "cyrillic"],
