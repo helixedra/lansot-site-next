@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import classes from "./ProductCard.module.css";
 
-export default function ProductCard({ product, locale }) {
+export default function ProductCard({ product, locale, index }) {
   return (
     <div className={classes.product_card} key={product.url}>
       <Link
