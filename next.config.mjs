@@ -9,6 +9,12 @@ const nextConfig = {
         pathname: "/storage/**",
         search: "",
       },
+      {
+        protocol: "https",
+        hostname: "images.codebase.stream",
+        port: "",
+        pathname: "/images/**",
+      },
     ],
   },
 };
