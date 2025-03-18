@@ -4,7 +4,7 @@ export async function MetaData({ locale, meta, pathname }) {
   return {
     title: meta.title,
     description: meta.description,
-    author: 'Lansot',
+    author: "Lansot",
 
     openGraph: {
       title: meta.title,
@@ -14,10 +14,10 @@ export async function MetaData({ locale, meta, pathname }) {
     metadataBase: new URL(baseUrl),
 
     alternates: {
-      canonical: `${baseUrl}/${locale}`,
+      canonical: `${baseUrl}/${pathname ? `${locale}/${pathname}` : locale}`,
       languages: {
-        uk: `${baseUrl}/${pathname ? `uk/${pathname}` : 'uk'}`,
-        en: `${baseUrl}/${pathname ? `en/${pathname}` : 'en'}`,
+        uk: `${baseUrl}/${pathname ? `uk/${pathname}` : "uk"}`,
+        en: `${baseUrl}/${pathname ? `en/${pathname}` : "en"}`,
         "x-default": `${baseUrl}/${pathname}`,
       },
     },
