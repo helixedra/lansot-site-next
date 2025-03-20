@@ -64,7 +64,7 @@ function getSliderImages(locale) {
     {
       img: `${process.env.NEXT_PUBLIC_IMAGE_PATH}/home_slider_img_12.jpg`,
       alt: {
-        uk: "Сучасний світло-сірий комодFolio із шістьма шухлядами в спальні, прикрашений лампою, вазами та картиною на тлі коричневої стіни",
+        uk: "Сучасний світло-сірий комод Folio із шістьма шухлядами в спальні, прикрашений лампою, вазами та картиною на тлі коричневої стіни",
         en: "Modern light gray chest of drawers Folio with six drawers in the bedroom, decorated with a lamp, vases and a painting against a brown wall",
       },
       title: {
