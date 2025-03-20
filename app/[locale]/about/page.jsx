@@ -8,7 +8,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const { locale } = params;
+  const { locale } = await params;
   const content = pages.about[locale];
   return MetaData({
     locale,
@@ -20,8 +20,8 @@ export async function generateMetadata({ params }) {
   });
 }
 
-export default function AboutPage({ params }) {
-  const { locale } = params;
+export default async function AboutPage({ params }) {
+  const { locale } = await params;
   const data = pages.about[locale];
 
   return (

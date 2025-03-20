@@ -9,8 +9,8 @@ export function generateStaticParams() {
   return Object.keys(pages.finishes).map((locale) => ({ locale }));
 }
 
-export function generateMetadata({ params }) {
-  const { locale } = params;
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
   const content = pages.finishes[locale];
 
   return MetaData({
@@ -52,8 +52,8 @@ function renderMaterialBlock(category, locale) {
   );
 }
 
-export default function FinishingPage({ params }) {
-  const { locale } = params;
+export default async function FinishingPage({ params }) {
+  const { locale } = await params;
   const data = pages.finishes[locale];
 
   return (

@@ -9,7 +9,7 @@ import { MetaData } from "@/utils/metadata";
 import languages from "@/app/data/lang.json";
 
 export async function generateMetadata({ params }) {
-  const { locale, category } = params;
+  const { locale, category } = await params;
   const content = pageContent.products[locale];
   const categoryData = categories[category][locale];
 
@@ -33,8 +33,8 @@ export async function generateStaticParams() {
   );
 }
 
-export default function ProductsPage({ params }) {
-  const { locale, category } = params;
+export default async function ProductsPage({ params }) {
+  const { locale, category } = await params;
   const content = categories[category][locale];
   const categoriesList = Object.values(categories);
   const products = Object.values(productsData);

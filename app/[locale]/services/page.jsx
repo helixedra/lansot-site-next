@@ -5,7 +5,7 @@ import PageHeader from "@/components/shared/PageHeader";
 import languages from "@/app/data/lang.json";
 
 export async function generateMetadata({ params }) {
-  const { locale } = params;
+  const { locale } = await params;
   const content = pages.services[locale];
   const meta = {
     title: `${content.meta.title} - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
@@ -20,8 +20,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function ServicesPage({ params }) {
-  const { locale } = params;
+export default async function ServicesPage({ params }) {
+  const { locale } = await params;
   const content = pages.services[locale];
 
   return (

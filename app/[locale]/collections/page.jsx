@@ -9,7 +9,7 @@ import PageHeader from "@/components/shared/PageHeader";
 import languages from "@/app/data/lang.json";
 
 export async function generateMetadata({ params }) {
-  const { locale } = params;
+  const { locale } = await params;
   const content = pages.collections[locale];
   const meta = {
     title: `${content.meta.title} - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
@@ -24,8 +24,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function CollectionsPage({ params }) {
-  const { locale } = params;
+export default async function CollectionsPage({ params }) {
+  const { locale } = await params;
   const content = pages.collections[locale];
 
   return (

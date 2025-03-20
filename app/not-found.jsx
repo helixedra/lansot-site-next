@@ -12,8 +12,8 @@ const montserrat = Montserrat({
 });
 
 export async function generateMetadata() {
-  const cookieStore = cookies();
-  const lang = cookieStore.get("locale")?.value || "uk"; // Запасна локаль
+  const cookieStore = await cookies();
+  const lang = (await cookieStore.get("locale")?.value) || "uk";
   const content = pages.not_found[lang];
   const meta = {
     title: `404 - ${content.title} - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
@@ -22,9 +22,9 @@ export async function generateMetadata() {
   return MetaData({ locale: lang, meta, pathname: "" });
 }
 
-export default function NotFound() {
-  const cookieStore = cookies();
-  const lang = cookieStore.get("locale")?.value || "uk"; // Запасна локаль
+export default async function NotFound() {
+  const cookieStore = await cookies();
+  const lang = (await cookieStore.get("locale")?.value) || "uk";
   const content = pages.not_found[lang];
 
   return (

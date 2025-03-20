@@ -8,8 +8,8 @@ export function generateStaticParams() {
   return Object.keys(pages.contacts).map((locale) => ({ locale }));
 }
 
-export function generateMetadata({ params }) {
-  const { locale } = params;
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
   const content = pages.contacts[locale];
   return MetaData({
     locale,
@@ -21,8 +21,8 @@ export function generateMetadata({ params }) {
   });
 }
 
-export default function ContactsPage({ params }) {
-  const { locale } = params;
+export default async function ContactsPage({ params }) {
+  const { locale } = await params;
   const data = pages.contacts[locale];
 
   const contacts = [

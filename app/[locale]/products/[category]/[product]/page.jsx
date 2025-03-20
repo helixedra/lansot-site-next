@@ -12,7 +12,7 @@ import { MetaData } from "@/utils/metadata";
 import languages from "@/app/data/lang.json";
 
 export async function generateMetadata({ params }) {
-  const { locale, product } = params;
+  const { locale, product } = await params;
   const productData = productsData[product];
 
   if (!productData) {
@@ -49,8 +49,8 @@ export async function generateStaticParams() {
   );
 }
 
-export default function ProductPage({ params }) {
-  const { locale, category, product } = params;
+export default async function ProductPage({ params }) {
+  const { locale, category, product } = await params;
   const productData = productsData[product];
 
   if (!productData) {

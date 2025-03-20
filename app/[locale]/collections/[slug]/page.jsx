@@ -7,7 +7,7 @@ import PageHeader from "@/components/shared/PageHeader";
 import languages from "@/app/data/lang.json";
 
 export async function generateMetadata({ params }) {
-  const { locale, slug } = params;
+  const { locale, slug } = await params;
   const content = collections.find((collection) => collection.url === slug);
   const meta = {
     title: `${content.meta.title[locale]} - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
@@ -26,8 +26,8 @@ export async function generateStaticParams() {
   );
 }
 
-export default function CollectionsPage({ params }) {
-  const { locale, slug } = params;
+export default async function CollectionsPage({ params }) {
+  const { locale, slug } = await params;
   const content = collections.find((collection) => collection.url === slug);
 
   return (

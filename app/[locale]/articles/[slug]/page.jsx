@@ -6,7 +6,7 @@ import PageHeader from "@/components/shared/PageHeader";
 import languages from "@/app/data/lang.json";
 
 export async function generateMetadata({ params }) {
-  const { locale, slug } = params;
+  const { locale, slug } = await params;
   const content = articles.find((article) => article.slug === slug);
   const meta = {
     title: `${content.title[locale]} - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
@@ -25,8 +25,8 @@ export async function generateStaticParams() {
   );
 }
 
-export default function ArticlePage({ params }) {
-  const { locale, slug } = params;
+export default async function ArticlePage({ params }) {
+  const { locale, slug } = await params;
   const article = articles.find((article) => article.slug === slug);
 
   if (!article) {

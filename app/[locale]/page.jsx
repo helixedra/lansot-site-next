@@ -11,7 +11,7 @@ import { MetaData } from "@/utils/metadata";
 import languages from "@/app/data/lang.json";
 
 export async function generateMetadata({ params }) {
-  const { locale } = params;
+  const { locale } = await params;
   const content = pages.homepage[locale];
   const meta = {
     title: content.meta.title,
@@ -26,8 +26,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function HomePage({ params }) {
-  const { locale } = params;
+export default async function HomePage({ params }) {
+  const { locale } = await params;
   const homepageContent = pages.homepage[locale];
   const sliderImages = getSliderImages(locale);
 
@@ -42,7 +42,7 @@ export default function HomePage({ params }) {
       </div>
 
       <IntroText>
-        <h1 className="text-4xl font-medium">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium">
           {homepageContent.herotext.title}
         </h1>
         <p className="text-base md:text-lg lg:text-xl leading-relaxed lg:leading-relaxed mt-6">

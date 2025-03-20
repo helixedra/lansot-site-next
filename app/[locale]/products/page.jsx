@@ -8,7 +8,7 @@ import { MetaData } from "@/utils/metadata";
 import languages from "@/app/data/lang.json";
 
 export async function generateMetadata({ params }) {
-  const { locale } = params;
+  const { locale } = await params;
   const content = pageContent.products[locale];
   const meta = {
     title: `${content.meta.title} - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
@@ -24,8 +24,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function ProductsPage({ params }) {
-  const { locale } = params;
+export default async function ProductsPage({ params }) {
+  const { locale } = await params;
 
   const categoriesList = Array.isArray(categories)
     ? categories

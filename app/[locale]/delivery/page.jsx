@@ -6,8 +6,8 @@ export function generateStaticParams() {
   return Object.keys(pages.delivery).map((locale) => ({ locale }));
 }
 
-export function generateMetadata({ params }) {
-  const { locale } = params;
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
   const content = pages.delivery[locale];
 
   return MetaData({
@@ -20,8 +20,8 @@ export function generateMetadata({ params }) {
   });
 }
 
-export default function DeliveryPage({ params }) {
-  const { locale } = params;
+export default async function DeliveryPage({ params }) {
+  const { locale } = await params;
   const data = pages.delivery[locale];
 
   const sections = [
