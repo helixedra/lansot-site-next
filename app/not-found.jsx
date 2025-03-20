@@ -4,14 +4,28 @@ import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import pages from "@/app/data/pages.json";
 import "@/app/styles/global.css";
+import { MetaData } from "@/utils/metadata";
 
 const montserrat = Montserrat({
   subsets: ["latin", "cyrillic"],
   variable: "--font-montserrat",
 });
-export default async function NotFound() {
-  const lang = (await cookies()).get("locale");
-  const content = await pages.not_found[lang.value];
+
+export async function generateMetadata() {
+  const cookieStore = cookies();
+  const lang = cookieStore.get("locale")?.value || "uk"; // Запасна локаль
+  const content = pages.not_found[lang];
+  const meta = {
+    title: `404 - ${content.title} - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
+    description: content.content,
+  };
+  return MetaData({ locale: lang, meta, pathname: "" });
+}
+
+export default function NotFound() {
+  const cookieStore = cookies();
+  const lang = cookieStore.get("locale")?.value || "uk"; // Запасна локаль
+  const content = pages.not_found[lang];
 
   return (
     <div

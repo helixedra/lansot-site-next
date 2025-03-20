@@ -6,9 +6,10 @@ import CatalogMenu from "@/components/products/CatalogMenu";
 import CatalogMenuMobile from "@/components/products/CatalogMenuMobile";
 import TextMore from "@/components/shared/TextMore";
 import { MetaData } from "@/utils/metadata";
+import languages from "@/app/data/lang.json";
 
 export async function generateMetadata({ params }) {
-  const { locale, category } = await params;
+  const { locale, category } = params;
   const content = pageContent.products[locale];
   const categoryData = categories[category][locale];
 
@@ -16,19 +17,27 @@ export async function generateMetadata({ params }) {
     title: `${categoryData.name} - ${content.title} - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
     description: categoryData.meta.description,
   };
+
   return MetaData({ locale, meta, pathname: `products/${category}` });
 }
 
-export default async function ProductsPage({ params }) {
-  const { locale, category } = await params;
-  const content = categories[category][locale];
-  const categoriesList = Array.isArray(categories)
-    ? categories
-    : Object.values(categories);
+export async function generateStaticParams() {
+  const locales = languages.lang;
+  const categoryKeys = Object.keys(categories);
 
-  const products = Array.isArray(productsData)
-    ? productsData
-    : Object.values(productsData);
+  return locales.flatMap((locale) =>
+    categoryKeys.map((category) => ({
+      locale,
+      category,
+    }))
+  );
+}
+
+export default function ProductsPage({ params }) {
+  const { locale, category } = params;
+  const content = categories[category][locale];
+  const categoriesList = Object.values(categories);
+  const products = Object.values(productsData);
 
   const productsFiltered = products.filter(
     (product) => product.category === category
@@ -41,13 +50,15 @@ export default async function ProductsPage({ params }) {
 
       <div className="w-full animate_moveUp">
         <h1 className="normal-case text-2xl font-medium md:block hidden">
-          {categories[category][locale].name}
+          {content.name}
         </h1>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
           {productsFiltered.map((product) => (
             <ProductCard key={product.url} product={product} locale={locale} />
           ))}
         </div>
+
         <TextMore locale={locale}>
           {content.category_description
             .split("</p>")

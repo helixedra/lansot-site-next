@@ -11,12 +11,12 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
-export default async function RootLayout({ children, params }) {
-  const { locale } = await params;
+export default function RootLayout({ children, params }) {
+  const { locale } = params;
 
   return (
-    <>
-      <div className={`${montserrat.variable} wrapper w-full`}>
+    <html lang={locale}>
+      <body className={`${montserrat.variable} wrapper w-full`}>
         <LocaleProvider locale={locale}>
           <CartProvider>
             <Header locale={locale} />
@@ -24,8 +24,8 @@ export default async function RootLayout({ children, params }) {
             <ScrollUp />
           </CartProvider>
         </LocaleProvider>
-      </div>
-      <Footer locale={locale} />
-    </>
+        <Footer locale={locale} />
+      </body>
+    </html>
   );
 }

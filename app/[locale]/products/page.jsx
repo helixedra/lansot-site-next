@@ -5,27 +5,35 @@ import productsData from "@/app/data/products.json";
 import CatalogMenu from "@/components/products/CatalogMenu";
 import CatalogMenuMobile from "@/components/products/CatalogMenuMobile";
 import { MetaData } from "@/utils/metadata";
+import languages from "@/app/data/lang.json";
 
 export async function generateMetadata({ params }) {
-  const { locale } = await params;
+  const { locale } = params;
   const content = pageContent.products[locale];
   const meta = {
-    title: content.meta.title + ` - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
+    title: `${content.meta.title} - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
     description: content.meta.description,
   };
   return MetaData({ locale, meta, pathname: "products" });
 }
 
-export default async function ProductsPage({ params }) {
-  const { locale } = await params;
-  const content = categories.products[locale];
+export async function generateStaticParams() {
+  const locales = languages.lang;
+  return locales.map((locale) => ({
+    locale,
+  }));
+}
+
+export default function ProductsPage({ params }) {
+  const { locale } = params;
+
   const categoriesList = Array.isArray(categories)
     ? categories
     : Object.values(categories);
-
   const products = Array.isArray(productsData)
     ? productsData
     : Object.values(productsData);
+  const content = categories.products[locale];
 
   return (
     <div className="max-w-[1600px] mx-auto p-6 lg:px-12 flex flex-col md:flex-row items-start">

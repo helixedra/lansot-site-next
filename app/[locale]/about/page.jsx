@@ -3,19 +3,26 @@ import pages from "@/app/data/pages.json";
 import { MetaData } from "@/utils/metadata";
 import PageHeader from "@/components/shared/PageHeader";
 
-export async function generateMetadata({ params }) {
-  const { locale } = await params;
-  const content = pages.about[locale];
-  const meta = {
-    title: content.meta.title + ` - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
-    description: content.meta.description,
-  };
-  return MetaData({ locale, meta, pathname: "about" });
+export async function generateStaticParams() {
+  return Object.keys(pages.about).map((locale) => ({ locale }));
 }
 
-export default async function AboutPage({ params }) {
-  const { locale } = await params;
-  const data = await pages.about[locale];
+export async function generateMetadata({ params }) {
+  const { locale } = params;
+  const content = pages.about[locale];
+  return MetaData({
+    locale,
+    meta: {
+      title: `${content.meta.title} - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
+      description: content.meta.description,
+    },
+    pathname: "about",
+  });
+}
+
+export default function AboutPage({ params }) {
+  const { locale } = params;
+  const data = pages.about[locale];
 
   return (
     <div className="max-w-[1600px] mx-auto mb-12 px-6 lg:px-12">

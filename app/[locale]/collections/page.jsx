@@ -6,20 +6,26 @@ import Image from "next/image";
 import LinkButton from "@/components/shared/LinkButton";
 import { MetaData } from "@/utils/metadata";
 import PageHeader from "@/components/shared/PageHeader";
+import languages from "@/app/data/lang.json";
 
 export async function generateMetadata({ params }) {
-  const { locale } = await params;
+  const { locale } = params;
   const content = pages.collections[locale];
-
   const meta = {
-    title: content.meta.title + ` - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
+    title: `${content.meta.title} - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
     description: content.meta.description,
   };
-  return MetaData({ locale, meta, pathname: `collections` });
+  return MetaData({ locale, meta, pathname: "collections" });
 }
 
-export default async function CollectionsPage({ params }) {
-  const { locale } = await params;
+export async function generateStaticParams() {
+  return languages.lang.map((locale) => ({
+    locale,
+  }));
+}
+
+export default function CollectionsPage({ params }) {
+  const { locale } = params;
   const content = pages.collections[locale];
 
   return (
@@ -29,15 +35,11 @@ export default async function CollectionsPage({ params }) {
         <div className="gap-8 pb-32 pt-8 mt-8 lg:mt-24 animate_fadeIn">
           {collections.map((collection) => (
             <div key={collection.id}>
-              <div
-                className="flex flex-col lg:flex-row py-8 border-t border-black"
-                key={collection.id}
-              >
+              <div className="flex flex-col lg:flex-row py-8 border-t border-black">
                 <div className="w-full lg:w-1/2 order-last lg:order-first mt-12 mb-8 lg:mt-0">
                   <Link href={`/${locale}/collections/${collection.url}`}>
                     <h2 className="mb-8">{collection.name[locale]}</h2>
                   </Link>
-
                   <div className="py-4 pr-8 text-xl leading-relaxed">
                     {collection.content.main.text[locale]}
                   </div>
@@ -48,7 +50,6 @@ export default async function CollectionsPage({ params }) {
                     {ui.global.see_more[locale]}
                   </LinkButton>
                 </div>
-
                 <div className="w-full lg:w-1/2 flex lg:justify-end">
                   <Link href={`/${locale}/collections/${collection.url}`}>
                     <Image

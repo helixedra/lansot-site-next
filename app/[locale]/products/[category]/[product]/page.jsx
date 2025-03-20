@@ -9,32 +9,56 @@ import Promo from "@/components/product-page/Promo";
 import Technical from "@/components/product-page/Technical";
 import Models from "@/components/product-page/Models";
 import { MetaData } from "@/utils/metadata";
+import languages from "@/app/data/lang.json";
 
 export async function generateMetadata({ params }) {
-  const { locale, product } = await params;
+  const { locale, product } = params;
   const productData = productsData[product];
-  const currentCategory = categories[productData.category][locale];
 
   if (!productData) {
     notFound();
   }
-  const content = productData;
 
+  const currentCategory = categories[productData.category][locale];
   const meta = {
-    title: `${content.meta.title[locale]} - ${currentCategory.name} - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
-    description: content.meta.description[locale],
+    title: `${productData.meta.title[locale]} - ${currentCategory.name} - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
+    description: productData.meta.description[locale],
   };
-  return MetaData({ locale, meta, pathname: `products/${currentCategory.url}/${productData.url}` });
+
+  return MetaData({
+    locale,
+    meta,
+    pathname: `products/${currentCategory.url}/${productData.url}`,
+  });
 }
 
-export default async function ProductPage({ params }) {
-  const { locale, category, product } = await params;
+export async function generateStaticParams() {
+  const locales = languages.lang;
+  const productKeys = Object.keys(productsData);
+
+  return locales.flatMap((locale) =>
+    productKeys.map((product) => {
+      const productData = productsData[product];
+      const category = productData.category;
+      return {
+        locale,
+        category,
+        product,
+      };
+    })
+  );
+}
+
+export default function ProductPage({ params }) {
+  const { locale, category, product } = params;
   const productData = productsData[product];
-  const currentCategory = categories[category];
 
   if (!productData) {
     notFound();
   }
+
+  const currentCategory = categories[category];
+
   return (
     <div className="container max-w-[1600px] mx-auto">
       <Breadcrumbs category={currentCategory} locale={locale} />

@@ -7,11 +7,11 @@ import TopProductsSlider from "@/components/homepage/TopProductsSlider";
 import ArticlesSection from "@/components/homepage/ArticlesSection";
 import ContactSection from "@/components/homepage/ContactSection";
 import articles from "@/app/data/articles.json";
-
 import { MetaData } from "@/utils/metadata";
+import languages from "@/app/data/lang.json";
 
 export async function generateMetadata({ params }) {
-  const { locale } = await params;
+  const { locale } = params;
   const content = pages.homepage[locale];
   const meta = {
     title: content.meta.title,
@@ -20,29 +20,16 @@ export async function generateMetadata({ params }) {
   return MetaData({ locale, meta, pathname: "" });
 }
 
-export default async function HomePage({ params }) {
-  const { locale } = await params;
+export async function generateStaticParams() {
+  return languages.lang.map((locale) => ({
+    locale,
+  }));
+}
 
-  const sliderImages = [
-    {
-      img: `${process.env.NEXT_PUBLIC_IMAGE_PATH}/home_slider_img_12.jpg`,
-      alt: { uk: "Комод Folio DH від Lansot", en: "Drawer Folio DH by Lansot" },
-    },
-    {
-      img: `${process.env.NEXT_PUBLIC_IMAGE_PATH}/home_slider_img_8.jpg`,
-      alt: {
-        uk: "Стіл Frank в інтер'єрі кухні",
-        en: "Frank table in the kitchen interior",
-      },
-    },
-    {
-      img: `${process.env.NEXT_PUBLIC_IMAGE_PATH}/home_slider_img_9.jpg`,
-      alt: {
-        uk: "Тумба Leon в інтер'єрі вітальні",
-        en: "Leon cabinet in the living room interior",
-      },
-    },
-  ];
+export default function HomePage({ params }) {
+  const { locale } = params;
+  const homepageContent = pages.homepage[locale];
+  const sliderImages = getSliderImages(locale);
 
   return (
     <>
@@ -56,22 +43,44 @@ export default async function HomePage({ params }) {
 
       <IntroText>
         <h1 className="text-4xl font-medium">
-          {pages.homepage[locale].herotext.title}
+          {homepageContent.herotext.title}
         </h1>
         <p className="text-base md:text-lg lg:text-xl leading-relaxed lg:leading-relaxed mt-6">
-          {pages.homepage[locale].herotext.content}
+          {homepageContent.herotext.content}
         </p>
       </IntroText>
 
       <CollectionsSlider locale={locale} />
-
-      <ServiceSection
-        content={pages.homepage[locale].service}
-        locale={locale}
-      />
+      <ServiceSection content={homepageContent.service} locale={locale} />
       <TopProductsSlider locale={locale} />
       <ArticlesSection articles={articles} locale={locale} />
       <ContactSection locale={locale} />
     </>
   );
+}
+
+function getSliderImages(locale) {
+  return [
+    {
+      img: `${process.env.NEXT_PUBLIC_IMAGE_PATH}/home_slider_img_12.jpg`,
+      alt:
+        locale === "uk"
+          ? "Комод Folio DH від Lansot"
+          : "Drawer Folio DH by Lansot",
+    },
+    {
+      img: `${process.env.NEXT_PUBLIC_IMAGE_PATH}/home_slider_img_8.jpg`,
+      alt:
+        locale === "uk"
+          ? "Стіл Frank в інтер'єрі кухні"
+          : "Frank table in the kitchen interior",
+    },
+    {
+      img: `${process.env.NEXT_PUBLIC_IMAGE_PATH}/home_slider_img_9.jpg`,
+      alt:
+        locale === "uk"
+          ? "Тумба Leon в інтер'єрі вітальні"
+          : "Leon cabinet in the living room interior",
+    },
+  ];
 }
