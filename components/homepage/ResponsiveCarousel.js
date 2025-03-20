@@ -20,11 +20,13 @@ export default function ResponsiveCarousel({ images, delay, locale }) {
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
   };
 
   return (
-    <div className={`${classes.carousel_container}`}  >
+    <div className={`${classes.carousel_container}`}>
       <div
         className={classes.carousel_track}
         style={{
@@ -36,7 +38,7 @@ export default function ResponsiveCarousel({ images, delay, locale }) {
             <Image
               src={image.img}
               alt={image.alt[locale]}
-              title={image.alt[locale]}
+              title={image.title[locale]}
               className={classes.carousel_image}
               width={1600}
               height={900}

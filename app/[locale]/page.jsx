@@ -63,24 +63,36 @@ function getSliderImages(locale) {
   return [
     {
       img: `${process.env.NEXT_PUBLIC_IMAGE_PATH}/home_slider_img_12.jpg`,
-      alt:
-        locale === "uk"
-          ? "Комод Folio DH від Lansot"
-          : "Drawer Folio DH by Lansot",
+      alt: {
+        uk: "Сучасний світло-сірий комодFolio із шістьма шухлядами в спальні, прикрашений лампою, вазами та картиною на тлі коричневої стіни",
+        en: "Modern light gray chest of drawers Folio with six drawers in the bedroom, decorated with a lamp, vases and a painting against a brown wall",
+      },
+      title: {
+        uk: "Купіть стильний світло-сірий комод для спальні – ідеальне рішення для елегантного зберігання речей",
+        en: "Buy a stylish light gray chest of drawers for the bedroom - the perfect solution for elegant storage",
+      },
     },
     {
       img: `${process.env.NEXT_PUBLIC_IMAGE_PATH}/home_slider_img_8.jpg`,
-      alt:
-        locale === "uk"
-          ? "Стіл Frank в інтер'єрі кухні"
-          : "Frank table in the kitchen interior",
+      alt: {
+        uk: "Елегантний довгий стіл Frank із темного дерева в сучасній кухні, оточений стільцями, з декоративними предметами та стильною білою лампою.",
+        en: "Elegant long Frank table made of dark wood in a modern kitchen, surrounded by chairs, with decorative items and a stylish white lamp.",
+      },
+      title: {
+        uk: "Купіть сучасний довгий стіл із темного дерева для вашої їдальні – ідеальний вибір для стилю та комфорту",
+        en: "Buy a modern dark wood dining table for your dining room - the perfect choice for style and comfort",
+      },
     },
     {
       img: `${process.env.NEXT_PUBLIC_IMAGE_PATH}/home_slider_img_9.jpg`,
-      alt:
-        locale === "uk"
-          ? "Тумба Leon в інтер'єрі вітальні"
-          : "Leon cabinet in the living room interior",
+      alt: {
+        uk: "Стильна низька тумба Leon з темного матеріалу з рифленими скляними дверцятами в сучасному інтер’єрі, прикрашена лампою та декоративними предметами",
+        en: "Stylish low Leon cabinet made of dark material with ribbed glass doors in a modern interior, decorated with a lamp and decorative items",
+      },
+      title: {
+        uk: "Купіть сучасну низьку тумбу з темного матеріалу для вашої вітальні – ідеальне поєднання стилю та практичності",
+        en: "Buy a modern low cabinet made of dark material for your living room - the perfect combination of style and practicality",
+      },
     },
   ];
 }
