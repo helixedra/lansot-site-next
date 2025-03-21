@@ -21,7 +21,7 @@
   object-fit: cover;
 }
 
-.carousel_dots {
+/* .carousel_dots {
   position: absolute;
   bottom: 10px;
   left: 50%;
@@ -36,7 +36,7 @@
   border-radius: 50%;
   background: gray;
   border: none;
-}
+} */
 
 .carousel_dot_active {
   background: white;

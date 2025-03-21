@@ -1,0 +1,44 @@
+.embla {
+    overflow: visible;
+}
+
+.embla__container {
+    display: flex;
+}
+
+.embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+}
+
+.slider__nav {
+    display: flex;
+    justify-content: space-between;
+    top: calc(50% - 23px - 16px);
+    position: absolute;
+    width: 100%;
+}
+
+.slider__nav__prev,
+.slider__nav__next {
+    background-color: var(--color-dark-10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-dark-100);
+    border: none;
+    width: 46px;
+    height: 46px;
+}
+
+.slider_container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    /* overflow: hidden; */
+    position: relative;
+    /* transform: translateX(-8px); */
+}

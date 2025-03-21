@@ -20,9 +20,7 @@ export default function ResponsiveCarousel({ images, delay, locale }) {
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
   };
 
   return (
@@ -34,7 +32,7 @@ export default function ResponsiveCarousel({ images, delay, locale }) {
         }}
       >
         {images.map((image, index) => (
-          <div key={index} className={classes.carousel_slide}>
+          <div key={index} className={`${classes.carousel_slide} bg-zinc-200 h-min relative`}>
             <Image
               src={image.img}
               alt={image.alt[locale]}

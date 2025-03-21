@@ -7,16 +7,18 @@ import { RiFunctionLine } from "react-icons/ri";
 import productsData from "@/app/data/products.json";
 import categories from "@/app/data/categories.json";
 import ui from "@/app/data/ui";
+import { EmblaCarousel } from "@/components/shared/EmblaCarousel";
 
 export default async function TopProductsSlider({ locale }) {
   const products = await Object.values(productsData).filter((product) => product.popular === true);
 
   return (
-    <div className={`${classes.container}`} >
+    <div className={`${classes.container}`}>
       <div className={classes.header}>
-        <div className={classes.title}>{ui.global.popular_products[locale]}</div>
+        <div className="text-lg font-semibold px-2">{ui.global.popular_products[locale]}</div>
         <div className={classes.controls}>
           <LinkButton
+            className="mr-2"
             href={`/${locale}/products`}
             title={ui.global.all_products[locale]}
             type="icon"
@@ -30,7 +32,37 @@ export default async function TopProductsSlider({ locale }) {
           </LinkButton>
         </div>
       </div>
-      <div className={classes.slider}>
+      <div className="slider max-w-[1600px] mx-auto p-4">
+        <EmblaCarousel locale={locale}>
+          {products &&
+            products.map((product) => (
+              <div className="embla__slide max-w-[440px] p-2" key={product.url}>
+                <Link
+                  href={`/${locale}/products/${product.category}/${product.url}`}
+                  // className={classes.slider__item}
+                  className="block border border-zinc-300 p-8"
+                  title={product.name}
+                >
+                  <Image
+                    alt={product.meta.title[locale]}
+                    title={product.meta.title[locale]}
+                    src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/products/${product.url}/${product.cover}`}
+                    style={{ objectFit: "contain" }}
+                    width={640}
+                    height={600}
+                  />
+                  <div>
+                    <div className="text-sm text-zinc-500">
+                      {categories[product.category][locale].name}
+                    </div>
+                    <div className="text-md font-semibold mt-1">{product.name}</div>
+                  </div>
+                </Link>
+              </div>
+            ))}
+        </EmblaCarousel>
+      </div>
+      {/* <div className={classes.slider}>
         <ItemsSlider slideWidth={440} locale={locale}>
           {products &&
             products.map((product) => (
@@ -55,7 +87,7 @@ export default async function TopProductsSlider({ locale }) {
               </Link>
             ))}
         </ItemsSlider>
-      </div>
+      </div> */}
     </div>
   );
 }
