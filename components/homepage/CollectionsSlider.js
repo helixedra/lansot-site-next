@@ -1,7 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import ItemsSlider from "@/components/shared/ItemsSlider";
-import classes from "./CollectionsSlider.module.css";
 import collections from "@/app/data/collections.json";
 import ui from "@/app/data/ui.json";
 import { EmblaCarousel } from "@/components/shared/EmblaCarousel";

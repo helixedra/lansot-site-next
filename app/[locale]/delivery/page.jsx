@@ -22,19 +22,23 @@ export async function generateMetadata({ params }) {
 
 export default async function DeliveryPage({ params }) {
   const { locale } = await params;
-  const data = pages.delivery[locale];
+  // const data = pages.delivery[locale]; 
+  const { data } = await fetch(`${process.env.API_ENDPOINT}/delivery?populate=*&locale=${locale}`).then((res) => res.json())
+
+  console.log(data)
+
 
   const sections = [
-    { title: data.info.payment.title, content: data.info.payment.description },
     {
-      title: data.info.delivery.title,
-      content: data.info.delivery.description,
+      title: data.Payment.Title,
+      content: data.Payment.Content,
     },
+    { title: data.Delivery.Title, content: data.Delivery.Content },
   ];
 
   return (
     <div className="max-w-[1600px] mx-auto mb-12 px-6 lg:px-12">
-      <PageHeader title={data.title} subtitle={data.subtitle} />
+      <PageHeader title={data.title} subtitle={data.Title} />
 
       <div className="mt-8 lg:mt-24 animate_fadeIn">
         <ul>
@@ -53,7 +57,7 @@ export default async function DeliveryPage({ params }) {
                   <div
                     className="mb-16 lg:mb-32 text-xl"
                     key={`${index}-${i}`}
-                    dangerouslySetInnerHTML={{ __html: item }}
+                    dangerouslySetInnerHTML={{ __html: item.children[0].text }}
                   ></div>
                 ))}
               </div>
@@ -64,3 +68,5 @@ export default async function DeliveryPage({ params }) {
     </div>
   );
 }
+
+
