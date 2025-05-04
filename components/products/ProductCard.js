@@ -1,10 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import classes from "./ProductCard.module.css";
 
 export default function ProductCard({ product, locale, index }) {
   return (
-    <div className={classes.product_card} key={product.url}>
+    <div className="mb-12 text-center" key={product.url}>
       <Link
         href={`/${locale}/products/${product.category}/${product.url}`}
         title={product.name}
@@ -19,9 +18,10 @@ export default function ProductCard({ product, locale, index }) {
           priority={index === 0}
           quality={75}
         />
-        <div className={classes.product_sub}>{product.sub[locale]}</div>
-        <div className={classes.product_card_name}>{product.name}</div>
+        <div className="-mt-4 text-sm text-zinc-500 relative">{product.sub[locale]}</div>
+        <div className="font-medium text-xl relative">{product.name}</div>
       </Link>
     </div>
   );
 }
+

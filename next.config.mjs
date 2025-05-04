@@ -21,6 +21,11 @@ const nextConfig = {
         port: "1337",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "api.lansot.com",
+        pathname: "/**",
+      },
     ],
   },
 };

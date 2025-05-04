@@ -30,7 +30,7 @@ export default async function CollectionsPage({ params }) {
 
   return (
     <div className="container max-w-[1600px] mx-auto px-4">
-      <div className="max-w-[1600px] mx-auto mb-12 px-6 lg:px-12">
+      <div className="max-w-[1600px] mx-auto mb-12">
         <PageHeader title={content.title} subtitle={content.subtitle} />
         <div className="gap-8 pb-32 pt-8 mt-8 lg:mt-24 animate_fadeIn">
           {collections.map((collection) => (

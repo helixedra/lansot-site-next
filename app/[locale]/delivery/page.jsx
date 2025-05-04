@@ -23,10 +23,7 @@ export async function generateMetadata({ params }) {
 export default async function DeliveryPage({ params }) {
   const { locale } = await params;
   // const data = pages.delivery[locale]; 
-  const { data } = await fetch(`${process.env.API_ENDPOINT}/delivery?populate=*&locale=${locale}`).then((res) => res.json())
-
-  console.log(data)
-
+  const { data } = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/delivery?populate=*&locale=${locale}`).then((res) => res.json())
 
   const sections = [
     {
@@ -38,7 +35,7 @@ export default async function DeliveryPage({ params }) {
 
   return (
     <div className="max-w-[1600px] mx-auto mb-12 px-6 lg:px-12">
-      <PageHeader title={data.title} subtitle={data.Title} />
+      <PageHeader title={data.SubTitle} subtitle={data.Title} />
 
       <div className="mt-8 lg:mt-24 animate_fadeIn">
         <ul>
