@@ -3,8 +3,10 @@ import React, { useState, useEffect } from "react";
 import classes from "./ResponsiveCarousel.module.css";
 import Image from "next/image";
 
-export default function ResponsiveCarousel({ images, delay, locale }) {
+export default function ResponsiveCarousel({ slides, delay }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const images = slides;
 
   // Auto-advance logic
   useEffect(() => {
@@ -23,6 +25,27 @@ export default function ResponsiveCarousel({ images, delay, locale }) {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
   };
 
+  const handleURL = (url) => {
+    if (!url || typeof url !== 'string') {
+      console.error('Invalid URL provided:', url);
+      return '';
+    }
+    
+    const backendUrl = process.env.NEXT_PUBLIC_BACKEND || '';
+    if (!backendUrl) {
+      console.error('BACKEND environment variable is not set');
+      return url;
+    }
+
+    const newURL = `${backendUrl}${url}`;
+    try {
+      return new URL(newURL).href;
+    } catch (error) {
+      console.error('Error creating URL:', error);
+      return url;
+    }
+  };
+
   return (
     <div className={`${classes.carousel_container}`}>
       <div
@@ -34,9 +57,9 @@ export default function ResponsiveCarousel({ images, delay, locale }) {
         {images.map((image, index) => (
           <div key={index} className={`${classes.carousel_slide} bg-zinc-200 h-min relative`}>
             <Image
-              src={image.img}
-              alt={image.alt[locale]}
-              title={image.title[locale]}
+              src={handleURL(image.Slide.url)}
+              alt={image.Alt}
+              title={image.Title}
               className={classes.carousel_image}
               width={1600}
               height={900}

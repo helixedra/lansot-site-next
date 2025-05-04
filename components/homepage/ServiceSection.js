@@ -10,9 +10,9 @@ export default function ServiceSection({ content, locale, ...props }) {
       <div className={classes.inner_container}>
         <div className={classes.content}>
           <Link href={`/${locale}/services`}>
-            <h2 className="mb-4 lg:mb-6">{content.title}</h2>
+            <h2 className="mb-4 lg:mb-6">{content.Title}</h2>
           </Link>
-          <p className='md:text-xl mb-8'>{content.content}</p>
+          <p className='md:text-xl mb-8'>{content.Content}</p>
           <Button title={ui.global.see_more[locale]} href={`/${locale}/services`}>
             {ui.global.see_more[locale]}
           </Button>
@@ -20,8 +20,8 @@ export default function ServiceSection({ content, locale, ...props }) {
         <div className={classes.image}>
           <Image
             src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/homepage/folio-collection_2.jpg`}
-            title={content.title}
-            alt={content.title}
+            title={content.Title}
+            alt={content.Title}
             style={{ objectFit: "contain" }}
             width={1082}
             height={800}

@@ -8,7 +8,7 @@ import { EmblaCarousel } from "@/components/shared/EmblaCarousel";
 
 export default function CollectionsSlider({ locale }) {
   return (
-    <div className="slider max-w-[1600px] mx-auto p-4">
+    <div className="slider max-w-[1600px] mx-auto p-4 lg:pb-48 pb-24">
       <EmblaCarousel locale={locale}>
         {collections.map((collection) => (
           <div className="embla__slide max-w-[500px] p-2" key={collection.id}>
