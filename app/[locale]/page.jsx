@@ -10,6 +10,8 @@ import articles from "@/app/data/articles.json";
 import { MetaData } from "@/utils/metadata";
 import languages from "@/app/data/lang.json";
 
+const SLUG = "homepage";
+
 export async function generateMetadata({ params }) {
   const { locale } = await params;
   const content = pages.homepage[locale];
@@ -42,16 +44,18 @@ export async function generateStaticParams() {
 export default async function HomePage({ params }) {
   const { locale } = await params;
   // const homepageContent = pages.homepage[locale];
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/homepage?populate=*&locale=${locale}`)
-  const homepageContent = await res.json()
+  const homepageContent = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/pages/${SLUG}/${locale}`).then((res) => res.json())
+ 
 
 
-  const homeSlider = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/homepage?populate[HomeSlider][populate]=*&locale=${locale}`)
-  const homeSliderData = await homeSlider.json()
+  const homepageSlider = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/galleries/home-slider/${locale}`).then((res) => res.json())
+  // const homeSliderData = await homeSlider.json()
   // const sliderImages = getSliderImages(locale);
 
-  const introText = homepageContent.data.Intro;
-  const service = homepageContent.data.Service;
+  const introText = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/contents/intro/${locale}`).then((res) => res.json())
+  const service = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/contents/service/${locale}`).then((res) => res.json())
+
+
 
   // console.log(homeSlider)
 
@@ -59,7 +63,7 @@ export default async function HomePage({ params }) {
     <>
       <div className="max-w-[var(--maxwidth-container)] mx-auto px-4 md:px-4 sm:px-0 animate_moveUp">
         <ResponsiveCarousel
-          slides={homeSliderData.data.HomeSlider}
+          slides={homepageSlider}
           delay={6500}
           locale={locale}
         />
@@ -67,10 +71,10 @@ export default async function HomePage({ params }) {
 
       <IntroText>
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium">
-          {introText.Title}
+          {introText.title}
         </h1>
         <p className="text-base md:text-lg lg:text-xl leading-relaxed lg:leading-relaxed">
-          {introText.Content}
+          {introText.content}
         </p>
       </IntroText>
 

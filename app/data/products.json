@@ -1,6 +1,8 @@
 {
   "leon-h2": {
+    "name": "Leon H2",
     "id": "leon-h2",
+    "url": "leon-h2",
     "meta": {
       "title": { "uk": "Тумба Leon H2", "en": "Highboard Leon H2" },
       "description": {
@@ -12,10 +14,8 @@
         "en": "Wardrobe for the living room, cabinet, shelf"
       }
     },
-    "url": "leon-h2",
     "category": "single-units",
     "collection": "leon",
-    "name": "Leon H2",
     "sub": { "uk": "Тумба", "en": "Highboard" },
     "description": {
       "uk": "Шафа для вітальні із оновленої серії Leon. Ідеально підійде для зберігання медіа або посуду у вітальні чи на кухні. Двері можуть бути виконані з алюмінієвої профільної рамки зі склом або з плитних матеріалів з різними варіантами обробки.",
