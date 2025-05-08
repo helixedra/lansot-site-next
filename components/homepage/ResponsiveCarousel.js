@@ -6,7 +6,8 @@ import Image from "next/image";
 export default function ResponsiveCarousel({ slides, delay }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const images = slides;
+  const {images} = slides;
+
 
   // Auto-advance logic
   useEffect(() => {
@@ -31,13 +32,13 @@ export default function ResponsiveCarousel({ slides, delay }) {
       return '';
     }
     
-    const backendUrl = process.env.NEXT_PUBLIC_BACKEND || '';
-    if (!backendUrl) {
+    const image_path = process.env.NEXT_PUBLIC_IMAGE_PATH || '';
+    if (!image_path) {
       console.error('BACKEND environment variable is not set');
       return url;
     }
 
-    const newURL = `${backendUrl}${url}`;
+    const newURL = `${image_path}/${url}`;
     try {
       return new URL(newURL).href;
     } catch (error) {
@@ -57,9 +58,9 @@ export default function ResponsiveCarousel({ slides, delay }) {
         {images.map((image, index) => (
           <div key={index} className={`${classes.carousel_slide} bg-zinc-200 h-min relative`}>
             <Image
-              src={handleURL(image.Slide.url)}
-              alt={image.Alt}
-              title={image.Title}
+              src={handleURL(image.path)}
+              alt={image.imageMeta.alt}
+              title={image.imageMeta.title}
               className={classes.carousel_image}
               width={1600}
               height={900}

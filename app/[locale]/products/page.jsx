@@ -27,25 +27,42 @@ export async function generateStaticParams() {
 export default async function ProductsPage({ params }) {
   const { locale } = await params;
 
-  const categoriesList = Array.isArray(categories)
-    ? categories
-    : Object.values(categories);
-  const products = Array.isArray(productsData)
-    ? productsData
-    : Object.values(productsData);
-  const content = categories.products[locale];
+
+  const categoriesData = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/categories/${locale}`).then((res) => res.json())
+  const productsDataRaw = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/products/${locale}`).then((res) => res.json())
+
+  
+  // const categoriesList = Array.isArray(categories)
+  // ? categories
+  // : Object.values(categories);
+  //
+  // const products = Array.isArray(productsData)
+  // ? productsData
+  // : Object.values(productsData);
+//
+//   const content = categories.products[locale];
+  
+//   console.log(categories)
+//   console.log("categoriesData", categoriesData)
+//   console.log("categoriesList", categoriesList)
+// console.log("content", content)
+// console.log("products", categories.products)
+// console.log("products", products)
+
+console.log("productsDataRaw", productsDataRaw)
+
 
   return (
     <div className="max-w-[1600px] mx-auto p-6 lg:px-12 flex flex-col md:flex-row items-start">
-      <CatalogMenu categories={categoriesList} locale={locale} />
-      <CatalogMenuMobile categories={categoriesList} locale={locale} />
+      <CatalogMenu categories={categoriesData} locale={locale} />
+      <CatalogMenuMobile categories={categoriesData} locale={locale} />
 
       <div className="w-full animate_moveUp">
-        <h1 className="text-2xl font-medium md:block hidden">{content.name}</h1>
+        <h1 className="text-2xl font-medium md:block hidden">{categoriesData[0].name}</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
-          {products.map((product, index) => (
+          {productsDataRaw.map((product, index) => (
             <ProductCard
-              key={product.url}
+              key={product.id}
               product={product}
               locale={locale}
               index={index}

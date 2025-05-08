@@ -10,16 +10,16 @@ export default function ServiceSection({ content, locale, ...props }) {
       <div className={classes.inner_container}>
         <div className={classes.content}>
           <Link href={`/${locale}/services`}>
-            <h2 className="mb-4 lg:mb-6">{content.Title}</h2>
+            <h2 className="mb-4 lg:mb-6">{content.title}</h2>
           </Link>
-          <p className='md:text-xl mb-8'>{content.Content}</p>
+          <p className='md:text-xl mb-8'>{content.content}</p>
           <Button title={ui.global.see_more[locale]} href={`/${locale}/services`}>
             {ui.global.see_more[locale]}
           </Button>
         </div>
         <div className={classes.image}>
           <Image
-            src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/homepage/folio-collection_2.jpg`}
+            src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/homepage/folio-collection_2.jpg`} // TODO: replace with path in DB
             title={content.Title}
             alt={content.Title}
             style={{ objectFit: "contain" }}

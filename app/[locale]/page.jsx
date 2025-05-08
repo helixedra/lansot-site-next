@@ -55,7 +55,10 @@ export default async function HomePage({ params }) {
   const introText = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/contents/intro/${locale}`).then((res) => res.json())
   const service = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/contents/service/${locale}`).then((res) => res.json())
 
-
+console.log(homepageContent)
+console.log(homepageSlider)
+console.log(introText)
+console.log(service)
 
   // console.log(homeSlider)
 
