@@ -4,7 +4,8 @@ import Link from "next/link";
 import Button from "@/components/shared/Button";
 import ui from "@/app/data/ui.json";
 
-export default function ServiceSection({ content, locale, ...props }) {
+export default function ServiceSection({ content, locale }) {
+
   return (
     <div className={`${classes.container}`} >
       <div className={classes.inner_container}>
@@ -20,8 +21,8 @@ export default function ServiceSection({ content, locale, ...props }) {
         <div className={classes.image}>
           <Image
             src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/homepage/folio-collection_2.jpg`} // TODO: replace with path in DB
-            title={content.Title}
-            alt={content.Title}
+            title={content.title} // TODO: replace with title from DB
+            alt={content.title} // TODO: replace with alt from DB
             style={{ objectFit: "contain" }}
             width={1082}
             height={800}

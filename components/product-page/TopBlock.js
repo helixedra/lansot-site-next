@@ -10,22 +10,22 @@ export default function TopBlock({ product, locale }) {
     <section className={`${classes.product_top} animate_moveUp`}>
       <div className={classes.product_main_img}>
         <Image
-          src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/products/${product.url}/${product.top_image}`}
-          alt={`${product.sub[locale]} ${product.name}`}
-          title={`${product.sub[locale]} ${product.name}`}
+          src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/products/${product.slug}/${product.cover.path}`}
+          alt={`${product.type} ${product.name}`}
+          title={`${product.type} ${product.name}`}
           width={1600}
           height={1200}
         />
       </div>
 
       <div className={classes.product_description}>
-        <h1 className="normal-case">{product.name}</h1>
-        <p>{product.description[locale]}</p>
+        <h1 className="normal-case">{product.type} {product.name}</h1>
+        <p>{product.description}</p>
 
         <div className={classes.price}>
           <small>{ui.global.from[locale] + ` `}</small>
           <strong>
-            {product.start_price}
+            {product.price}
             {` ` + ui.global.currency[locale]}
           </strong>
           <Tooltip>{ui.global.price_tooltip[locale]}</Tooltip>

@@ -1,5 +1,4 @@
 import ResponsiveCarousel from "@/components/homepage/ResponsiveCarousel";
-import pages from "@/app/data/pages.json";
 import IntroText from "@/components/homepage/IntroText";
 import CollectionsSlider from "@/components/homepage/CollectionsSlider";
 import ServiceSection from "@/components/homepage/ServiceSection";
@@ -11,14 +10,21 @@ import { MetaData } from "@/utils/metadata";
 import languages from "@/app/data/lang.json";
 
 const SLUG = "homepage";
+const REVALIDATE_SECONDS = parseInt(process.env.REVALIDATE_SECONDS || "60");
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-  const content = pages.homepage[locale];
+
+  const content = await fetch(
+    `${process.env.NEXT_PUBLIC_API_ENDPOINT}/pages/${SLUG}/${locale}`,
+    { next: { revalidate: REVALIDATE_SECONDS } }
+  ).then((res) => res.json());
+
   const meta = {
     title: content.meta.title,
     description: content.meta.description,
   };
+
   return MetaData({ locale, meta, pathname: "" });
 }
 
@@ -28,56 +34,34 @@ export async function generateStaticParams() {
   }));
 }
 
-
-// export async function generateStaticParams({ params }) {
-//   const { locale } = await params;
-//   const res = await fetch(`${process.env.API_ENDPOINT}/homepage/homepage?populate=*&locale=${locale}`)
-//   const homepageContent = await res.json()
- 
-//   return {
-//     props: {
-//       homepageContent,
-//     },
-//   }
-// }
-
 export default async function HomePage({ params }) {
   const { locale } = await params;
-  // const homepageContent = pages.homepage[locale];
-  const homepageContent = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/pages/${SLUG}/${locale}`).then((res) => res.json())
- 
 
-
-  const homepageSlider = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/galleries/home-slider/${locale}`).then((res) => res.json())
-  // const homeSliderData = await homeSlider.json()
-  // const sliderImages = getSliderImages(locale);
-
-  const introText = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/contents/intro/${locale}`).then((res) => res.json())
-  const service = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/contents/service/${locale}`).then((res) => res.json())
-
-console.log(homepageContent)
-console.log(homepageSlider)
-console.log(introText)
-console.log(service)
-
-  // console.log(homeSlider)
+  const [homepageContent, homepageSlider, intro, service] = await Promise.all([
+    fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/pages/${SLUG}/${locale}`, {
+      next: { revalidate: REVALIDATE_SECONDS },
+    }).then((res) => res.json()),
+    fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/galleries/home-slider/${locale}`, {
+      next: { revalidate: REVALIDATE_SECONDS },
+    }).then((res) => res.json()),
+    fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/contents/intro/${locale}`, {
+      next: { revalidate: REVALIDATE_SECONDS },
+    }).then((res) => res.json()),
+    fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/contents/service/${locale}`, {
+      next: { revalidate: REVALIDATE_SECONDS },
+    }).then((res) => res.json()),
+  ]);
 
   return (
     <>
       <div className="max-w-[var(--maxwidth-container)] mx-auto px-4 md:px-4 sm:px-0 animate_moveUp">
-        <ResponsiveCarousel
-          slides={homepageSlider}
-          delay={6500}
-          locale={locale}
-        />
+        <ResponsiveCarousel slides={homepageSlider} delay={6500} locale={locale} />
       </div>
 
       <IntroText>
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium">
-          {introText.title}
-        </h1>
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium">{intro.title}</h1>
         <p className="text-base md:text-lg lg:text-xl leading-relaxed lg:leading-relaxed">
-          {introText.content}
+          {intro.content}
         </p>
       </IntroText>
 
@@ -89,4 +73,3 @@ console.log(service)
     </>
   );
 }
-
