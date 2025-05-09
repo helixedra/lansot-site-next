@@ -25,7 +25,7 @@ export default function TopBlock({ product, locale }) {
         <div className={classes.price}>
           <small>{ui.global.from[locale] + ` `}</small>
           <strong>
-            {product.price}
+            {product.price.toLocaleString()}
             {` ` + ui.global.currency[locale]}
           </strong>
           <Tooltip>{ui.global.price_tooltip[locale]}</Tooltip>

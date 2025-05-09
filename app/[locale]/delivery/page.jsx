@@ -1,14 +1,18 @@
-import pages from "@/app/data/pages.json";
 import PageHeader from "@/components/shared/PageHeader";
 import { MetaData } from "@/utils/metadata";
+import languages from "@/app/data/lang.json";
+
+const REVALIDATE_SECONDS = parseInt(process.env.REVALIDATE_SECONDS || "60");
 
 export function generateStaticParams() {
-  return Object.keys(pages.delivery).map((locale) => ({ locale }));
+  const locales = languages.lang;
+  return locales.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-  const content = pages.delivery[locale];
+  // fetch delivery page data
+  const content = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/pages/delivery?locale=${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json()).then((res) => res[0]);
 
   return MetaData({
     locale,
@@ -22,24 +26,16 @@ export async function generateMetadata({ params }) {
 
 export default async function DeliveryPage({ params }) {
   const { locale } = await params;
-  // const data = pages.delivery[locale]; 
-  const { data } = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/delivery?populate=*&locale=${locale}`).then((res) => res.json())
-
-  const sections = [
-    {
-      title: data.Payment.Title,
-      content: data.Payment.Content,
-    },
-    { title: data.Delivery.Title, content: data.Delivery.Content },
-  ];
+  // fetch delivery page data
+  const content = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/pages/delivery?locale=${locale}`).then((res) => res.json()).then((res) => res[0]);
 
   return (
     <div className="max-w-[1600px] mx-auto mb-12 px-6 lg:px-12">
-      <PageHeader title={data.SubTitle} subtitle={data.Title} />
+      <PageHeader title={content.subtitle} subtitle={content.title} />
 
       <div className="mt-8 lg:mt-24 animate_fadeIn">
         <ul>
-          {sections.map(({ title, content }, index) => (
+          {content.content.map(({ title, content }, index) => (
             <li
               key={index}
               className="flex flex-col lg:flex-row gap-4 border-t border-black pb-32 pt-8"
@@ -50,13 +46,12 @@ export default async function DeliveryPage({ params }) {
                 </h2>
               </div>
               <div className="lg:w-1/2">
-                {content?.map((item, i) => (
+                
                   <div
                     className="mb-16 lg:mb-32 text-xl"
-                    key={`${index}-${i}`}
-                    dangerouslySetInnerHTML={{ __html: item.children[0].text }}
+                    dangerouslySetInnerHTML={{ __html: content }}
                   ></div>
-                ))}
+                
               </div>
             </li>
           ))}

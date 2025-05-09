@@ -1,8 +1,4 @@
-import productsData from "@/app/data/products.json";
-import categories from "@/app/data/categories.json";
 import { notFound } from "next/navigation";
-import AddToCart from "@/components/parts/AddToCart";
-import ProductConfig from "@/components/ProductConfig";
 import Breadcrumbs from "@/components/shared/Breadcrumbs";
 import TopBlock from "@/components/product-page/TopBlock";
 import Promo from "@/components/product-page/Promo";
@@ -15,7 +11,8 @@ const REVALIDATE_SECONDS = parseInt(process.env.REVALIDATE_SECONDS || "60");
 
 export async function generateMetadata({ params }) {
   const { locale, product } = await params;
-  const productData = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/products/${product}/${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json());
+  // fetch product data
+  const productData = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/products/${product}?locale=${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json());
 
   if (!productData) {
     notFound();
@@ -37,6 +34,7 @@ export async function generateMetadata({ params }) {
 
 export async function generateStaticParams() {
   const locales = languages.lang;
+  // fetch product keys
   const productKeys = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/static/products`, {
     next: { revalidate: REVALIDATE_SECONDS },
   }).then((res) => res.json());
@@ -54,8 +52,11 @@ export async function generateStaticParams() {
 }
 
 export default async function ProductPage({ params }) {
-  const { locale, category, product } = await params;
-  const productData = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/products/${product}/${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json());
+  const { locale, product } = await params;
+  // fetch product data
+  const productData = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/products/${product}?locale=${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json());
+
+  console.log(productData);
 
   if (!productData) {
     notFound();

@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { locale } = await params;
   // fetch content from API
-  const content = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/pages/products/${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json());
+  const content = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/pages/products?locale=${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json()).then((res) => res[0]);
 
   const meta = {
     title: `${content.meta.title} - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
@@ -31,8 +31,8 @@ export default async function ProductsPage({ params }) {
   const { locale } = await params;
 
   const [categories, products] = await Promise.all([
-    fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/categories/${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json()),
-    fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/products/${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json()),
+    fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/categories?locale=${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json()),
+    fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/products?locale=${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json()),
   ]);
 
   return (

@@ -9,7 +9,7 @@ const REVALIDATE_SECONDS = parseInt(process.env.REVALIDATE_SECONDS || "60");
 
 export async function generateMetadata({ params }) {
   const { locale, category } = await params;
-  const content = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/categories/${category}/${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json());
+  const content = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/categories/${category}?locale=${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json()).then((res) => res[0]);
 
   console.log(content);
 
@@ -23,11 +23,9 @@ export async function generateMetadata({ params }) {
 
 export async function generateStaticParams() {
   const locales = languages.lang;
-  // const categoryKeys = Object.keys(categories);
-  const categoriesList = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/categories/en`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json());
+ 
+  const categoriesList = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/categories?locale=en`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json());
   const categoryKeys = categoriesList.map((category) => category.slug);
-
-  // console.log(categoriesList);
 
   return locales.flatMap((locale) =>
     categoryKeys.map((category) => ({
@@ -40,12 +38,13 @@ export async function generateStaticParams() {
 export default async function ProductsPage({ params }) {
   const { locale, category } = await params;
   // fetch current category
-  const currentCategory = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/categories/${category}/${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json());
+  const currentCategory = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/categories/${category}?locale=${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json()).then((res) => res[0]);
 
   // fetch categories list
-  const categoriesList = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/categories/${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json());
+  const categoriesList = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/categories?locale=${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json());
 
-  const products = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/products/${locale}?category=${category}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json());
+  // fetch products list
+  const products = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/products?locale=${locale}&category=${category}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json());
 
   return (
     <div className="max-w-[1600px] mx-auto p-6 lg:px-12 flex flex-col md:flex-row items-start">

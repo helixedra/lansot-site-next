@@ -1,7 +1,5 @@
-// import collections from "@/app/data/collections.json";
 import ui from "@/app/data/ui.json";
 import Link from "next/link";
-import pages from "@/app/data/pages.json";
 import Image from "next/image";
 import LinkButton from "@/components/shared/LinkButton";
 import { MetaData } from "@/utils/metadata";
@@ -12,8 +10,8 @@ const REVALIDATE_SECONDS = parseInt(process.env.REVALIDATE_SECONDS || "60");
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-  const collections = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/pages/collections/${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json());
-  // const content = pages.collections[locale];
+  // fetch collections page data
+  const collections = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/pages/collections?locale=${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json()).then((res) => res[0]);
   const meta = {
     title: `${collections.meta.title} - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
     description: collections.meta.description,
@@ -29,9 +27,9 @@ export async function generateStaticParams() {
 
 export default async function CollectionsPage({ params }) {
   const { locale } = await params;
-
+// fetch collections page data and collections list
   const [page, collections] = await Promise.all([
-    fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/pages/collections/${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json()),
+    fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/pages/collections?locale=${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json()).then((res) => res[0]),
     fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/collections?locale=${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json()),
   ]);
 

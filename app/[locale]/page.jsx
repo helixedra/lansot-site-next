@@ -16,9 +16,9 @@ export async function generateMetadata({ params }) {
   const { locale } = await params;
 
   const content = await fetch(
-    `${process.env.NEXT_PUBLIC_API_ENDPOINT}/pages/${SLUG}/${locale}`,
+    `${process.env.NEXT_PUBLIC_API_ENDPOINT}/pages/${SLUG}?locale=${locale}`,
     { next: { revalidate: REVALIDATE_SECONDS } }
-  ).then((res) => res.json());
+  ).then((res) => res.json()).then((res) => res[0]);
 
   const meta = {
     title: content.meta.title,
@@ -37,19 +37,19 @@ export async function generateStaticParams() {
 export default async function HomePage({ params }) {
   const { locale } = await params;
 
-  const [homepageContent, homepageSlider, intro, service] = await Promise.all([
-    fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/pages/${SLUG}/${locale}`, {
+  const [homepageSlider, intro, service] = await Promise.all([
+    fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/galleries/home-slider?locale=${locale}`, {
       next: { revalidate: REVALIDATE_SECONDS },
-    }).then((res) => res.json()),
-    fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/galleries/home-slider/${locale}`, {
+    }).then((res) => res.json()).then((res) => res[0]),
+    fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/contents/intro?locale=${locale}`, {
       next: { revalidate: REVALIDATE_SECONDS },
-    }).then((res) => res.json()),
-    fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/contents/intro/${locale}`, {
+    }).then((res) => res.json()).then((res) => res[0]),
+    fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/contents/intro?locale=${locale}`, {
       next: { revalidate: REVALIDATE_SECONDS },
-    }).then((res) => res.json()),
-    fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/contents/service/${locale}`, {
+    }).then((res) => res.json()).then((res) => res[0]),
+    fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/contents/service?locale=${locale}`, {
       next: { revalidate: REVALIDATE_SECONDS },
-    }).then((res) => res.json()),
+    }).then((res) => res.json()).then((res) => res[0]),
   ]);
 
   return (

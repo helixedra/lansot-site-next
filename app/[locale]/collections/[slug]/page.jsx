@@ -1,5 +1,4 @@
 import Image from "next/image";
-import collections from "@/app/data/collections.json";
 import ui from "@/app/data/ui.json";
 import ProductsSlider from "@/components/homepage/ProductsSlider";
 import { MetaData } from "@/utils/metadata";
@@ -10,10 +9,11 @@ const REVALIDATE_SECONDS = parseInt(process.env.REVALIDATE_SECONDS || "60");
 
 export async function generateMetadata({ params }) {
   const { locale, slug } = await params;
-  const content = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/collections/${slug}?locale=${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json());
-  const collection = content[0];
+  // fetch collection data
+  const collection = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/collections/${slug}?locale=${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json()).then((res) => res[0]);
+
   const meta = {
-    title: `${collection.name} - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
+    title: `${collection.meta.title} - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
     description: collection.meta.description,
   };
   return MetaData({ locale, meta, pathname: `collections/${slug}` });
@@ -32,8 +32,8 @@ export async function generateStaticParams() {
 
 export default async function CollectionsPage({ params }) {
   const { locale, slug } = await params;
-  const content = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/collections/${slug}?locale=${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json());
-  const collection = content[0];
+  // fetch collection data
+  const collection = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/collections/${slug}?locale=${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json()).then((res) => res[0]);
 
   return (
     <div className="max-w-[1600px] mx-auto mb-12 px-6 lg:px-12">
