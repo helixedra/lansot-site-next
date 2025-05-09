@@ -12,6 +12,7 @@ export default function Header({ locale }) {
   return (
     <>
       <header
+      id="header"
         className={`${classes.header} flex items-center h-[80px]  fixed bg-white w-full top-0 z-50`}
       >
         <div className={`${classes.header_container} max-w-[1600px] mx-auto`}>

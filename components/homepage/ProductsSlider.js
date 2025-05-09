@@ -4,14 +4,10 @@ import classes from "./TopProductsSlider.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { RiFunctionLine } from "react-icons/ri";
-import productsData from "@/app/data/products.json";
-import categories from "@/app/data/categories.json";
 import ui from "@/app/data/ui";
 
-export default async function TopProductsSlider({ locale, includes, header, ...props }) {
-  const products = Object.values(productsData).filter((product) =>
-    includes.some((substring) => product.url.includes(substring))
-  );
+export default async function TopProductsSlider({ locale, includes: products, header, ...props }) {
+
 
   return (
     <div className={classes.container} {...props}>
@@ -37,19 +33,20 @@ export default async function TopProductsSlider({ locale, includes, header, ...p
           {products &&
             products.map((product) => (
               <Link
-                href={`/${locale}/products/${product.category}/${product.url}`}
-                key={product.url}
+                href={`/${locale}/products/${product.category.slug}/${product.slug}`}
+                key={product.id}
                 className={classes.slider__item}
               >
                 <Image
-                  alt={product.meta.title[locale]}
-                  src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/products/${product.url}/${product.cover}`}
+                  alt={product.cover.imageMeta.alt}
+                  title={product.cover.imageMeta.title}
+                  src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/products/${product.slug}/${product.cover.path}`}
                   style={{ objectFit: "contain" }}
                   width={640}
                   height={600}
                 />
                 <div className={classes.slider__content}>
-                  <div>{categories[product.category][locale].name}</div>
+                  <div>{product.category.name}</div>
                   <div>{product.name}</div>
                 </div>
               </Link>
