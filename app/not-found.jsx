@@ -2,7 +2,6 @@ import Link from "next/link";
 import { cookies } from "next/headers";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
-import pages from "@/app/data/pages.json";
 import "@/app/styles/global.css";
 import { MetaData } from "@/utils/metadata";
 
@@ -11,10 +10,25 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
+const page = {
+  "not_found": {
+    "uk": {
+      "title": "Сторінку не знайдено",
+      "content": "Вибачте, але сторінка, яку ви шукаєте, не існує або була видалена.",
+      "back": "Повернутися на головну"
+    },
+    "en": {
+      "title": "Page not found",
+      "content": "Sorry, the page you are looking for does not exist or has been deleted.",
+      "back": "Back to home"
+    }
+  }
+}
+
 export async function generateMetadata() {
   const cookieStore = await cookies();
   const lang = (await cookieStore.get("locale")?.value) || "uk";
-  const content = pages.not_found[lang];
+  const content = page.not_found[lang];
   const meta = {
     title: `404 - ${content.title} - ${process.env.NEXT_PUBLIC_SITE_NAME}`,
     description: content.content,
@@ -25,7 +39,7 @@ export async function generateMetadata() {
 export default async function NotFound() {
   const cookieStore = await cookies();
   const lang = (await cookieStore.get("locale")?.value) || "uk";
-  const content = pages.not_found[lang];
+  const content = page.not_found[lang];
 
   return (
     <div

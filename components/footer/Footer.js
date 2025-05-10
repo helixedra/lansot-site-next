@@ -1,11 +1,27 @@
-import classes from "./Footer.module.css";
+  import classes from "./Footer.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import page from "@/app/data/pages.json";
+
+const footerData = {
+  "footer": {
+    "uk": {
+      "facebookPage": "Сторінка Facebook",
+      "instagramPage": "Сторінка Instagram",
+      "copyright": "© {currentYear} Lansot - Меблі в мінімалістичному стилі",
+      "terms": "Договір публічної оферти"
+    },
+    "en": {
+      "facebookPage": "Facebook Page",
+      "instagramPage": "Instagram Page",
+      "copyright": "© {currentYear} Lansot - Furniture in minimalist style",
+      "terms": "Public Offer Agreement"
+    }
+  },
+};
 
 export default async function Footer({ locale }) {
   const currentYear = await new Date().getFullYear();
-  const footerData = await page.footer[locale];
+  const footer = footerData.footer[locale];
 
   return (
     <footer className={`${classes.footer}`}>
@@ -26,12 +42,12 @@ export default async function Footer({ locale }) {
               href="https://www.facebook.com/lansotcom/"
               target="_blank"
               rel="noopener noreferrer nofollow"
-              aria-label={footerData?.facebookPage}
-              title={footerData?.facebookPage}
+              aria-label={footer.facebookPage}
+              title={footer.facebookPage}
             >
               <Image
                 src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/facebook.svg`}
-                title={footerData?.facebookPage}
+                title={footer.facebookPage}
                 alt="Facebook"
                 width={24}
                 height={24}
@@ -41,12 +57,12 @@ export default async function Footer({ locale }) {
               href="https://www.instagram.com/lansot_com/"
               target="_blank"
               rel="noopener noreferrer nofollow"
-              aria-label={footerData?.instagramPage}
-              title={footerData?.instagramPage}
+              aria-label={footer.instagramPage}
+              title={footer.instagramPage}
             >
               <Image
                 src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/instagram.svg`}
-                title={footerData?.instagramPage}
+                title={footer.instagramPage}
                 alt="Instagram"
                 width={24}
                 height={24}
@@ -56,9 +72,9 @@ export default async function Footer({ locale }) {
         </div>
 
         <div className={classes.footer_bottom}>
-          <div>{footerData?.copyright.replace("{currentYear}", currentYear)}</div>
+          <div>{footer.copyright.replace("{currentYear}", currentYear)}</div>
           <div className={classes.footer_links}>
-            <Link href={`/docs/${locale}/terms.html`} rel="nofollow" target="_blank">{footerData?.terms}</Link>
+            <Link href={`/docs/${locale}/terms.html`} rel="nofollow" target="_blank">{footer.terms}</Link>
           </div>
         </div>
       </div>

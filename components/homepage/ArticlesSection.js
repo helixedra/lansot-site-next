@@ -50,9 +50,9 @@ export default function ArticlesSection({ articles, locale, ...props }) {
                 }`}
               >
                 <Link href={`/${locale}/articles/${article.slug}`}>
-                  <h3 className={classes.title}>{article.title[locale]}</h3>
+                  <h3 className={classes.title}>{article.title}</h3>
                 </Link>
-                <p className={classes.text}>{article.preview[locale]}</p>
+                <p className={classes.text}>{article.preview}</p>
                 <div className={classes.controls}>
                   <Button
                     href={`/${locale}/articles/${article.slug}`}

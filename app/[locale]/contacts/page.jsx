@@ -15,6 +15,7 @@ export async function generateMetadata({ params }) {
   const { locale } = await params;
   const content = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/pages/contacts?locale=${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json()).then((res) => res[0]);
 
+
   return MetaData({
     locale,
     meta: {
@@ -28,6 +29,8 @@ export async function generateMetadata({ params }) {
 export default async function ContactsPage({ params }) {
   const { locale } = await params;
   const data = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/pages/contacts?locale=${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json()).then((res) => res[0]);
+
+  const tel = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/contents/tel?locale=${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json()).then((res) => res[0]);
 
   const contacts = [
     { href: "viber://pa?chatURI=Lansot_com", icon: "viber.png", alt: "viber" },
@@ -87,7 +90,7 @@ export default async function ContactsPage({ params }) {
           ))}
         </div>
       </div>
-      <ContactSection locale={locale} />
+      <ContactSection locale={locale} contacts={tel} />
     </>
   );
 }

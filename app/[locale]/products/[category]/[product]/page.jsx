@@ -56,7 +56,7 @@ export default async function ProductPage({ params }) {
   // fetch product data
   const productData = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/products/${product}?locale=${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json());
 
-  console.log(productData);
+
 
   if (!productData) {
     notFound();
