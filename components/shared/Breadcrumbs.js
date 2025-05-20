@@ -1,19 +1,19 @@
 import Link from "next/link";
 import classes from "./Breadcrumbs.module.css";
-import pages from "@/app/data/pages";
+import ui from "@/app/data/ui.json";
 
-export default function breadcrumbs({ category, locale }) {
+export default function Breadcrumbs({ category, locale }) {
   return (
     <div className={classes.breadcrumbs_container}>
       <ul className={classes.breadcrumbs_list}>
         <li className={classes.breadcrumbs_list_item}>
-          <Link href={`/${locale}`}>{pages.homepage[locale].name}</Link>
+          <Link href={`/${locale}`}>{ui.global.home_link[locale]}</Link>
         </li>
         <li className={classes.breadcrumbs_list_item}>
-          <Link href={`/${locale}/products`}>{pages.products[locale].name}</Link>
+          <Link href={`/${locale}/products`}>{ui.global.products[locale]}</Link>
         </li>
         <li className={classes.breadcrumbs_list_item}>
-          <Link href={`/${locale}/products/${category[locale].url}`}>{category[locale].name}</Link>
+          <Link href={`/${locale}/products/${category.slug}`}>{category.name}</Link>
         </li>
       </ul>
     </div>

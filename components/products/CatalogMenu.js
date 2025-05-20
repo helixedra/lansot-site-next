@@ -1,21 +1,21 @@
 import ActiveProductsMenuItem from "@/components/ActiveProductsMenuItem";
 import classes from "@/components/products/CatalogMenu.module.css";
 
-export default function CatalogMenu({ categories, locale }) {
+export default function CatalogMenu({ categories }) {
   return (
     <>
       <aside className={classes.catalog_menu}>
         <ul>
           {categories.map((category) => (
-            <li key={category[locale].url}>
+            <li key={category.id}>
               <ActiveProductsMenuItem
-                title={category[locale].name}
-                href={`/${locale}/products${
-                  category[locale].url ? `/${category[locale].url}` : ""
+                title={category.name}
+                href={`/${category.locale}/products${
+                  category.slug ? `/${category.slug}` : ""
                 }`}
-                locale={locale}
+                locale={category.locale}
               >
-                {category[locale].name}
+                {category.name}
               </ActiveProductsMenuItem>
             </li>
           ))}

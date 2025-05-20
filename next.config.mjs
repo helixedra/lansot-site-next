@@ -15,6 +15,17 @@ const nextConfig = {
         port: "",
         pathname: "/images/**",
       },
+      {
+        protocol: "http",
+        hostname: "localhost",
+        port: "1337",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "api.lansot.com",
+        pathname: "/**",
+      },
     ],
   },
 };

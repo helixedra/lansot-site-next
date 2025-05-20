@@ -1,16 +1,21 @@
 import Image from "next/image";
-import pages from "@/app/data/pages.json";
 import ContactSection from "@/components/homepage/ContactSection";
 import PageHeader from "@/components/shared/PageHeader";
 import { MetaData } from "@/utils/metadata";
+import languages from "@/app/data/lang.json";
 
-export function generateStaticParams() {
-  return Object.keys(pages.contacts).map((locale) => ({ locale }));
+const REVALIDATE_SECONDS = parseInt(process.env.REVALIDATE_SECONDS || "60");
+
+export async function generateStaticParams() {
+  return languages.lang.map((locale) => ({ locale }));
 }
+
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-  const content = pages.contacts[locale];
+  const content = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/pages/contacts?locale=${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json()).then((res) => res[0]);
+
+
   return MetaData({
     locale,
     meta: {
@@ -23,7 +28,9 @@ export async function generateMetadata({ params }) {
 
 export default async function ContactsPage({ params }) {
   const { locale } = await params;
-  const data = pages.contacts[locale];
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/pages/contacts?locale=${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json()).then((res) => res[0]);
+
+  const tel = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/contents/tel?locale=${locale}`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json()).then((res) => res[0]);
 
   const contacts = [
     { href: "viber://pa?chatURI=Lansot_com", icon: "viber.png", alt: "viber" },
@@ -47,9 +54,9 @@ export default async function ContactsPage({ params }) {
 
         <div className="mt-8 lg:mt-24 animate_fadeIn">
           <ul>
-            {[data.info.office, data.info.production].map((section, index) => (
+            {data.content.map((section) => (
               <li
-                key={index}
+                key={section.id}
                 className="flex flex-col lg:flex-row gap-4 border-t border-black pb-32 pt-8"
               >
                 <div className="lg:w-1/2">
@@ -58,18 +65,10 @@ export default async function ContactsPage({ params }) {
                   </h2>
                 </div>
                 <div className="lg:w-1/2 text-lg">
-                  <div>{section.content}</div>
-                  {index === 0 && (
-                    <>
-                      <div>{data.info.phone}</div>
-                      <div>{data.info.email}</div>
-                      <div className="mt-8">{data.info.schedule.title}</div>
-                      <div>{data.info.schedule.content}</div>
-                    </>
-                  )}
+                  <div dangerouslySetInnerHTML={{ __html: section.content }} />
                 </div>
               </li>
-            ))}
+            )).reverse()}
           </ul>
         </div>
 
@@ -91,7 +90,7 @@ export default async function ContactsPage({ params }) {
           ))}
         </div>
       </div>
-      <ContactSection locale={locale} />
+      <ContactSection locale={locale} contacts={tel} />
     </>
   );
 }

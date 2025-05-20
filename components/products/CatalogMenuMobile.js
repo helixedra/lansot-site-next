@@ -15,15 +15,15 @@ export default function CatalogMenuMobile({ categories, locale }) {
   const pathname = usePathname();
   const activeCategory = pathname.split("/")[3];
 
-  function getActiveCategory(url) {
-    const active = categories.find((category) => category[locale].url === url);
-    return active || { [locale]: { name: ui.global.all_products[locale] } };
+  function getActiveCategory(slug) {
+    const active = categories.find((category) => category.slug === slug);
+    return active || { name: ui.global.all_products[locale] };
   }
 
   return (
     <div className={classes.mobile_catalog_menu}>
       <button className={classes.catalog_selector} onClick={toggleMenu}>
-        {getActiveCategory(activeCategory)[locale].name}
+        {getActiveCategory(activeCategory).name}
 
         <span
           className={isMenuOpen ? `${classes.arrow} ${classes.arrow_up}` : classes.arrow}
@@ -32,12 +32,11 @@ export default function CatalogMenuMobile({ categories, locale }) {
 
       <ul className={classes.catalog_menu_items} style={{ display: isMenuOpen ? "block" : "none" }}>
         {categories.map((category) => (
-          <li key={category[locale].url}>
+          <li key={category.id}>
             <Link
-              href={`/${locale}/products${category[locale].url ? `/${category[locale].url}` : ""}`}
-              key={category[locale].url}
+              href={`/${category.locale}/products${category.slug ? `/${category.slug}` : ""}`}
             >
-              {category[locale].name}
+              {category.name}
             </Link>
           </li>
         ))}

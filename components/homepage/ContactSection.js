@@ -1,11 +1,11 @@
 "use client";
 import classes from "./ContactSection.module.css";
 import ui from "@/app/data/ui";
-import pages from "@/app/data/pages";
+// import pages from "@/app/data/pages";
 import { useState } from "react";
 import Toast from "@/components/shared/Toast";
 
-export default function ContactSection({ locale }) {
+export default function ContactSection({ locale, contacts }) {
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -69,12 +69,9 @@ export default function ContactSection({ locale }) {
           <div className={classes.contact_text}>
             <div>
               <div className={classes.label}>Tel</div>
-              <div>{pages.contacts[locale].info.phone}</div>
+              <div>{contacts.content}</div>
             </div>
-            <div>
-              <div className={classes.label}>Email</div>
-              <div>{pages.contacts[locale].info.email}</div>
-            </div>
+
           </div>
         </div>
         <div className={classes.contact_form}>

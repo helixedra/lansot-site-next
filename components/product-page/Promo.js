@@ -8,28 +8,29 @@ const columnsStyle = {
 };
 
 export default function Promo({ product, locale }) {
+
   return (
     <section className={classes.product_promo}>
-      {product.promo.map((promo, index) => (
+      {product.promotion.map((promo, index) => (
         <div
           key={index}
           className={`promo-img grid my-[8rem] items-center justify-between ${
-            columnsStyle[promo.type]
+            columnsStyle[promo.layout]
           }`}
         >
           {promo.images &&
-            promo.images.map((image, imgIndex) => (
+            promo.images.map((image) => (
               <Image
-                key={imgIndex}
-                src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/products/${product.url}/${image.img}`}
-                alt={image.alt[locale]}
-                title={image.alt[locale]}
+                key={image.id}
+                src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/products/${product.slug}/${image.path}`}
+                alt={image.imageMeta.alt}
+                title={image.imageMeta.title}
                 width={1600}
                 height={1600}
                 quality={90}
                 className="max-h-[800px] w-full object-contain"
               />
-            ))}
+            )).reverse()}
         </div>
       ))}
     </section>

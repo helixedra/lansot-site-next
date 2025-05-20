@@ -4,13 +4,15 @@ import classes from "./TopProductsSlider.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { RiFunctionLine } from "react-icons/ri";
-import productsData from "@/app/data/products.json";
-import categories from "@/app/data/categories.json";
+// import productsData from "@/app/data/products.json";
+// import categories from "@/app/data/categories.json";
 import ui from "@/app/data/ui";
 import { EmblaCarousel } from "@/components/shared/EmblaCarousel";
 
+const REVALIDATE_SECONDS = parseInt(process.env.REVALIDATE_SECONDS || "60");
+
 export default async function TopProductsSlider({ locale }) {
-  const products = await Object.values(productsData).filter((product) => product.popular === true);
+  const products = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/products?locale=${locale}&top=true`, { next: { revalidate: REVALIDATE_SECONDS } }).then((res) => res.json());
 
   return (
     <div className={`${classes.container}`}>
@@ -36,24 +38,24 @@ export default async function TopProductsSlider({ locale }) {
         <EmblaCarousel locale={locale}>
           {products &&
             products.map((product) => (
-              <div className="embla__slide max-w-[440px] p-2" key={product.url}>
+              <div className="embla__slide max-w-[440px] p-2" key={product.id}>
                 <Link
-                  href={`/${locale}/products/${product.category}/${product.url}`}
+                  href={`/${locale}/products/${product.category.slug}/${product.slug}`}
                   // className={classes.slider__item}
                   className="block border border-zinc-300 p-8"
                   title={product.name}
                 >
                   <Image
-                    alt={product.meta.title[locale]}
-                    title={product.meta.title[locale]}
-                    src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/products/${product.url}/${product.cover}`}
+                    alt={product.cover.imageMeta.alt}
+                    title={product.cover.imageMeta.title}
+                    src={`${process.env.NEXT_PUBLIC_IMAGE_PATH}/products/${product.slug}/${product.cover.path}`}
                     style={{ objectFit: "contain" }}
                     width={640}
                     height={600}
                   />
                   <div>
                     <div className="text-sm text-zinc-500">
-                      {categories[product.category][locale].name}
+                      {product.category.name}
                     </div>
                     <div className="text-md font-semibold mt-1">{product.name}</div>
                   </div>

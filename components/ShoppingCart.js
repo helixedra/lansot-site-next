@@ -1,7 +1,7 @@
 "use client";
 import { useContext, useState } from "react";
 import { CartContext } from "@/contexts/CartContext";
-import products from "@/app/data/products";
+// import products from "@/app/data/products";
 import Dialog from "./shared/Dialog";
 import { RiShoppingCart2Line } from "react-icons/ri";
 
