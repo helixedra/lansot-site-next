@@ -1,4 +1,4 @@
-import pages from "@/app/data/pages.json";
+// import pages from "@/app/data/pages.json";
 import Link from "next/link";
 import { MetaData } from "@/utils/metadata";
 import PageHeader from "@/components/shared/PageHeader";
